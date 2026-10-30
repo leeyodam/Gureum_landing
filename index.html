@@ -23,268 +23,337 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=4" />
   </head>
   <body>
-    <div class="page-glow" aria-hidden="true"></div>
+    <header class="nav-shell" id="nav">
+      <div class="nav">
+        <a class="nav__brand" href="#top">
+          <img src="assets/logo.png" alt="" width="36" height="36" />
+          <span>구름</span>
+        </a>
 
-    <header class="nav" id="nav">
-      <a class="nav__brand" href="#top" aria-label="구름 홈">
-        <img src="assets/logo.png" alt="" width="36" height="36" />
-        <span>구름</span>
-      </a>
-      <nav class="nav__links" aria-label="주요 메뉴">
-        <a href="#features">기능</a>
-        <a href="#how">작동 방식</a>
-        <a href="#privacy">프라이버시</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-      <a class="btn btn--primary btn--sm" href="#download">다운로드</a>
+        <nav class="nav__links" id="navLinks" aria-label="주요 메뉴">
+          <a href="#features">기능</a>
+          <a href="#how">작동 방식</a>
+          <a href="#privacy">프라이버시</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="nav__actions">
+          <a class="btn btn--primary btn--sm" href="#download">다운로드</a>
+          <button
+            class="nav__menu"
+            id="menuBtn"
+            type="button"
+            aria-expanded="false"
+            aria-controls="navLinks"
+            aria-label="메뉴 열기"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
     </header>
 
     <main id="top">
       <section class="hero">
-        <div class="hero__copy reveal">
-          <p class="eyebrow">GUREUM · Local VPN Guard</p>
-          <h1>
-            <span class="brand-hero">구름</span>
-            <span class="hero__line">한 번의 탭으로</span>
-            <span class="hero__line">연결을 보호하세요</span>
-          </h1>
-          <p class="hero__sub">
-            기기 안에서 DNS를 바꾸고 SNI를 나눠 보내는 가벼운 로컬 보호.
-            TLS는 열지 않습니다.
-          </p>
-          <div class="hero__cta">
-            <a class="btn btn--primary" href="#download">앱 받기</a>
-            <a class="btn btn--ghost" href="#how">작동 방식 보기</a>
-          </div>
-        </div>
-
-        <div class="hero__stage reveal" style="--delay: 120ms">
-          <div class="hero__orb" aria-hidden="true"></div>
-          <img
-            class="hero__mascot"
-            src="assets/icon-1024.png"
-            alt="구름 캐릭터 로고"
-            width="420"
-            height="420"
-          />
-          <div class="phone" aria-hidden="true">
-            <div class="phone__notch"></div>
-            <div class="phone__screen">
-              <div class="phone__top">
-                <img src="assets/logo.png" alt="" width="28" height="28" />
-                <span>구름</span>
-              </div>
-              <p class="phone__pill">보호 중</p>
-              <p class="phone__status">구름 보호가 켜졌습니다</p>
-              <div class="phone__cloud">
-                <img src="assets/logo.png" alt="" width="120" height="120" />
-              </div>
-              <div class="phone__metrics">
-                <div><span>보호 시간</span><strong>12분</strong></div>
-                <div><span>보호 데이터</span><strong>48.2 MB</strong></div>
-              </div>
+        <div class="hero__inner">
+          <div class="hero__copy reveal">
+            <p class="eyebrow">GUREUM</p>
+            <h1>
+              <span class="brand-hero">구름</span>
+              <span class="hero__line">한 번의 탭으로</span>
+              <span class="hero__line">연결을 보호하세요</span>
+            </h1>
+            <p class="hero__sub">
+              기기 안에서 DNS를 바꾸고 SNI를 나눠 보내는 가벼운 로컬 보호.
+              TLS는 열지 않습니다.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#download">앱 받기</a>
+              <a class="btn btn--ghost" href="#how">작동 방식 보기</a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="logos reveal" aria-label="핵심 가치">
-        <p>DNS 프리셋 · SNI 분할 · 로컬 처리 · TLS 비복호화</p>
-      </section>
-
-      <section class="features dark" id="features">
-        <div class="section-head reveal">
-          <h2>필요한 보호만,<br />부드럽게</h2>
-          <p>한 화면에서 보호를 켜고, DNS를 고르고, 상태를 확인하세요.</p>
-        </div>
-
-        <div class="bento">
-          <article class="bento__card bento__card--lg reveal">
-            <div class="bento__text">
-              <h3>원탭 구름 보호</h3>
-              <p>중앙의 구름을 누르면 로컬 VPN이 연결되고 보호가 시작됩니다.</p>
-            </div>
-            <div class="bento__visual bento__visual--cloud">
-              <img src="assets/logo.png" alt="" width="160" height="160" />
-            </div>
-          </article>
-
-          <article class="bento__card reveal" style="--delay: 80ms">
-            <div class="bento__text">
-              <h3>DNS 프리셋</h3>
-              <p>신뢰할 수 있는 DNS를 빠르게 선택해 이름 해석을 정리합니다.</p>
-            </div>
-            <div class="chip-row" aria-hidden="true">
-              <span>Cloudflare</span>
-              <span>Google</span>
-              <span>Quad9</span>
-            </div>
-          </article>
-
-          <article class="bento__card reveal" style="--delay: 140ms">
-            <div class="bento__text">
-              <h3>SNI 분할</h3>
-              <p>ClientHello를 SNI 시작 위치에서 나눠 보내 네트워크 간섭에 대응합니다.</p>
-            </div>
-            <div class="split-viz" aria-hidden="true">
-              <span class="bar"></span>
-              <span class="bar bar--accent"></span>
-              <span class="bar"></span>
-            </div>
-          </article>
-
-          <article class="bento__card bento__card--wide reveal" style="--delay: 100ms">
-            <div class="bento__text">
-              <h3>기기 안에서만 동작</h3>
-              <p>
-                트래픽을 외부 서버로 우회하지 않습니다. 설정과 보호는 내 기기에서
-                끝나며, TLS 내용을 들여다보지 않습니다.
-              </p>
-            </div>
-            <ul class="checklist">
-              <li>로컬 VpnService / Packet Tunnel</li>
+            <ul class="hero__points">
+              <li>로컬 VPN</li>
+              <li>DNS 프리셋</li>
+              <li>SNI 분할</li>
               <li>TLS 비복호화</li>
-              <li>원격 프록시 없음</li>
             </ul>
-          </article>
+          </div>
+
+          <div class="hero__visual reveal" style="--delay: 100ms">
+            <div class="phone" role="img" aria-label="구름 앱 화면 미리보기">
+              <div class="phone__bezel">
+                <div class="phone__island"></div>
+                <div class="phone__screen">
+                  <div class="phone__top">
+                    <img src="assets/logo.png" alt="" width="28" height="28" />
+                    <span>구름</span>
+                  </div>
+                  <p class="phone__pill">보호 중</p>
+                  <p class="phone__status">구름 보호가 켜졌습니다</p>
+                  <p class="phone__support">기본 보호 · Cloudflare</p>
+                  <button class="phone__cloud" type="button" tabindex="-1">
+                    <img src="assets/logo.png" alt="" width="132" height="132" />
+                  </button>
+                  <div class="phone__metrics">
+                    <div>
+                      <span>보호 시간</span>
+                      <strong>12분</strong>
+                    </div>
+                    <div>
+                      <span>보호 데이터</span>
+                      <strong>48.2 MB</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="split" id="how">
-        <div class="split__copy reveal">
-          <p class="eyebrow">How it works</p>
-          <h2>복잡함 없이,<br />보호만 남기기</h2>
-          <ul>
-            <li>
-              <strong>1. 구름을 탭</strong>
-              <span>VPN 권한을 허용하면 보호 세션이 시작됩니다.</span>
-            </li>
-            <li>
-              <strong>2. DNS 적용</strong>
-              <span>선택한 DNS로 이름 해석을 기기에서 처리합니다.</span>
-            </li>
-            <li>
-              <strong>3. SNI 분할 전송</strong>
-              <span>필요 시 ClientHello를 나눠 보내 연결을 안정화합니다.</span>
-            </li>
-          </ul>
-        </div>
-        <div class="split__media reveal" style="--delay: 100ms">
-          <img src="assets/splash.png" alt="구름 로딩 화면" />
+      <section class="features" id="features">
+        <div class="section-shell">
+          <div class="section-head reveal">
+            <p class="eyebrow eyebrow--on-dark">기능</p>
+            <h2>필요한 보호만,<br />부드럽게</h2>
+            <p>한 화면에서 보호를 켜고, DNS를 고르고, 상태를 확인하세요.</p>
+          </div>
+
+          <div class="bento">
+            <article class="bento__card bento__card--lg reveal">
+              <div class="bento__text">
+                <h3>원탭 구름 보호</h3>
+                <p>중앙의 구름을 누르면 로컬 VPN이 연결되고 보호가 시작됩니다.</p>
+              </div>
+              <div class="bento__visual">
+                <img src="assets/logo.png" alt="" width="148" height="148" />
+              </div>
+            </article>
+
+            <article class="bento__card reveal" style="--delay: 60ms">
+              <div class="bento__text">
+                <h3>DNS 프리셋</h3>
+                <p>신뢰할 수 있는 DNS를 빠르게 선택해 이름 해석을 정리합니다.</p>
+              </div>
+              <div class="chip-row" aria-hidden="true">
+                <span>Cloudflare</span>
+                <span>Google</span>
+                <span>Quad9</span>
+              </div>
+            </article>
+
+            <article class="bento__card reveal" style="--delay: 120ms">
+              <div class="bento__text">
+                <h3>SNI 분할</h3>
+                <p>ClientHello를 SNI 시작 위치에서 나눠 보내 네트워크 간섭에 대응합니다.</p>
+              </div>
+              <div class="split-viz" aria-hidden="true">
+                <span class="bar"></span>
+                <span class="bar bar--accent"></span>
+                <span class="bar"></span>
+              </div>
+            </article>
+
+            <article class="bento__card bento__card--wide reveal" style="--delay: 80ms">
+              <div class="bento__text">
+                <h3>기기 안에서만 동작</h3>
+                <p>
+                  트래픽을 외부 서버로 우회하지 않습니다. 설정과 보호는 내 기기에서
+                  끝나며, TLS 내용을 들여다보지 않습니다.
+                </p>
+              </div>
+              <ul class="checklist">
+                <li>로컬 VpnService / Packet Tunnel</li>
+                <li>TLS 비복호화</li>
+                <li>원격 프록시 없음</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="split split--flip" id="privacy">
-        <div class="split__copy reveal">
-          <p class="eyebrow">Privacy first</p>
-          <h2>열어보지 않는<br />보호</h2>
-          <p class="lead">
-            구름은 “감시를 위한 VPN”이 아닙니다. 목표는 기기 로컬에서 DNS와
-            SNI 처리로 연결을 돕는 것입니다.
-          </p>
-          <ul class="plain-list">
-            <li>TLS 페이로드 복호화 없음</li>
-            <li>계정·추적 SDK 중심 설계 배제</li>
-            <li>앱 저장소는 private으로 운영</li>
-          </ul>
-        </div>
-        <div class="split__media glass-panel reveal" style="--delay: 100ms">
-          <img class="mascot-float" src="assets/icon-1024.png" alt="" width="280" height="280" />
-          <p>내 기기 · 내 보호 · 내 선택</p>
+      <section class="how" id="how">
+        <div class="section-shell how__grid">
+          <div class="how__copy reveal">
+            <p class="eyebrow">작동 방식</p>
+            <h2>복잡함 없이,<br />보호만 남기기</h2>
+            <p class="lead">
+              권한 허용 후 구름만 누르면 됩니다. DNS와 SNI 처리는 기기 로컬에서
+              이뤄집니다.
+            </p>
+          </div>
+
+          <ol class="steps reveal" style="--delay: 80ms">
+            <li>
+              <span class="steps__num">1</span>
+              <div>
+                <strong>구름을 탭</strong>
+                <p>VPN 권한을 허용하면 보호 세션이 시작됩니다.</p>
+              </div>
+            </li>
+            <li>
+              <span class="steps__num">2</span>
+              <div>
+                <strong>DNS 적용</strong>
+                <p>선택한 DNS로 이름 해석을 기기에서 처리합니다.</p>
+              </div>
+            </li>
+            <li>
+              <span class="steps__num">3</span>
+              <div>
+                <strong>SNI 분할 전송</strong>
+                <p>필요 시 ClientHello를 나눠 보내 연결을 안정화합니다.</p>
+              </div>
+            </li>
+          </ol>
         </div>
       </section>
 
-      <section class="quotes">
-        <div class="section-head reveal">
-          <h2>가볍고, 분명하게</h2>
-          <p>보호 상태를 한눈에, 조작은 한 번에.</p>
+      <section class="privacy" id="privacy">
+        <div class="section-shell privacy__grid">
+          <div class="privacy__copy reveal">
+            <p class="eyebrow">프라이버시</p>
+            <h2>열어보지 않는<br />보호</h2>
+            <p class="lead">
+              구름은 감시를 위한 VPN이 아닙니다. 목표는 기기 로컬에서 DNS와 SNI
+              처리로 연결을 돕는 것입니다.
+            </p>
+            <ul class="plain-list">
+              <li>TLS 페이로드 복호화 없음</li>
+              <li>원격 프록시·우회 서버 없음</li>
+              <li>앱 저장소는 private으로 운영</li>
+            </ul>
+          </div>
+
+          <div class="privacy__panel reveal" style="--delay: 100ms">
+            <div class="privacy__card">
+              <img src="assets/logo.png" alt="" width="88" height="88" />
+              <h3>내 기기에서 끝납니다</h3>
+              <p>보호 세션은 기기 안에서만 동작하며, 트래픽을 외부로 보내지 않습니다.</p>
+            </div>
+            <div class="privacy__stats" aria-hidden="true">
+              <div>
+                <strong>0</strong>
+                <span>원격 서버</span>
+              </div>
+              <div>
+                <strong>0</strong>
+                <span>TLS 복호화</span>
+              </div>
+              <div>
+                <strong>1</strong>
+                <span>탭으로 시작</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="quote-grid">
-          <figure class="quote reveal">
-            <blockquote>“VPN이라고 하면 무겁게 느껴졌는데, 구름은 그냥 켜두면 됩니다.”</blockquote>
-            <figcaption>Android 베타 사용자</figcaption>
-          </figure>
-          <figure class="quote reveal" style="--delay: 80ms">
-            <blockquote>“DNS만 바꾸고 싶을 때 가장 덜 복잡한 선택지였어요.”</blockquote>
-            <figcaption>개발자 프리뷰</figcaption>
-          </figure>
-          <figure class="quote reveal" style="--delay: 140ms">
-            <blockquote>“캐릭터만 눌러도 보호가 켜지니, 설정 화면을 헤맬 일이 없어요.”</blockquote>
-            <figcaption>얼리 테스터</figcaption>
-          </figure>
+      </section>
+
+      <section class="values">
+        <div class="section-shell">
+          <div class="section-head reveal">
+            <p class="eyebrow">왜 구름인가</p>
+            <h2>가볍고, 분명하게</h2>
+            <p>보호 상태를 한눈에, 조작은 한 번에.</p>
+          </div>
+          <div class="value-grid">
+            <article class="value reveal">
+              <h3>단순한 조작</h3>
+              <p>설정 화면을 헤맬 필요 없이, 구름만 눌러 보호를 켜고 끕니다.</p>
+            </article>
+            <article class="value reveal" style="--delay: 60ms">
+              <h3>로컬 처리</h3>
+              <p>DNS와 SNI 처리는 기기 안에서 끝나 불필요한 우회를 만들지 않습니다.</p>
+            </article>
+            <article class="value reveal" style="--delay: 120ms">
+              <h3>투명한 경계</h3>
+              <p>TLS는 복호화하지 않습니다. 보호의 범위가 분명합니다.</p>
+            </article>
+          </div>
         </div>
       </section>
 
       <section class="faq" id="faq">
-        <div class="section-head reveal">
-          <h2>자주 묻는 질문</h2>
-        </div>
-        <div class="faq__list">
-          <details class="reveal">
-            <summary>일반 VPN과 무엇이 다른가요?</summary>
-            <p>
-              구름은 원격 VPN 서버로 트래픽을 보내지 않습니다. 기기 안에서 DNS와
-              SNI 처리를 수행하는 로컬 보호에 가깝습니다.
-            </p>
-          </details>
-          <details class="reveal" style="--delay: 60ms">
-            <summary>HTTPS 내용을 보나요?</summary>
-            <p>아니요. TLS를 복호화하지 않으며, ClientHello의 SNI 구간 분할만 다룹니다.</p>
-          </details>
-          <details class="reveal" style="--delay: 100ms">
-            <summary>소스 코드는 공개되나요?</summary>
-            <p>
-              랜딩과 브랜드 사이트는 public으로 운영하고, 앱 저장소는 private으로
-              유지합니다.
-            </p>
-          </details>
+        <div class="section-shell section-shell--narrow">
+          <div class="section-head reveal">
+            <p class="eyebrow">FAQ</p>
+            <h2>자주 묻는 질문</h2>
+          </div>
+          <div class="faq__list">
+            <details class="reveal">
+              <summary>일반 VPN과 무엇이 다른가요?</summary>
+              <p>
+                구름은 원격 VPN 서버로 트래픽을 보내지 않습니다. 기기 안에서 DNS와
+                SNI 처리를 수행하는 로컬 보호에 가깝습니다.
+              </p>
+            </details>
+            <details class="reveal" style="--delay: 40ms">
+              <summary>HTTPS 내용을 보나요?</summary>
+              <p>아니요. TLS를 복호화하지 않으며, ClientHello의 SNI 구간 분할만 다룹니다.</p>
+            </details>
+            <details class="reveal" style="--delay: 80ms">
+              <summary>소스 코드는 공개되나요?</summary>
+              <p>
+                랜딩 페이지는 public으로 운영하고, 앱 저장소는 private으로 유지합니다.
+              </p>
+            </details>
+          </div>
         </div>
       </section>
 
-      <section class="cta dark" id="download">
-        <div class="cta__inner reveal">
+      <section class="cta" id="download">
+        <div class="section-shell cta__inner reveal">
           <img src="assets/logo.png" alt="" width="72" height="72" class="cta__icon" />
           <h2>지금 구름을 켜보세요</h2>
-          <p>Android · iOS 배포 링크는 준비되는 대로 여기에 연결됩니다.</p>
+          <p>Android · iOS 배포가 준비되면 여기에서 바로 받을 수 있습니다.</p>
           <div class="hero__cta">
-            <a class="btn btn--primary" href="#" aria-disabled="true">Android 곧 공개</a>
-            <a class="btn btn--ghost btn--on-dark" href="#" aria-disabled="true">iOS 곧 공개</a>
+            <span class="btn btn--primary btn--disabled">Android 준비 중</span>
+            <span class="btn btn--ghost btn--on-dark btn--disabled">iOS 준비 중</span>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="footer__brand">
-        <img src="assets/logo.png" alt="" width="40" height="40" />
-        <div>
-          <strong>구름</strong>
-          <span>GUREUM</span>
+    <footer class="footer-shell">
+      <div class="footer">
+        <div class="footer__brand">
+          <img src="assets/logo.png" alt="" width="40" height="40" />
+          <div>
+            <strong>구름</strong>
+            <span>GUREUM</span>
+          </div>
         </div>
+        <div class="footer__cols">
+          <div>
+            <h4>제품</h4>
+            <a href="#features">기능</a>
+            <a href="#how">작동 방식</a>
+            <a href="#download">다운로드</a>
+          </div>
+          <div>
+            <h4>신뢰</h4>
+            <a href="#privacy">프라이버시</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div>
+            <h4>저장소</h4>
+            <a
+              href="https://github.com/leeyodam/Gureum_landing"
+              target="_blank"
+              rel="noopener noreferrer"
+              >랜딩 GitHub</a
+            >
+          </div>
+        </div>
+        <p class="footer__copy">© <span id="year"></span> GUREUM</p>
       </div>
-      <div class="footer__cols">
-        <div>
-          <h4>Product</h4>
-          <a href="#features">기능</a>
-          <a href="#how">작동 방식</a>
-          <a href="#download">다운로드</a>
-        </div>
-        <div>
-          <h4>Trust</h4>
-          <a href="#privacy">프라이버시</a>
-          <a href="#faq">FAQ</a>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <a href="mailto:hello@gureum.app">hello@gureum.app</a>
-        </div>
-      </div>
-      <p class="footer__copy">© <span id="year"></span> GUREUM. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=4"></script>
   </body>
 </html>
