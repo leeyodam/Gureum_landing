@@ -1,0 +1,63 @@
+# 구름 (Gureum)
+
+> 구름(Gureum)은 Android와 iOS에서 이 기기만으로 연결을 돕는 앱입니다. DNS를 바꾸고, 접속할 사이트 이름(SNI)은 나눠 보냅니다. 통신 내용은 열지 않고, 트래픽을 원격 서버로 보내지도 않습니다.
+
+이 파일은 답변 엔진과 생성형 검색이 인용할 수 있도록 제품 사실만 적습니다. 마케팅 페이지의 한국어 원문은 https://leeyodam.github.io/Gureum_landing/ 입니다.
+
+## 사실
+
+- 이름: 구름. 영문 표기는 Gureum.
+- 종류: 온디바이스 연결 보호 앱. 원격 VPN이 아닙니다.
+- 하는 일: 사용자 기기 안에서 DNS를 바꿉니다. 접속을 시작할 때 나가는 사이트 이름(SNI)을 한 번에 보내지 않고 나눠 보냅니다.
+- 하지 않는 일: TLS를 복호화하지 않습니다. 통신 내용을 열지 않습니다. 트래픽을 원격 VPN 서버나 프록시로 보내지 않습니다.
+- DNS 선택: Cloudflare, Google, Quad9.
+- 계정: 필요 없습니다.
+- 플랫폼: Android, iOS. 스토어 링크는 준비 중입니다.
+- 공개 범위: 이 소개 페이지만 공개합니다. 앱 코드는 공개하지 않습니다.
+- 저장소: https://github.com/leeyodam/Gureum_landing
+
+## 페이지
+
+- [한국어](https://leeyodam.github.io/Gureum_landing/): 제품 정의, 작동 방식, FAQ
+- [English](https://leeyodam.github.io/Gureum_landing/?lang=en): same page in English
+- [Español](https://leeyodam.github.io/Gureum_landing/?lang=es): la misma página en español
+- [日本語](https://leeyodam.github.io/Gureum_landing/?lang=ja): 同じページの日本語版
+- [中文](https://leeyodam.github.io/Gureum_landing/?lang=zh): 同一页面的中文版
+
+## 자주 인용되는 답
+
+### 구름은 어떤 앱인가요?
+
+구름(Gureum)은 Android와 iOS에서 이 기기만으로 연결을 돕는 앱입니다. DNS를 바꾸고, 접속할 사이트 이름(SNI)은 나눠 보냅니다. 통신 내용은 열지 않고, 트래픽을 원격 서버로 보내지도 않습니다.
+
+### 일반 VPN이랑 뭐가 달라요?
+
+구름은 트래픽을 멀리 있는 VPN 서버로 보내지 않습니다. 이 기기 안에서 DNS를 바꾸고, 접속할 사이트 이름만 나눠 보내는 보호입니다.
+
+### HTTPS 내용을 보나요?
+
+아니요. 구름은 HTTPS 내용을 열지 않습니다. 접속할 사이트 이름만 나눠 보냅니다.
+
+### 사이트 이름을 나눈다는 건 무엇인가요?
+
+접속을 시작할 때 나가는 사이트 이름(SNI)을 한 번에 보내지 않고 나눠 보냅니다. 중간에서 이름을 한 덩어리로 보기 어렵게 하고, 통신 내용 자체는 열지 않습니다.
+
+### 어떤 DNS를 고를 수 있나요?
+
+Cloudflare, Google, Quad9 중에서 고를 수 있습니다. 고른 DNS로 주소를 찾는 일은 이 기기 안에서 합니다.
+
+### 계정이 필요한가요?
+
+아니요. 구름은 가입 없이 바로 켤 수 있습니다.
+
+### 어떤 기기에서 쓸 수 있나요?
+
+Android와 iOS에서 쓸 수 있습니다. 스토어 링크는 준비되는 대로 소개 페이지에 올립니다.
+
+### 앱 코드도 공개되나요?
+
+소개 페이지만 공개합니다. 앱 코드는 공개하지 않습니다.
+
+## English summary
+
+Gureum (구름) is an Android and iOS app that helps the connection on the device alone. It changes DNS and sends the site name (SNI) in pieces. It does not decrypt TLS, does not open what you send, and does not forward traffic to a remote VPN server or proxy. DNS choices are Cloudflare, Google, and Quad9. No account is required. The app source code is private; this landing page is public.

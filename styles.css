@@ -860,9 +860,59 @@ button {
   font-size: 0.96rem;
 }
 
+/* ---------- About / answer block ---------- */
+.about {
+  padding: 88px 0;
+  background:
+    radial-gradient(520px 240px at 12% 0%, rgba(142, 200, 255, 0.28), transparent 70%),
+    #f3f8fe;
+}
+
+.about__answer {
+  margin: 0 0 22px;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+html[lang="ko"] .about__answer,
+html[lang="ko"] .about__facts dd {
+  word-break: keep-all;
+}
+
+.about__facts {
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.about__facts div {
+  display: grid;
+  grid-template-columns: minmax(7.5rem, 12rem) 1fr;
+  gap: 12px;
+  align-items: baseline;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid var(--line);
+}
+
+.about__facts dt {
+  margin: 0;
+  font-weight: 700;
+  color: var(--sky-deep);
+  font-size: 0.88rem;
+}
+
+.about__facts dd {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
 /* ---------- FAQ ---------- */
 .faq {
-  padding: 24px 0 96px;
+  padding: 88px 0 96px;
   background: #ffffff;
 }
 
@@ -1161,12 +1211,15 @@ details p {
   .how,
   .privacy,
   .values,
+  .about,
+  .faq,
   .cta {
     padding: 72px 0;
   }
 
-  .faq {
-    padding: 8px 0 72px;
+  .about__facts div {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 
   .privacy__stats {

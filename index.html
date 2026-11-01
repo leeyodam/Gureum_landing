@@ -3,27 +3,221 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>구름 — 한 번만 누르면 연결을 지켜 줘요</title>
+    <title>구름(Gureum) — 한 번만 누르면 연결을 지켜 줘요</title>
     <meta
       name="description"
-      content="구름은 이 기기 안에서 DNS를 바꾸고, 접속할 사이트 이름은 나눠 보냅니다. 통신 내용은 열지 않아요."
+      content="구름(Gureum)은 Android·iOS용 앱입니다. 기기 안에서 DNS를 바꾸고 사이트 이름(SNI)을 나눠 보내며, 통신 내용은 열지 않습니다. 원격 서버로 트래픽을 보내지 않고 계정 없이 켤 수 있어요."
     />
-    <meta property="og:title" content="구름 — 한 번만 누르면 연결을 지켜 줘요" />
+    <meta name="author" content="Gureum" />
+    <meta name="application-name" content="구름" />
+    <meta name="apple-mobile-web-app-title" content="구름" />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <link rel="canonical" href="https://leeyodam.github.io/Gureum_landing/" />
+    <link rel="alternate" hreflang="ko" href="https://leeyodam.github.io/Gureum_landing/" />
+    <link rel="alternate" hreflang="en" href="https://leeyodam.github.io/Gureum_landing/?lang=en" />
+    <link rel="alternate" hreflang="es" href="https://leeyodam.github.io/Gureum_landing/?lang=es" />
+    <link rel="alternate" hreflang="ja" href="https://leeyodam.github.io/Gureum_landing/?lang=ja" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://leeyodam.github.io/Gureum_landing/?lang=zh" />
+    <link rel="alternate" hreflang="x-default" href="https://leeyodam.github.io/Gureum_landing/" />
+    <link rel="alternate" type="text/plain" href="llms.txt" title="구름(Gureum) 요약" />
+    <meta property="og:title" content="구름(Gureum) — 한 번만 누르면 연결을 지켜 줘요" />
     <meta
       property="og:description"
-      content="구름은 이 기기 안에서 DNS를 바꾸고, 접속할 사이트 이름은 나눠 보냅니다. 통신 내용은 열지 않아요."
+      content="구름(Gureum)은 Android·iOS용 앱입니다. 기기 안에서 DNS를 바꾸고 사이트 이름(SNI)을 나눠 보내며, 통신 내용은 열지 않습니다. 원격 서버로 트래픽을 보내지 않고 계정 없이 켤 수 있어요."
     />
-    <meta property="og:image" content="assets/og.png" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://leeyodam.github.io/Gureum_landing/" />
+    <meta property="og:site_name" content="구름 (Gureum)" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:locale:alternate" content="ja_JP" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+    <meta property="og:image" content="https://leeyodam.github.io/Gureum_landing/assets/og.png" />
+    <meta property="og:image:secure_url" content="https://leeyodam.github.io/Gureum_landing/assets/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="구름(Gureum) 앱 소개" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="구름(Gureum) — 한 번만 누르면 연결을 지켜 줘요" />
+    <meta
+      name="twitter:description"
+      content="구름(Gureum)은 Android·iOS용 앱입니다. 기기 안에서 DNS를 바꾸고 사이트 이름(SNI)을 나눠 보내며, 통신 내용은 열지 않습니다. 원격 서버로 트래픽을 보내지 않고 계정 없이 켤 수 있어요."
+    />
+    <meta name="twitter:image" content="https://leeyodam.github.io/Gureum_landing/assets/og.png" />
+    <meta name="twitter:image:alt" content="구름(Gureum) 앱 소개" />
     <meta name="theme-color" content="#B0D6F2" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png" />
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
-    <link rel="stylesheet" href="styles.css?v=5" />
+    <link rel="stylesheet" href="styles.css?v=7" />
+    <script type="application/ld+json" id="structured-data">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://leeyodam.github.io/Gureum_landing/#organization",
+            "name": "Gureum",
+            "alternateName": ["구름", "雲", "云"],
+            "url": "https://leeyodam.github.io/Gureum_landing/",
+            "logo": "https://leeyodam.github.io/Gureum_landing/assets/logo.png",
+            "sameAs": ["https://github.com/leeyodam/Gureum_landing"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://leeyodam.github.io/Gureum_landing/#website",
+            "url": "https://leeyodam.github.io/Gureum_landing/",
+            "name": "구름",
+            "alternateName": "Gureum",
+            "inLanguage": ["ko", "en", "es", "ja", "zh-Hans"],
+            "publisher": { "@id": "https://leeyodam.github.io/Gureum_landing/#organization" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://leeyodam.github.io/Gureum_landing/#webpage",
+            "url": "https://leeyodam.github.io/Gureum_landing/",
+            "name": "구름(Gureum) — 한 번만 누르면 연결을 지켜 줘요",
+            "description": "구름(Gureum)은 Android·iOS용 앱입니다. 기기 안에서 DNS를 바꾸고 사이트 이름(SNI)을 나눠 보내며, 통신 내용은 열지 않습니다. 원격 서버로 트래픽을 보내지 않고 계정 없이 켤 수 있어요.",
+            "inLanguage": "ko",
+            "isPartOf": { "@id": "https://leeyodam.github.io/Gureum_landing/#website" },
+            "about": { "@id": "https://leeyodam.github.io/Gureum_landing/#app" },
+            "primaryImageOfPage": "https://leeyodam.github.io/Gureum_landing/assets/og.png",
+            "dateModified": "2026-11-01",
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": [".about__answer", ".hero__sub"]
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://leeyodam.github.io/Gureum_landing/#app",
+            "name": "구름",
+            "alternateName": "Gureum",
+            "applicationCategory": "SecurityApplication",
+            "operatingSystem": "Android, iOS",
+            "url": "https://leeyodam.github.io/Gureum_landing/",
+            "image": "https://leeyodam.github.io/Gureum_landing/assets/og.png",
+            "inLanguage": "ko",
+            "description": "구름(Gureum)은 Android와 iOS에서 이 기기만으로 연결을 돕는 앱입니다. DNS를 바꾸고, 접속할 사이트 이름(SNI)은 나눠 보냅니다. 통신 내용은 열지 않고, 트래픽을 원격 서버로 보내지도 않습니다.",
+            "featureList": [
+              "기기 안에서 DNS를 바꾸고, 사이트 이름을 나눠 보냅니다.",
+              "통신 내용을 열지 않고, 원격 VPN 서버로 우회하지 않습니다.",
+              "Cloudflare, Google, Quad9"
+            ],
+            "publisher": { "@id": "https://leeyodam.github.io/Gureum_landing/#organization" }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://leeyodam.github.io/Gureum_landing/#faq",
+            "url": "https://leeyodam.github.io/Gureum_landing/#faq",
+            "inLanguage": "ko",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "구름은 어떤 앱인가요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "구름(Gureum)은 Android와 iOS에서 이 기기만으로 연결을 돕는 앱입니다. DNS를 바꾸고, 접속할 사이트 이름(SNI)은 나눠 보냅니다. 통신 내용은 열지 않고, 트래픽을 원격 서버로 보내지도 않습니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "일반 VPN이랑 뭐가 달라요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "구름은 트래픽을 멀리 있는 VPN 서버로 보내지 않습니다. 이 기기 안에서 DNS를 바꾸고, 접속할 사이트 이름만 나눠 보내는 보호입니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "HTTPS 내용을 보나요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "아니요. 구름은 HTTPS 내용을 열지 않습니다. 접속할 사이트 이름만 나눠 보냅니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "사이트 이름을 나눈다는 건 무엇인가요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "접속을 시작할 때 나가는 사이트 이름(SNI)을 한 번에 보내지 않고 나눠 보냅니다. 중간에서 이름을 한 덩어리로 보기 어렵게 하고, 통신 내용 자체는 열지 않습니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "어떤 DNS를 고를 수 있나요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Cloudflare, Google, Quad9 중에서 고를 수 있습니다. 고른 DNS로 주소를 찾는 일은 이 기기 안에서 합니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "계정이 필요한가요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "아니요. 구름은 가입 없이 바로 켤 수 있습니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "어떤 기기에서 쓸 수 있나요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Android와 iOS에서 쓸 수 있습니다. 스토어 링크는 준비되는 대로 이 페이지에 올립니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "앱 코드도 공개되나요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "소개 페이지만 공개합니다. 앱 코드는 공개하지 않습니다."
+                }
+              }
+            ]
+          },
+          {
+            "@type": "HowTo",
+            "@id": "https://leeyodam.github.io/Gureum_landing/#how",
+            "name": "구름을 켜는 방법",
+            "description": "권한을 허용한 다음 구름만 누르면 됩니다. DNS와 이름 나누기는 이 기기에서 처리해요.",
+            "inLanguage": "ko",
+            "step": [
+              {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "구름을 눌러요",
+                "text": "권한을 허용하면 보호가 시작됩니다."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "DNS를 골라요",
+                "text": "고른 DNS로 주소를 이 기기에서 찾습니다."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "이름을 나눠 보내요",
+                "text": "필요할 때 사이트 이름을 나눠 보내 연결을 안정적으로 유지합니다."
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="nav-shell" id="nav">
@@ -74,7 +268,7 @@
               <span class="hero__line" data-i18n="hero.line2">연결을 지켜 줘요</span>
             </h1>
             <p class="hero__sub" data-i18n="hero.sub">
-              DNS를 바꾸고, 접속할 사이트 이름은 나눠서 보냅니다. 내용은 보지 않아요.
+              Android와 iOS에서, 이 기기만으로 DNS를 바꾸고 사이트 이름은 나눠 보냅니다. 내용은 보지 않아요.
             </p>
             <div class="hero__cta">
               <a class="btn btn--primary" href="#download" data-i18n="hero.download">다운로드</a>
@@ -292,6 +486,41 @@
         </div>
       </section>
 
+      <section class="about" id="about">
+        <div class="section-shell section-shell--narrow">
+          <div class="section-head reveal">
+            <p class="eyebrow" data-i18n="about.kicker">정의</p>
+            <h2 data-i18n="about.title">구름은 어떤 앱인가요?</h2>
+          </div>
+          <p class="about__answer reveal" data-i18n="about.answer">
+            구름(Gureum)은 Android와 iOS에서 이 기기만으로 연결을 돕는 앱입니다. DNS를 바꾸고, 접속할
+            사이트 이름(SNI)은 나눠 보냅니다. 통신 내용은 열지 않고, 트래픽을 원격 서버로 보내지도 않습니다.
+          </p>
+          <dl class="about__facts reveal" style="--delay: 60ms">
+            <div>
+              <dt data-i18n="about.f1.dt">하는 일</dt>
+              <dd data-i18n="about.f1.dd">기기 안에서 DNS를 바꾸고, 사이트 이름을 나눠 보냅니다.</dd>
+            </div>
+            <div>
+              <dt data-i18n="about.f2.dt">하지 않는 일</dt>
+              <dd data-i18n="about.f2.dd">통신 내용을 열지 않고, 원격 VPN 서버로 우회하지 않습니다.</dd>
+            </div>
+            <div>
+              <dt data-i18n="about.f3.dt">기기</dt>
+              <dd data-i18n="about.f3.dd">Android, iOS</dd>
+            </div>
+            <div>
+              <dt data-i18n="about.f4.dt">DNS</dt>
+              <dd data-i18n="about.f4.dd">Cloudflare, Google, Quad9</dd>
+            </div>
+            <div>
+              <dt data-i18n="about.f5.dt">계정</dt>
+              <dd data-i18n="about.f5.dd">필요 없습니다.</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
       <section class="faq" id="faq">
         <div class="section-shell section-shell--narrow">
           <div class="section-head reveal">
@@ -299,19 +528,39 @@
             <h2 data-i18n="faq.title">자주 묻는 질문</h2>
           </div>
           <div class="faq__list">
-            <details class="reveal">
+            <details class="reveal" id="faq-vpn">
               <summary data-i18n="faq.q1">일반 VPN이랑 뭐가 달라요?</summary>
               <p data-i18n="faq.a1">
-                구름은 트래픽을 멀리 있는 VPN 서버로 보내지 않아요. 이 폰 안에서 DNS와 사이트 이름만 다루는 보호에 가깝습니다.
+                구름은 트래픽을 멀리 있는 VPN 서버로 보내지 않습니다. 이 기기 안에서 DNS를 바꾸고, 접속할 사이트 이름만 나눠 보내는 보호입니다.
               </p>
             </details>
-            <details class="reveal" style="--delay: 40ms">
+            <details class="reveal" id="faq-https" style="--delay: 40ms">
               <summary data-i18n="faq.q2">HTTPS 내용을 보나요?</summary>
-              <p data-i18n="faq.a2">아니요. 내용은 열지 않고, 접속할 사이트 이름만 나눠 보냅니다.</p>
+              <p data-i18n="faq.a2">아니요. 구름은 HTTPS 내용을 열지 않습니다. 접속할 사이트 이름만 나눠 보냅니다.</p>
             </details>
-            <details class="reveal" style="--delay: 80ms">
+            <details class="reveal" id="faq-sni" style="--delay: 80ms">
+              <summary data-i18n="faq.q4">사이트 이름을 나눈다는 건 무엇인가요?</summary>
+              <p data-i18n="faq.a4">
+                접속을 시작할 때 나가는 사이트 이름(SNI)을 한 번에 보내지 않고 나눠 보냅니다. 중간에서 이름을 한 덩어리로 보기 어렵게 하고, 통신 내용 자체는 열지 않습니다.
+              </p>
+            </details>
+            <details class="reveal" id="faq-dns">
+              <summary data-i18n="faq.q5">어떤 DNS를 고를 수 있나요?</summary>
+              <p data-i18n="faq.a5">
+                Cloudflare, Google, Quad9 중에서 고를 수 있습니다. 고른 DNS로 주소를 찾는 일은 이 기기 안에서 합니다.
+              </p>
+            </details>
+            <details class="reveal" id="faq-account">
+              <summary data-i18n="faq.q6">계정이 필요한가요?</summary>
+              <p data-i18n="faq.a6">아니요. 구름은 가입 없이 바로 켤 수 있습니다.</p>
+            </details>
+            <details class="reveal" id="faq-devices">
+              <summary data-i18n="faq.q7">어떤 기기에서 쓸 수 있나요?</summary>
+              <p data-i18n="faq.a7">Android와 iOS에서 쓸 수 있습니다. 스토어 링크는 준비되는 대로 이 페이지에 올립니다.</p>
+            </details>
+            <details class="reveal" id="faq-code">
               <summary data-i18n="faq.q3">앱 코드도 공개되나요?</summary>
-              <p data-i18n="faq.a3">소개 페이지만 공개하고, 앱 코드는 공개하지 않습니다.</p>
+              <p data-i18n="faq.a3">소개 페이지만 공개합니다. 앱 코드는 공개하지 않습니다.</p>
             </details>
           </div>
         </div>
@@ -348,6 +597,7 @@
           </div>
           <div>
             <h4 data-i18n="foot.trust">안내</h4>
+            <a href="#about" data-i18n="foot.about">정의</a>
             <a href="#privacy" data-i18n="foot.privacy">프라이버시</a>
             <a href="#faq" data-i18n="foot.faq">FAQ</a>
           </div>
@@ -366,7 +616,7 @@
       </div>
     </footer>
 
-    <script src="i18n.js?v=5"></script>
-    <script src="script.js?v=5"></script>
+    <script src="i18n.js?v=6"></script>
+    <script src="script.js?v=6"></script>
   </body>
 </html>

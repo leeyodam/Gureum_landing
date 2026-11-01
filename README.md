@@ -29,3 +29,20 @@ python -m http.server 5173
 | `assets/og.png` | SNS 미리보기 |
 
 다운로드 버튼은 스토어 URL이 준비되면 `index.html`의 `#download` 섹션에서 교체하세요.
+
+## 검색·답변 엔진
+
+공개 URL은 https://leeyodam.github.io/Gureum_landing/ 이고, 이 주소의 본문은 한국어입니다.
+
+| 파일 | 역할 |
+|------|------|
+| `robots.txt` | 검색·생성형 크롤러 허용, 사이트맵 위치 |
+| `sitemap.xml` | 언어별 주소 |
+| `llms.txt` | 인용하기 쉬운 제품 사실 |
+
+다른 언어는 쿼리로 구분합니다.
+
+- English: `?lang=en`
+- Español: `?lang=es`
+- 日本語: `?lang=ja`
+- 中文: `?lang=zh`
