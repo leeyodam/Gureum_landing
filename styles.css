@@ -15,7 +15,8 @@
   --protect: #22c55e;
   --radius: 24px;
   --shadow: 0 20px 50px rgba(47, 100, 170, 0.16);
-  --font: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --font: "Pretendard", "Apple SD Gothic Neo", "Hiragino Sans", "Yu Gothic", "PingFang SC",
+    "Microsoft YaHei", "Noto Sans KR", sans-serif;
   --nav-h: 68px;
   --max: 1120px;
 }
@@ -150,67 +151,71 @@ button {
   box-shadow: 0 6px 16px rgba(77, 163, 255, 0.22);
 }
 
-.nav__links {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.nav__links a {
-  padding: 8px 12px;
-  border-radius: 999px;
-  color: var(--ink-soft);
-  font-size: 0.94rem;
-  font-weight: 600;
-  transition: color 0.15s ease, background 0.15s ease;
-}
-
-.nav__links a:hover {
-  color: var(--ink);
-  background: rgba(77, 163, 255, 0.08);
-}
-
 .nav__actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   flex-shrink: 0;
 }
 
-.nav__menu {
-  display: none;
-  width: 42px;
-  height: 42px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 0;
-  flex-direction: column;
+.lang {
+  position: relative;
+}
+
+.lang__btn {
+  min-height: 40px;
+  padding: 0 12px 0 14px;
+  border-radius: 999px;
+  border: 1px solid #d7e6f5;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.84rem;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 5px;
+  gap: 6px;
   cursor: pointer;
 }
 
-.nav__menu span {
+.lang__btn svg {
   display: block;
-  width: 16px;
-  height: 2px;
-  border-radius: 2px;
-  background: var(--ink);
-  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.nav-shell.is-open .nav__menu span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+.lang__menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 156px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(19, 35, 63, 0.12);
+  z-index: 30;
 }
 
-.nav-shell.is-open .nav__menu span:nth-child(2) {
-  opacity: 0;
+.lang__menu[hidden] {
+  display: none;
 }
 
-.nav-shell.is-open .nav__menu span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+.lang__menu button {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.lang__menu button:hover,
+.lang__menu button[aria-selected="true"] {
+  background: #eef6ff;
 }
 
 /* ---------- Buttons ---------- */
@@ -345,30 +350,107 @@ button {
 }
 
 .phone {
-  width: min(100%, 320px);
-  filter: drop-shadow(0 28px 50px rgba(19, 35, 63, 0.22));
+  width: min(100%, 292px);
+  position: relative;
+  filter: drop-shadow(0 28px 36px rgba(19, 35, 63, 0.28));
 }
 
-.phone__bezel {
-  border-radius: 36px;
-  padding: 12px;
-  background: linear-gradient(160deg, #24324c, #101827);
+.phone__side {
+  position: absolute;
+  width: 3px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #8e8e93, #3a3a3c 40%, #1c1c1e);
+  z-index: 0;
 }
 
-.phone__island {
-  width: 96px;
-  height: 10px;
-  margin: 2px auto 12px;
-  border-radius: 999px;
-  background: #070b14;
+.phone__side--silent {
+  left: -2px;
+  top: 112px;
+  height: 18px;
+}
+
+.phone__side--up {
+  left: -2px;
+  top: 146px;
+  height: 38px;
+}
+
+.phone__side--down {
+  left: -2px;
+  top: 194px;
+  height: 38px;
+}
+
+.phone__side--power {
+  right: -2px;
+  top: 168px;
+  height: 62px;
+}
+
+.phone__frame {
+  position: relative;
+  z-index: 1;
+  border-radius: 48px;
+  padding: 11px;
+  background:
+    linear-gradient(145deg, #d7d7dc 0%, #8e8e93 8%, #3a3a3c 22%, #1c1c1e 55%, #48484a 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35),
+    inset 0 0 0 2px #0b0b0d;
 }
 
 .phone__screen {
-  border-radius: 26px;
-  padding: 18px 16px 20px;
+  position: relative;
+  border-radius: 38px;
+  min-height: 568px;
+  padding: 58px 16px 18px;
+  overflow: hidden;
   background: linear-gradient(180deg, #dceeff 0%, #eef6ff 42%, #f7fbfe 100%);
   text-align: center;
   color: var(--ink);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.phone__island {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  width: 98px;
+  height: 30px;
+  margin-left: -49px;
+  border-radius: 20px;
+  background: #050505;
+  z-index: 2;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.phone__bar {
+  position: absolute;
+  top: 16px;
+  left: 22px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  z-index: 1;
+}
+
+.phone__sys {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--ink);
+}
+
+.phone__home {
+  width: 118px;
+  height: 5px;
+  margin: 18px auto 0;
+  border-radius: 999px;
+  background: rgba(19, 35, 63, 0.38);
 }
 
 .phone__top {
@@ -978,33 +1060,6 @@ details p {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 980px) {
-  .nav__menu {
-    display: inline-flex;
-  }
-
-  .nav__links {
-    position: absolute;
-    top: calc(var(--nav-h) + 1px);
-    left: 0;
-    right: 0;
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 4px;
-    padding: 12px 16px 16px;
-    background: #ffffff;
-    border-bottom: 1px solid var(--line);
-    box-shadow: 0 16px 30px rgba(19, 35, 63, 0.1);
-  }
-
-  .nav-shell.is-open .nav__links {
-    display: flex;
-  }
-
-  .nav__links a {
-    padding: 12px 14px;
-  }
-
   .hero__inner,
   .how__grid,
   .privacy__grid,
@@ -1025,7 +1080,23 @@ details p {
   }
 
   .phone {
-    width: min(100%, 280px);
+    width: min(100%, 270px);
+  }
+
+  .phone__screen {
+    min-height: 520px;
+  }
+
+  .phone__island {
+    width: 84px;
+    height: 26px;
+    margin-left: -42px;
+  }
+
+  .phone__bar {
+    left: 16px;
+    right: 12px;
+    font-size: 12px;
   }
 
   .bento__card--lg {
@@ -1066,7 +1137,15 @@ details p {
   }
 
   .nav__actions .btn--sm {
-    display: none;
+    min-height: 36px;
+    padding: 0 12px;
+    font-size: 0.8rem;
+  }
+
+  .lang__btn {
+    min-height: 36px;
+    padding: 0 10px;
+    font-size: 0.78rem;
   }
 
   .hero__points {
