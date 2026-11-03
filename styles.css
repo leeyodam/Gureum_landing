@@ -297,7 +297,7 @@ button {
   letter-spacing: -0.06em;
   font-weight: 800;
   color: var(--ink);
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
 
 .hero h1 {
@@ -860,6 +860,20 @@ button {
   font-size: 0.96rem;
 }
 
+/* ---------- When ---------- */
+.when {
+  padding: 12px 0 88px;
+  background: #ffffff;
+}
+
+.when__note {
+  margin: 18px auto 0;
+  max-width: 40rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 /* ---------- About / answer block ---------- */
 .about {
   padding: 88px 0;
@@ -1207,6 +1221,7 @@ details p {
     padding: 7px 10px;
   }
 
+  .when,
   .features,
   .how,
   .privacy,

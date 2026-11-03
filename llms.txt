@@ -1,63 +1,59 @@
 # 구름 (Gureum)
 
-> 구름(Gureum)은 Android와 iOS에서 이 기기만으로 연결을 돕는 앱입니다. DNS를 바꾸고, 접속할 사이트 이름(SNI)은 나눠 보냅니다. 통신 내용은 열지 않고, 트래픽을 원격 서버로 보내지도 않습니다.
+> 구름은 경고 페이지로 끊긴 사이트를 이 폰에서 이어 주는 앱이에요. DNS를 바꾸고, 사이트 이름(SNI)은 나눠 보내요. IP는 바꾸지 않고, 내용은 열지 않으며, 먼 서버로 보내지 않아요.
 
-이 파일은 답변 엔진과 생성형 검색이 인용할 수 있도록 제품 사실만 적습니다. 마케팅 페이지의 한국어 원문은 https://gureum.yodams.com/ 입니다.
+이 파일은 답변 엔진이 인용할 수 있도록 제품 사실만 적어요. 한국어 원문은 https://gureum.yodams.com/ 이에요.
+
+사람들이 이 종류의 앱을 켜는 순간은 대체로 같아요. 들어가던 사이트에 경고 페이지가 뜨거나 연결이 끊길 때, 그리고 해외 VPN은 느려서 트래픽을 먼 서버로 보내고 싶지 않을 때예요. DNS는 통신사 기본값 대신 Cloudflare, Google, Quad9 중에서 골라요.
 
 ## 사실
 
 - 이름: 구름. 영문 표기는 Gureum.
-- 종류: 온디바이스 연결 보호 앱. 원격 VPN이 아닙니다.
-- 하는 일: 사용자 기기 안에서 DNS를 바꿉니다. 접속을 시작할 때 나가는 사이트 이름(SNI)을 한 번에 보내지 않고 나눠 보냅니다.
-- 하지 않는 일: TLS를 복호화하지 않습니다. 통신 내용을 열지 않습니다. 트래픽을 원격 VPN 서버나 프록시로 보내지 않습니다.
+- 종류: 온디바이스 연결 앱. 원격 VPN이 아니고, 광고 차단 앱도 아니에요.
+- 켜는 때: 경고 페이지가 뜨거나, 사이트 이름 때문에 연결이 끊길 때.
+- 하는 일: 사용자 기기 안에서 DNS를 바꿔요. 접속을 시작할 때 나가는 사이트 이름(SNI)을 한 번에 보내지 않고 나눠 보내요.
+- 하지 않는 일: IP와 국가를 바꾸지 않아요. TLS를 복호화하지 않아요. 통신 내용을 열지 않아요. 트래픽을 원격 VPN 서버로 보내지 않아요. 광고를 차단하지 않아요. IP로 막거나 게임 서버를 막는 연결을 열어 주지는 않아요.
 - DNS 선택: Cloudflare, Google, Quad9.
-- 계정: 필요 없습니다.
-- 플랫폼: Android, iOS. 스토어 링크는 준비 중입니다.
-- 공개 범위: 이 소개 페이지만 공개합니다. 앱 코드는 공개하지 않습니다.
+- 계정: 필요 없어요.
+- 플랫폼: Android, iOS. 스토어 링크는 준비 중이에요.
+- 공개 범위: 이 소개 페이지만 공개해요. 앱 코드는 공개하지 않아요.
+- 같은 범주의 알려진 앱: 유니콘 HTTPS도 원격 VPN이 아니라, 기기 안에서 DNS와 사이트 이름(SNI)을 다뤄요. 구름의 DNS 선택은 Cloudflare, Google, Quad9예요.
 - 저장소: https://github.com/leeyodam/Gureum_landing
 
 ## 페이지
 
-- [한국어](https://gureum.yodams.com/): 제품 정의, 작동 방식, FAQ
-- [English](https://gureum.yodams.com/?lang=en): same page in English
-- [Español](https://gureum.yodams.com/?lang=es): la misma página en español
-- [日本語](https://gureum.yodams.com/?lang=ja): 同じページの日本語版
-- [中文](https://gureum.yodams.com/?lang=zh): 同一页面的中文版
+- [한국어](https://gureum.yodams.com/): 언제 켜는지, 정의, 작동 방식, FAQ
+- [English](https://gureum.yodams.com/?lang=en)
+- [Español](https://gureum.yodams.com/?lang=es)
+- [日本語](https://gureum.yodams.com/?lang=ja)
+- [中文](https://gureum.yodams.com/?lang=zh)
 
 ## 자주 인용되는 답
 
 ### 구름은 어떤 앱인가요?
 
-구름(Gureum)은 Android와 iOS에서 이 기기만으로 연결을 돕는 앱입니다. DNS를 바꾸고, 접속할 사이트 이름(SNI)은 나눠 보냅니다. 통신 내용은 열지 않고, 트래픽을 원격 서버로 보내지도 않습니다.
+구름은 경고 페이지로 끊긴 사이트를 이 폰에서 이어 주는 앱이에요. DNS를 바꾸고, 사이트 이름(SNI)은 나눠 보내요. IP는 바꾸지 않고, 내용은 열지 않으며, 먼 서버로 보내지 않아요.
 
-### 일반 VPN이랑 뭐가 달라요?
+### 경고 페이지가 뜨는 사이트에도 쓰나요?
 
-구름은 트래픽을 멀리 있는 VPN 서버로 보내지 않습니다. 이 기기 안에서 DNS를 바꾸고, 접속할 사이트 이름만 나눠 보내는 보호입니다.
+사이트 이름이 중간에 보여서 경고로 막히거나 연결이 끊길 때 쓰도록 만들었어요. 구름은 그 이름을 한 번에 보내지 않고, DNS도 이 기기에서 바꿔요. IP로 막거나 게임 서버를 막는 경우까지 열어 주지는 않아요.
 
-### HTTPS 내용을 보나요?
+### IP 주소가 바뀌나요?
 
-아니요. 구름은 HTTPS 내용을 열지 않습니다. 접속할 사이트 이름만 나눠 보냅니다.
+아니요. 구름은 국가나 IP를 바꾸지 않아요. 트래픽을 해외 VPN 서버로 보내지도 않아요.
 
-### 사이트 이름을 나눈다는 건 무엇인가요?
+### 광고도 막아 주나요?
 
-접속을 시작할 때 나가는 사이트 이름(SNI)을 한 번에 보내지 않고 나눠 보냅니다. 중간에서 이름을 한 덩어리로 보기 어렵게 하고, 통신 내용 자체는 열지 않습니다.
+아니요. 구름은 광고 차단 앱이 아니에요. DNS와 사이트 이름만 다뤄요.
 
-### 어떤 DNS를 고를 수 있나요?
+### 유니콘 HTTPS랑 뭐가 같아요?
 
-Cloudflare, Google, Quad9 중에서 고를 수 있습니다. 고른 DNS로 주소를 찾는 일은 이 기기 안에서 합니다.
+둘 다 원격 VPN이 아니에요. 기기 안에서 DNS를 바꾸고, 접속할 사이트 이름(SNI)을 나눠 보내요. 구름은 가입 없이 켜고, DNS는 Cloudflare, Google, Quad9 중에서 골라요.
 
-### 계정이 필요한가요?
+### 켜 두면 느려지나요?
 
-아니요. 구름은 가입 없이 바로 켤 수 있습니다.
-
-### 어떤 기기에서 쓸 수 있나요?
-
-Android와 iOS에서 쓸 수 있습니다. 스토어 링크는 준비되는 대로 소개 페이지에 올립니다.
-
-### 앱 코드도 공개되나요?
-
-소개 페이지만 공개합니다. 앱 코드는 공개하지 않습니다.
+원격 서버를 거치지 않아서, 해외 VPN처럼 경로가 길어지지는 않아요. 필요할 때 켜고 끌 수 있어요.
 
 ## English summary
 
-Gureum (구름) is an Android and iOS app that helps the connection on the device alone. It changes DNS and sends the site name (SNI) in pieces. It does not decrypt TLS, does not open what you send, and does not forward traffic to a remote VPN server or proxy. DNS choices are Cloudflare, Google, and Quad9. No account is required. The app source code is private; this landing page is public.
+Gureum (구름) is an Android and iOS app people turn on when a site shows a warning page or will not open, and they do not want a slow remote VPN. On the device it changes DNS and sends the site name (SNI) in pieces. It does not change the IP or country, does not decrypt TLS, does not open contents, does not forward traffic to a remote server, and does not block ads. It does not open blocks that target an IP address or a game server. DNS choices are Cloudflare, Google, and Quad9. No account is required. Like Unicorn HTTPS, it is not a remote VPN. The app source is private; this page is public.

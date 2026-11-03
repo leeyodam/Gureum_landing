@@ -39,10 +39,15 @@
     const url = pageUrl(lang);
     const pairs = [
       ["about.title", "about.answer"],
+      ["faq.q8", "faq.a8"],
       ["faq.q1", "faq.a1"],
+      ["faq.q9", "faq.a9"],
+      ["faq.q10", "faq.a10"],
       ["faq.q2", "faq.a2"],
       ["faq.q4", "faq.a4"],
+      ["faq.q12", "faq.a12"],
       ["faq.q5", "faq.a5"],
+      ["faq.q11", "faq.a11"],
       ["faq.q6", "faq.a6"],
       ["faq.q7", "faq.a7"],
       ["faq.q3", "faq.a3"],
@@ -70,6 +75,8 @@
           url: SITE,
           logo: `${SITE}assets/logo.png`,
           sameAs: ["https://github.com/leeyodam/Gureum_landing"],
+          areaServed: "KR",
+          knowsLanguage: ["ko", "en", "es", "ja", "zh"],
         },
         {
           "@type": "WebSite",
@@ -90,7 +97,7 @@
           isPartOf: { "@id": `${SITE}#website` },
           about: { "@id": `${SITE}#app` },
           primaryImageOfPage: `${SITE}assets/og.png`,
-          dateModified: "2026-11-01",
+          dateModified: "2026-11-03",
           speakable: {
             "@type": "SpeakableSpecification",
             cssSelector: [".about__answer", ".hero__sub"],
