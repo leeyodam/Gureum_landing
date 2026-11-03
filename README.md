@@ -18,6 +18,8 @@ python -m http.server 5173
 - Source: `main` / `/ (root)`
 - URL: https://gureum.yodams.com/
 - DNS: `gureum.yodams.com` CNAME `leeyodam.github.io`
+- Search Console: URL 접두어 `https://gureum.yodams.com/`
+- Analytics: `analytics.js` (신호·광고 개인화 끔). 이벤트는 `download_click`, `section_click`, `language_change`, `faq_open`, `outbound_click`
 
 ## 브랜드 에셋
 
