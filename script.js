@@ -39,6 +39,8 @@
     const url = pageUrl(lang);
     const pairs = [
       ["about.title", "about.answer"],
+      ["faq.q14", "faq.a14"],
+      ["faq.q15", "faq.a15"],
       ["faq.q8", "faq.a8"],
       ["faq.q13", "faq.a13"],
       ["faq.q1", "faq.a1"],

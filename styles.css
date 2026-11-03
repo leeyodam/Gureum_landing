@@ -985,6 +985,19 @@ html[lang="ko"] .about__facts dd {
   color: var(--ink-soft);
 }
 
+.about__sources {
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  max-width: 40rem;
+}
+
+.about__sources a {
+  color: var(--sky-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* ---------- FAQ ---------- */
 .faq {
   padding: 88px 0 96px;

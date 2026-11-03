@@ -8,10 +8,10 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self' 'unsafe-inline'; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; base-uri 'none'; object-src 'none'; form-action 'none'"
     />
-    <title>사이트 경고 페이지, 이 기기에서 이어 줘요 | 구름</title>
+    <title>SNI 차단 우회 앱 | 구름</title>
     <meta
       name="description"
-      content="사이트 경고 페이지가 뜨면 구름이 이 폰에서 DNS를 바꾸고 이름을 나눠 보내요. IP는 그대로고, 내용은 열지 않아요."
+      content="SNI 차단 우회가 필요할 때, 구름이 이 폰에서 DNS를 바꾸고 사이트 이름(SNI)을 나눠 보내요. IP는 그대로고, 원격 VPN 서버는 없어요."
     />
     <meta name="author" content="Gureum" />
     <meta name="application-name" content="구름" />
@@ -28,10 +28,10 @@
     <link rel="alternate" hreflang="zh-Hans" href="https://gureum.yodams.com/?lang=zh" />
     <link rel="alternate" hreflang="x-default" href="https://gureum.yodams.com/" />
     <link rel="alternate" type="text/plain" href="llms.txt" title="구름(Gureum) 요약" />
-    <meta property="og:title" content="사이트 경고 페이지, 이 기기에서 이어 줘요 | 구름" />
+    <meta property="og:title" content="SNI 차단 우회 앱 | 구름" />
     <meta
       property="og:description"
-      content="사이트 경고 페이지가 뜨면 구름이 이 폰에서 DNS를 바꾸고 이름을 나눠 보내요. IP는 그대로고, 내용은 열지 않아요."
+      content="SNI 차단 우회가 필요할 때, 구름이 이 폰에서 DNS를 바꾸고 사이트 이름(SNI)을 나눠 보내요. IP는 그대로고, 원격 VPN 서버는 없어요."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://gureum.yodams.com/" />
@@ -46,15 +46,15 @@
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="구름(Gureum) 앱 소개" />
+    <meta property="og:image:alt" content="구름(Gureum) 앱, DNS 변경과 SNI 분할" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="사이트 경고 페이지, 이 기기에서 이어 줘요 | 구름" />
+    <meta name="twitter:title" content="SNI 차단 우회 앱 | 구름" />
     <meta
       name="twitter:description"
-      content="사이트 경고 페이지가 뜨면 구름이 이 폰에서 DNS를 바꾸고 이름을 나눠 보내요. IP는 그대로고, 내용은 열지 않아요."
+      content="SNI 차단 우회가 필요할 때, 구름이 이 폰에서 DNS를 바꾸고 사이트 이름(SNI)을 나눠 보내요. IP는 그대로고, 원격 VPN 서버는 없어요."
     />
     <meta name="twitter:image" content="https://gureum.yodams.com/assets/og.png" />
-    <meta name="twitter:image:alt" content="구름(Gureum) 앱 소개" />
+    <meta name="twitter:image:alt" content="구름(Gureum) 앱, DNS 변경과 SNI 분할" />
     <meta name="theme-color" content="#B0D6F2" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png" />
@@ -76,7 +76,7 @@
     />
     <link rel="preload" href="assets/logo-ui.webp" as="image" type="image/webp" />
     <script>document.documentElement.classList.add("js")</script>
-    <link rel="stylesheet" href="styles.css?v=10" />
+    <link rel="stylesheet" href="styles.css?v=11" />
     <script type="application/ld+json" id="structured-data">
       {
         "@context": "https://schema.org",
@@ -105,8 +105,8 @@
             "@type": "WebPage",
             "@id": "https://gureum.yodams.com/#webpage",
             "url": "https://gureum.yodams.com/",
-            "name": "사이트 경고 페이지, 이 기기에서 이어 줘요 | 구름",
-            "description": "사이트 경고 페이지가 뜨면 구름이 이 폰에서 DNS를 바꾸고 이름을 나눠 보내요. IP는 그대로고, 내용은 열지 않아요.",
+            "name": "SNI 차단 우회 앱 | 구름",
+            "description": "SNI 차단 우회가 필요할 때, 구름이 이 폰에서 DNS를 바꾸고 사이트 이름(SNI)을 나눠 보내요. IP는 그대로고, 원격 VPN 서버는 없어요.",
             "inLanguage": "ko",
             "isPartOf": { "@id": "https://gureum.yodams.com/#website" },
             "about": { "@id": "https://gureum.yodams.com/#app" },
@@ -127,7 +127,7 @@
             "url": "https://gureum.yodams.com/",
             "image": "https://gureum.yodams.com/assets/og.png",
             "inLanguage": "ko",
-            "description": "구름은 사이트 경고 페이지로 끊긴 사이트를 이 폰에서 이어 주는 앱이에요. DNS를 바꾸고, 사이트 이름(SNI)은 나눠 보내요. IP는 바꾸지 않고, 내용은 열지 않으며, 먼 서버로 보내지 않아요.",
+            "description": "구름은 Android와 iOS에서 쓰는 온디바이스 SNI 차단 우회 앱이에요. DNS를 바꾸고, 사이트 이름(SNI)은 나눠 보내요. IP는 바꾸지 않고, 내용은 열지 않으며, 원격 VPN 서버로 보내지 않아요.",
             "featureList": [
               "이름 때문에 끊긴 연결에서, 기기 안의 DNS를 바꾸고 사이트 이름을 나눠 보내요.",
               "IP를 바꾸지 않고, 내용을 열지 않으며, 원격 VPN 서버로 보내지 않아요.",
@@ -146,7 +146,23 @@
                 "name": "구름은 어떤 앱인가요?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "구름은 사이트 경고 페이지로 끊긴 사이트를 이 폰에서 이어 주는 앱이에요. DNS를 바꾸고, 사이트 이름(SNI)은 나눠 보내요. IP는 바꾸지 않고, 내용은 열지 않으며, 먼 서버로 보내지 않아요."
+                  "text": "구름은 Android와 iOS에서 쓰는 온디바이스 SNI 차단 우회 앱이에요. DNS를 바꾸고, 사이트 이름(SNI)은 나눠 보내요. IP는 바꾸지 않고, 내용은 열지 않으며, 원격 VPN 서버로 보내지 않아요."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "SNI 차단 우회 앱이란 무엇인가요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "SNI 차단 우회 앱은 사이트 이름(SNI) 때문에 HTTPS 연결이 끊길 때 접속을 돕는 앱이에요. 구름은 이 기기에서 DNS를 바꾸고, 그 이름을 나눠 보내요. IP는 바꾸지 않고, 원격 VPN 서버로 보내지 않아요."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "어떤 사이트 차단을 돕나요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "사이트 이름(SNI) 때문에 HTTPS 연결이 끊기는 일부를 도와요. IP나 게임 서버를 막는 차단과 광고 차단은 하지 않아요."
                 }
               },
               {
@@ -154,7 +170,7 @@
                 "name": "사이트 경고 페이지가 뜨면 쓰나요?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "사이트 경고 페이지가 이름 때문에 뜰 때 쓰도록 만들었어요. 구름은 그 이름을 한 번에 보내지 않고, DNS도 이 기기에서 바꿔요. IP로 막거나 게임 서버를 막는 경우까지 열어 주지는 않아요."
+                  "text": "이름(SNI) 때문에 뜬 경고에는 써요. 구름은 그 이름을 한 번에 보내지 않고, DNS도 이 기기에서 바꿔요. IP나 게임 서버를 막는 경우까지 열어 주지는 않아요."
                 }
               },
               {
@@ -162,7 +178,7 @@
                 "name": "일반 VPN이랑 뭐가 달라요?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "구름은 트래픽을 멀리 있는 VPN 서버로 보내지 않아요. 이 기기 안에서 DNS를 바꾸고, 접속할 사이트 이름만 나눠 보내는 보호예요."
+                  "text": "원격 VPN은 트래픽을 VPN 서버로 보내 IP나 경로를 바꿀 수 있어요. 구름은 그 서버로 보내지 않고, 이 기기에서 DNS와 사이트 이름(SNI)만 다뤄요. IP나 국가는 바꾸지 않아요."
                 }
               },
               {
@@ -186,7 +202,7 @@
                 "name": "HTTPS 내용을 보나요?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "아니요. 구름은 HTTPS 내용을 열지 않아요. 접속할 사이트 이름만 나눠 보내요."
+                  "text": "아니요. 구름은 HTTPS 내용을 열거나 복호화하지 않아요. 다루는 것은 DNS와 접속을 시작할 때의 사이트 이름(SNI)이에요."
                 }
               },
               {
@@ -202,7 +218,7 @@
                 "name": "유니콘 HTTPS랑 뭐가 같아요?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "둘 다 원격 VPN이 아니에요. 기기 안에서 DNS를 바꾸고, 접속할 사이트 이름(SNI)을 나눠 보내요. 구름은 가입 없이 켜고, DNS는 Cloudflare, Google, Quad9 중에서 골라요."
+                  "text": "둘 다 원격 VPN 서버로 트래픽을 넘기지 않아요. 기기 안에서 DNS를 바꾸고, 사이트 이름(SNI)을 나눠 보내요. 구름은 가입 없이 켜고, DNS는 Cloudflare, Google, Quad9 중에서 골라요."
                 }
               },
               {
@@ -210,7 +226,7 @@
                 "name": "어떤 DNS를 고를 수 있나요?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Cloudflare, Google, Quad9 중에서 고를 수 있어요. 고른 DNS로 주소를 찾는 일은 이 기기 안에서 해요."
+                  "text": "Cloudflare, Google, Quad9 중에서 고를 수 있어요. 주소 찾기는 고른 DNS로 나가요."
                 }
               },
               {
@@ -250,7 +266,7 @@
                 "name": "방문한 사이트 이름을 보내나요?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "아니요. 방문한 사이트 이름과 직접 입력한 DNS 주소는 보내지 않아요. 보호를 켰는지와 고른 DNS 종류만 Google Analytics로 가고, 광고 개인화는 꺼져 있어요."
+                  "text": "아니요. 방문한 사이트 이름과 직접 입력한 DNS 주소는 Google Analytics로 보내지 않아요. 보호를 켰는지와 고른 DNS 종류만 가고, 광고 개인화는 꺼져 있어요. 주소 찾기는 고른 DNS로 나가요."
                 }
               }
             ]
@@ -258,8 +274,8 @@
           {
             "@type": "HowTo",
             "@id": "https://gureum.yodams.com/#how",
-            "name": "사이트 경고 페이지를 잇는 방법",
-            "description": "권한을 허용한 다음 구름만 누르면 돼요. DNS와 이름 나누기는 이 기기에서 처리해요.",
+            "name": "SNI 차단으로 끊긴 연결을 잇는 방법",
+            "description": "권한을 허용한 다음 구름만 누르면 돼요. DNS 변경과 이름 나누기는 이 기기에서 해요.",
             "inLanguage": "ko",
             "step": [
               {
@@ -272,7 +288,7 @@
                 "@type": "HowToStep",
                 "position": 2,
                 "name": "DNS를 골라요",
-                "text": "고른 DNS로 주소를 이 기기에서 찾아요."
+                "text": "주소 찾기는 고른 DNS로 나가요."
               },
               {
                 "@type": "HowToStep",
@@ -329,14 +345,14 @@
       <section class="hero">
         <div class="hero__inner">
           <div class="hero__copy reveal">
-            <p class="eyebrow">GUREUM</p>
+            <p class="eyebrow" data-i18n="hero.kicker">SNI 차단 우회</p>
             <p class="brand-hero">구름</p>
             <h1>
-              <span class="hero__line" data-i18n="hero.line1">사이트 경고 페이지가 뜨면</span>
+              <span class="hero__line" data-i18n="hero.line1">SNI 차단 우회가 필요하면</span>
               <span class="hero__line" data-i18n="hero.line2">이 기기에서 이어 줘요</span>
             </h1>
             <p class="hero__sub" data-i18n="hero.sub">
-              사이트 이름이 보여서 끊길 때, 이 폰에서 DNS를 바꾸고 이름은 나눠 보내요.
+              사이트 이름(SNI)을 나눠 보내고, DNS는 이 폰에서 바꿔요. IP는 그대로고, 원격 VPN 서버는 없어요.
             </p>
             <div class="hero__cta">
               <a class="btn btn--primary" href="#download" data-i18n="hero.download">다운로드</a>
@@ -399,8 +415,8 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow" data-i18n="when.kicker">이럴 때</p>
-            <h2 data-i18n="when.title">사이트 경고 페이지가 뜰 때 켜요</h2>
-            <p data-i18n="when.lead">사이트 경고 페이지가 뜨거나 이름 때문에 끊기면, 해외 서버 없이 이 기기에서 연결을 도와요.</p>
+            <h2 data-i18n="when.title">SNI 차단으로 경고 페이지가 뜰 때</h2>
+            <p data-i18n="when.lead">사이트 이름(SNI) 때문에 경고가 뜨거나 연결이 끊기면, 이 기기에서 DNS를 바꾸고 이름을 나눠 보내요.</p>
           </div>
           <div class="value-grid">
             <article class="value reveal">
@@ -409,7 +425,7 @@
             </article>
             <article class="value reveal" style="--delay: 60ms">
               <h3 data-i18n="when.2.title">해외 VPN이 느릴 때</h3>
-              <p data-i18n="when.2.body">트래픽은 이 폰에 둬요. IP도 바꾸지 않고, 먼 서버로 보내지 않아요.</p>
+              <p data-i18n="when.2.body">트래픽은 원격 VPN 서버로 보내지 않아요. IP도 바꾸지 않아요.</p>
             </article>
             <article class="value reveal" style="--delay: 120ms">
               <h3 data-i18n="when.3.title">DNS를 고르고 싶을 때</h3>
@@ -467,15 +483,15 @@
 
             <article class="bento__card bento__card--wide reveal" style="--delay: 80ms">
               <div class="bento__text">
-                <h3 data-i18n="feat.local.title">이 폰 안에서 끝나요</h3>
+                <h3 data-i18n="feat.local.title">원격 VPN은 없어요</h3>
                 <p data-i18n="feat.local.body">
-                  다른 서버로 트래픽을 보내지 않아요. IP도 바꾸지 않고, 내용은 보지 않아요.
+                  트래픽을 원격 VPN 서버로 보내지 않아요. IP도 바꾸지 않고, 내용은 열지 않아요.
                 </p>
               </div>
               <ul class="checklist">
                 <li data-i18n="check.local">이 기기에서만 동작</li>
                 <li data-i18n="check.tls">통신 내용은 열지 않음</li>
-                <li data-i18n="check.proxy">우회용 서버 없음</li>
+                <li data-i18n="check.proxy">원격 VPN 서버 없음</li>
               </ul>
             </article>
           </div>
@@ -486,9 +502,9 @@
         <div class="section-shell how__grid">
           <div class="how__copy reveal">
             <p class="eyebrow" data-i18n="how.kicker">작동 방식</p>
-            <h2 data-i18n-html="how.title">사이트 경고 페이지는<br />이렇게 이어져요</h2>
+            <h2 data-i18n-html="how.title">SNI 차단은<br />이렇게 이어져요</h2>
             <p class="lead" data-i18n="how.lead">
-              권한을 허용한 다음 구름만 누르면 돼요. DNS와 이름 나누기는 이 기기에서 처리해요.
+              권한을 허용한 다음 구름만 누르면 돼요. DNS 변경과 이름 나누기는 이 기기에서 해요.
             </p>
           </div>
 
@@ -504,7 +520,7 @@
               <span class="steps__num">2</span>
               <div>
                 <strong data-i18n="step2.title">DNS를 골라요</strong>
-                <p data-i18n="step2.body">고른 DNS로 주소를 이 기기에서 찾아요.</p>
+                <p data-i18n="step2.body">주소 찾기는 고른 DNS로 나가요.</p>
               </div>
             </li>
             <li>
@@ -524,27 +540,27 @@
             <p class="eyebrow" data-i18n="privacy.kicker">프라이버시</p>
             <h2 data-i18n-html="privacy.title">내용은<br />보지 않아요</h2>
             <p class="lead" data-i18n="privacy.lead">
-              통신 내용과 방문한 사이트 이름은 열지 않고, 밖으로 보내지 않아요. 보호를 켰는지와 고른 DNS 종류만 Google Analytics로 가고, 광고 개인화는 꺼져 있어요.
+              HTTPS 내용은 열지 않아요. 원격 VPN 서버로 트래픽을 보내지 않아요. 주소 찾기는 고른 DNS로 나가고, 사이트 이름(SNI)은 나눠 그 사이트로 보내요. 보호를 켰는지와 DNS 종류만 Google Analytics로 가고, 방문한 사이트 이름은 빠지며, 광고 개인화는 꺼져 있어요.
             </p>
             <ul class="plain-list">
               <li data-i18n="privacy.b1">통신 내용은 열지 않아요</li>
-              <li data-i18n="privacy.b2">다른 서버로 우회하지 않아요</li>
+              <li data-i18n="privacy.b2">원격 VPN 서버는 없어요</li>
               <li data-i18n="privacy.b3">가입 없이 바로 쓸 수 있어요</li>
               <li data-i18n="privacy.b4">IP는 바꾸지 않아요</li>
-              <li data-i18n="privacy.b5">방문한 사이트 이름은 보내지 않아요</li>
+              <li data-i18n="privacy.b5">Analytics에는 사이트 이름을 보내지 않아요</li>
             </ul>
           </div>
 
           <div class="privacy__panel reveal" style="--delay: 100ms">
             <div class="privacy__card">
               <img src="assets/logo-ui.webp" alt="" width="88" height="88" />
-              <h3 data-i18n="card.title">이 기기에서 끝나요</h3>
-              <p data-i18n="card.body">보호는 이 폰 안에서만 동작하고, 트래픽을 밖으로 보내지 않아요.</p>
+              <h3 data-i18n="card.title">VPN 서버는 없어요</h3>
+              <p data-i18n="card.body">트래픽을 원격 VPN 서버로 보내지 않아요. 주소 찾기는 고른 DNS로 나가요.</p>
             </div>
             <div class="privacy__stats" aria-hidden="true">
               <div>
                 <strong>0</strong>
-                <span data-i18n="stat.server">원격 서버</span>
+                <span data-i18n="stat.server">VPN 서버</span>
               </div>
               <div>
                 <strong>0</strong>
@@ -573,7 +589,7 @@
             </article>
             <article class="value reveal" style="--delay: 60ms">
               <h3 data-i18n="v2.title">이 기기에서 처리해요</h3>
-              <p data-i18n="v2.body">DNS와 이름 나누기는 폰 안에서 끝나요.</p>
+              <p data-i18n="v2.body">DNS 변경과 이름 나누기는 이 폰에서 시작해요. 주소 찾기는 고른 DNS로 나가요.</p>
             </article>
             <article class="value reveal" style="--delay: 120ms">
               <h3 data-i18n="v3.title">하는 일이 분명해요</h3>
@@ -590,16 +606,16 @@
             <h2 data-i18n="about.title">구름은 어떤 앱인가요?</h2>
           </div>
             <p class="about__answer reveal" data-i18n="about.answer">
-            구름은 사이트 경고 페이지로 끊긴 사이트를 이 폰에서 이어 주는 앱이에요. DNS를 바꾸고, 사이트 이름(SNI)은 나눠 보내요. IP는 바꾸지 않고, 내용은 열지 않으며, 먼 서버로 보내지 않아요.
+            구름은 Android와 iOS에서 쓰는 온디바이스 SNI 차단 우회 앱이에요. DNS를 바꾸고, 사이트 이름(SNI)은 나눠 보내요. IP는 바꾸지 않고, 내용은 열지 않으며, 원격 VPN 서버로 보내지 않아요.
           </p>
           <dl class="about__facts reveal" style="--delay: 60ms">
             <div>
               <dt data-i18n="about.f1.dt">하는 일</dt>
-              <dd data-i18n="about.f1.dd">이름 때문에 끊긴 연결에서, 기기 안의 DNS를 바꾸고 사이트 이름을 나눠 보내요.</dd>
+              <dd data-i18n="about.f1.dd">사이트 이름(SNI) 때문에 끊긴 연결에서, 이 기기의 DNS를 바꾸고 그 이름을 나눠 보내요.</dd>
             </div>
             <div>
               <dt data-i18n="about.f2.dt">하지 않는 일</dt>
-              <dd data-i18n="about.f2.dd">IP를 바꾸지 않고, 내용을 열지 않으며, 원격 VPN 서버로 보내지 않아요.</dd>
+              <dd data-i18n="about.f2.dd">IP를 바꾸지 않고, HTTPS 내용은 열지 않으며, 원격 VPN 서버로 보내지 않아요.</dd>
             </div>
             <div>
               <dt data-i18n="about.f3.dt">기기</dt>
@@ -614,6 +630,7 @@
               <dd data-i18n="about.f5.dd">필요 없어요.</dd>
             </div>
           </dl>
+          <p class="about__sources reveal" data-i18n-html="about.sources">SNI는 <a href="https://www.rfc-editor.org/rfc/rfc6066">RFC 6066</a>의 접속 이름이에요. DNS 설명은 <a href="https://developers.cloudflare.com/1.1.1.1/">Cloudflare</a>, <a href="https://developers.google.com/speed/public-dns">Google</a>, <a href="https://www.quad9.net/">Quad9</a>에 있어요.</p>
         </div>
       </section>
 
@@ -621,19 +638,31 @@
         <div class="section-shell section-shell--narrow">
           <div class="section-head reveal">
             <p class="eyebrow" data-i18n="faq.kicker">FAQ</p>
-            <h2 data-i18n="faq.title">사이트 경고 페이지, 자주 묻는 질문</h2>
+            <h2 data-i18n="faq.title">SNI 차단 우회, 자주 묻는 질문</h2>
           </div>
           <div class="faq__list">
+            <details class="reveal" id="faq-what">
+              <summary data-i18n="faq.q14">SNI 차단 우회 앱이란 무엇인가요?</summary>
+              <p data-i18n="faq.a14">
+                SNI 차단 우회 앱은 사이트 이름(SNI) 때문에 HTTPS 연결이 끊길 때 접속을 돕는 앱이에요. 구름은 이 기기에서 DNS를 바꾸고, 그 이름을 나눠 보내요. IP는 바꾸지 않고, 원격 VPN 서버로 보내지 않아요.
+              </p>
+            </details>
+            <details class="reveal" id="faq-which">
+              <summary data-i18n="faq.q15">어떤 사이트 차단을 돕나요?</summary>
+              <p data-i18n="faq.a15">
+                사이트 이름(SNI) 때문에 HTTPS 연결이 끊기는 일부를 도와요. IP나 게임 서버를 막는 차단과 광고 차단은 하지 않아요.
+              </p>
+            </details>
             <details class="reveal" id="faq-warning">
               <summary data-i18n="faq.q8">사이트 경고 페이지가 뜨면 쓰나요?</summary>
               <p data-i18n="faq.a8">
-                사이트 경고 페이지가 이름 때문에 뜰 때 쓰도록 만들었어요. 구름은 그 이름을 한 번에 보내지 않고, DNS도 이 기기에서 바꿔요. IP로 막거나 게임 서버를 막는 경우까지 열어 주지는 않아요.
+                이름(SNI) 때문에 뜬 경고에는 써요. 구름은 그 이름을 한 번에 보내지 않고, DNS도 이 기기에서 바꿔요. IP나 게임 서버를 막는 경우까지 열어 주지는 않아요.
               </p>
             </details>
             <details class="reveal" id="faq-vpn">
               <summary data-i18n="faq.q1">일반 VPN이랑 뭐가 달라요?</summary>
               <p data-i18n="faq.a1">
-                구름은 트래픽을 멀리 있는 VPN 서버로 보내지 않아요. 이 기기 안에서 DNS를 바꾸고, 접속할 사이트 이름만 나눠 보내는 보호예요.
+                원격 VPN은 트래픽을 VPN 서버로 보내 IP나 경로를 바꿀 수 있어요. 구름은 그 서버로 보내지 않고, 이 기기에서 DNS와 사이트 이름(SNI)만 다뤄요. IP나 국가는 바꾸지 않아요.
               </p>
             </details>
             <details class="reveal" id="faq-ip">
@@ -646,7 +675,7 @@
             </details>
             <details class="reveal" id="faq-https" style="--delay: 40ms">
               <summary data-i18n="faq.q2">HTTPS 내용을 보나요?</summary>
-              <p data-i18n="faq.a2">아니요. 구름은 HTTPS 내용을 열지 않아요. 접속할 사이트 이름만 나눠 보내요.</p>
+              <p data-i18n="faq.a2">아니요. 구름은 HTTPS 내용을 열거나 복호화하지 않아요. 다루는 것은 DNS와 접속을 시작할 때의 사이트 이름(SNI)이에요.</p>
             </details>
             <details class="reveal" id="faq-sni" style="--delay: 80ms">
               <summary data-i18n="faq.q4">사이트 이름(SNI)을 나눈다는 게 뭐예요?</summary>
@@ -657,13 +686,13 @@
             <details class="reveal" id="faq-like">
               <summary data-i18n="faq.q12">유니콘 HTTPS랑 뭐가 같아요?</summary>
               <p data-i18n="faq.a12">
-                둘 다 원격 VPN이 아니에요. 기기 안에서 DNS를 바꾸고, 접속할 사이트 이름(SNI)을 나눠 보내요. 구름은 가입 없이 켜고, DNS는 Cloudflare, Google, Quad9 중에서 골라요.
+                둘 다 원격 VPN 서버로 트래픽을 넘기지 않아요. 기기 안에서 DNS를 바꾸고, 사이트 이름(SNI)을 나눠 보내요. 구름은 가입 없이 켜고, DNS는 Cloudflare, Google, Quad9 중에서 골라요.
               </p>
             </details>
             <details class="reveal" id="faq-dns">
               <summary data-i18n="faq.q5">어떤 DNS를 고를 수 있나요?</summary>
               <p data-i18n="faq.a5">
-                Cloudflare, Google, Quad9 중에서 고를 수 있어요. 고른 DNS로 주소를 찾는 일은 이 기기 안에서 해요.
+                Cloudflare, Google, Quad9 중에서 고를 수 있어요. 주소 찾기는 고른 DNS로 나가요.
               </p>
             </details>
             <details class="reveal" id="faq-speed">
@@ -687,7 +716,7 @@
             <details class="reveal" id="faq-measure">
               <summary data-i18n="faq.q13">방문한 사이트 이름을 보내나요?</summary>
               <p data-i18n="faq.a13">
-                아니요. 방문한 사이트 이름과 직접 입력한 DNS 주소는 보내지 않아요. 보호를 켰는지와 고른 DNS 종류만 Google Analytics로 가고, 광고 개인화는 꺼져 있어요.
+                아니요. 방문한 사이트 이름과 직접 입력한 DNS 주소는 Google Analytics로 보내지 않아요. 보호를 켰는지와 고른 DNS 종류만 가고, 광고 개인화는 꺼져 있어요. 주소 찾기는 고른 DNS로 나가요.
               </p>
             </details>
           </div>
@@ -749,8 +778,8 @@
       </div>
     </footer>
 
-    <script src="i18n.js?v=11" defer></script>
-    <script src="script.js?v=10" defer></script>
+    <script src="i18n.js?v=12" defer></script>
+    <script src="script.js?v=11" defer></script>
     <script src="analytics.js?v=3" defer></script>
   </body>
 </html>
