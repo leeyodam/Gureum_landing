@@ -131,6 +131,8 @@ window.GUREUM_I18N = {
     "foot.faq": "FAQ",
     "foot.repo": "저장소",
     "foot.github": "GitHub",
+    "foot.newWindow": "새 창",
+    "skip": "본문으로",
   },
   en: {
     "meta.title": "Gureum — When a site won't open, stay on this device",
@@ -264,6 +266,8 @@ window.GUREUM_I18N = {
     "foot.faq": "FAQ",
     "foot.repo": "Repository",
     "foot.github": "GitHub",
+    "foot.newWindow": "opens in a new tab",
+    "skip": "Skip to content",
   },
   es: {
     "meta.title": "Gureum — Si un sitio no abre, se queda en este dispositivo",
@@ -397,6 +401,8 @@ window.GUREUM_I18N = {
     "foot.faq": "FAQ",
     "foot.repo": "Repositorio",
     "foot.github": "GitHub",
+    "foot.newWindow": "se abre en una pestaña nueva",
+    "skip": "Ir al contenido",
   },
   ja: {
     "meta.title": "雲 (Gureum) — 開かないサイトを、この端末でつなぎます",
@@ -530,6 +536,8 @@ window.GUREUM_I18N = {
     "foot.faq": "FAQ",
     "foot.repo": "リポジトリ",
     "foot.github": "GitHub",
+    "foot.newWindow": "新しいタブで開く",
+    "skip": "本文へ",
   },
   zh: {
     "meta.title": "云 (Gureum) — 网站打不开时，留在这台设备上",
@@ -663,5 +671,7 @@ window.GUREUM_I18N = {
     "foot.faq": "FAQ",
     "foot.repo": "仓库",
     "foot.github": "GitHub",
+    "foot.newWindow": "在新标签页打开",
+    "skip": "跳到正文",
   },
 };

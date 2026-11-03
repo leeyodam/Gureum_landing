@@ -1,11 +1,11 @@
 :root {
   --sky: #4da3ff;
-  --sky-deep: #2f8fff;
+  --sky-deep: #2b6cb0;
   --sky-soft: #8ec8ff;
   --sky-mist: #d7ebff;
   --ink: #13233f;
   --ink-soft: #4a5b78;
-  --muted: #64748b;
+  --muted: #5c6b84;
   --line: #e8eef5;
   --canvas: #f3f8fe;
   --white: #ffffff;
@@ -15,16 +15,68 @@
   --protect: #22c55e;
   --radius: 24px;
   --shadow: 0 20px 50px rgba(47, 100, 170, 0.16);
-  --font: "Pretendard", "Apple SD Gothic Neo", "Hiragino Sans", "Yu Gothic", "PingFang SC",
-    "Microsoft YaHei", "Noto Sans KR", sans-serif;
+  --font: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Hiragino Sans",
+    "Yu Gothic", "PingFang SC", "Microsoft YaHei", sans-serif;
   --nav-h: 68px;
   --max: 1120px;
+}
+
+@font-face {
+  font-family: Pretendard;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2-subset/Pretendard-Regular.subset.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: Pretendard;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2-subset/Pretendard-Bold.subset.woff2")
+    format("woff2");
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+:focus-visible {
+  outline: 3px solid var(--sky-deep);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 200;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 700;
+  transform: translateY(-160%);
+}
+
+.skip:focus {
+  transform: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 html {
@@ -244,9 +296,18 @@ button {
 }
 
 .btn--primary {
-  background: linear-gradient(180deg, #63b0ff, var(--sky-deep));
+  background: var(--sky-deep);
   color: #fff;
-  box-shadow: 0 12px 28px rgba(47, 143, 255, 0.32);
+  box-shadow: 0 12px 28px rgba(43, 108, 176, 0.28);
+}
+
+.btn:disabled {
+  opacity: 1;
+  cursor: default;
+  transform: none;
+  box-shadow: none;
+  background: #d5e2f0;
+  color: #3e4d63;
 }
 
 .btn--ghost {
@@ -701,7 +762,7 @@ button {
   border-radius: 16px;
   display: grid;
   place-items: center;
-  background: linear-gradient(180deg, #63b0ff, var(--sky-deep));
+  background: var(--sky-deep);
   color: #fff;
   font-weight: 800;
   font-size: 1.05rem;
@@ -1055,10 +1116,11 @@ details p {
   gap: 16px;
 }
 
-.footer__cols h4 {
+.footer__label {
   margin: 0 0 10px;
   font-size: 0.82rem;
-  color: var(--muted);
+  font-weight: 700;
+  color: var(--ink-soft);
   letter-spacing: 0.02em;
 }
 
@@ -1083,14 +1145,14 @@ details p {
 }
 
 /* ---------- Motion ---------- */
-.reveal {
+.js .reveal {
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 0.65s ease, transform 0.65s ease;
   transition-delay: var(--delay, 0ms);
 }
 
-.reveal.is-visible {
+.js .reveal.is-visible {
   opacity: 1;
   transform: none;
 }
@@ -1110,7 +1172,7 @@ details p {
     scroll-behavior: auto;
   }
 
-  .reveal {
+  .js .reveal {
     opacity: 1;
     transform: none;
     transition: none;
@@ -1201,13 +1263,13 @@ details p {
   }
 
   .nav__actions .btn--sm {
-    min-height: 36px;
+    min-height: 44px;
     padding: 0 12px;
     font-size: 0.8rem;
   }
 
   .lang__btn {
-    min-height: 36px;
+    min-height: 44px;
     padding: 0 10px;
     font-size: 0.78rem;
   }

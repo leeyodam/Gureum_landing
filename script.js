@@ -232,6 +232,48 @@
     closeLang();
   });
 
+  const langOptions = () => (langMenu ? [...langMenu.querySelectorAll("button")] : []);
+
+  const moveLangFocus = (direction) => {
+    const options = langOptions();
+    if (!options.length) return;
+    const current = options.indexOf(document.activeElement);
+    const selected = options.findIndex((button) => button.getAttribute("aria-selected") === "true");
+    const start = current >= 0 ? current : selected >= 0 ? selected : 0;
+    const next = (start + direction + options.length) % options.length;
+    options[next].focus();
+  };
+
+  langBtn?.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowDown" && event.key !== "ArrowUp" && event.key !== "Enter" && event.key !== " ") return;
+    if (event.key === "Enter" || event.key === " ") return;
+    event.preventDefault();
+    openLang();
+    const options = langOptions();
+    const selected = options.find((button) => button.getAttribute("aria-selected") === "true");
+    (selected || options[0])?.focus();
+  });
+
+  langMenu?.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+      moveLangFocus(event.key === "ArrowDown" ? 1 : -1);
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      langOptions()[0]?.focus();
+    } else if (event.key === "End") {
+      event.preventDefault();
+      const options = langOptions();
+      options[options.length - 1]?.focus();
+    } else if (event.key === "Escape") {
+      event.preventDefault();
+      closeLang();
+      langBtn?.focus();
+    } else if (event.key === "Tab") {
+      closeLang();
+    }
+  });
+
   window.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeLang();
   });
