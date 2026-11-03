@@ -1,5 +1,7 @@
 (function () {
   var MEASUREMENT_ID = "G-4PZ6F5ZGPY";
+  var SCROLL_MARKS = [50, 90];
+  var SECTIONS = ["when", "features", "how", "privacy", "about", "faq", "download"];
 
   function lang() {
     return document.documentElement.lang || "ko";
@@ -31,11 +33,16 @@
     var langButton = node.closest("[data-lang]");
     if (langButton) {
       var next = langButton.getAttribute("data-lang") || lang();
-      gtag("event", "language_change", {
+      gtag("event", "language_change", { page_lang: next });
+      gtag("config", MEASUREMENT_ID, {
+        page_lang: next,
+        send_page_view: false,
+      });
+      gtag("event", "page_view", {
         page_lang: next,
         page_location: location.href,
+        page_title: document.title,
       });
-      gtag("config", MEASUREMENT_ID, { page_lang: next });
       return;
     }
 
@@ -44,11 +51,8 @@
     var href = link.getAttribute("href") || "";
     if (href.charAt(0) === "#") {
       var section = href.slice(1) || "top";
-      if (section === "download") {
-        gtag("event", "download_click", { section: section, page_lang: lang() });
-      } else {
-        gtag("event", "section_click", { section: section, page_lang: lang() });
-      }
+      var name = section === "download" ? "download_click" : "section_click";
+      gtag("event", name, { section: section, page_lang: lang() });
       return;
     }
 
@@ -73,4 +77,43 @@
     },
     true
   );
+
+  var scrolled = {};
+  function onScroll() {
+    var height = document.documentElement.scrollHeight - window.innerHeight;
+    if (height <= 0) return;
+    var percent = Math.round((window.scrollY / height) * 100);
+    for (var i = 0; i < SCROLL_MARKS.length; i += 1) {
+      var mark = SCROLL_MARKS[i];
+      if (scrolled[mark] || percent < mark) continue;
+      scrolled[mark] = true;
+      gtag("event", "scroll_depth", {
+        percent_scrolled: mark,
+        page_lang: lang(),
+      });
+    }
+  }
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  if (!("IntersectionObserver" in window)) return;
+  var seen = {};
+  var observer = new IntersectionObserver(
+    function (entries) {
+      for (var i = 0; i < entries.length; i += 1) {
+        var entry = entries[i];
+        if (!entry.isIntersecting) continue;
+        var id = entry.target.id;
+        if (!id || seen[id]) continue;
+        seen[id] = true;
+        gtag("event", "section_view", { section: id, page_lang: lang() });
+        observer.unobserve(entry.target);
+      }
+    },
+    { threshold: 0.35 }
+  );
+  for (var s = 0; s < SECTIONS.length; s += 1) {
+    var element = document.getElementById(SECTIONS[s]);
+    if (element) observer.observe(element);
+  }
 })();
