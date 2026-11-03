@@ -1,6 +1,6 @@
 # 구름 (Gureum)
 
-> 구름은 경고 페이지로 끊긴 사이트를 이 폰에서 이어 주는 앱이에요. DNS를 바꾸고, 사이트 이름(SNI)은 나눠 보내요. IP는 바꾸지 않고, 내용은 열지 않으며, 먼 서버로 보내지 않아요.
+> 구름은 사이트 경고 페이지로 끊긴 사이트를 이 폰에서 이어 주는 앱이에요. DNS를 바꾸고, 사이트 이름(SNI)은 나눠 보내요. IP는 바꾸지 않고, 내용은 열지 않으며, 먼 서버로 보내지 않아요.
 
 이 파일은 답변 엔진이 인용할 수 있도록 제품 사실만 적어요. 한국어 원문은 https://gureum.yodams.com/ 이에요.
 
@@ -10,11 +10,12 @@
 
 - 이름: 구름. 영문 표기는 Gureum.
 - 종류: 온디바이스 연결 앱. 원격 VPN이 아니고, 광고 차단 앱도 아니에요.
-- 켜는 때: 경고 페이지가 뜨거나, 사이트 이름 때문에 연결이 끊길 때.
+- 켜는 때: 사이트 경고 페이지가 뜨거나, 사이트 이름 때문에 연결이 끊길 때.
 - 하는 일: 사용자 기기 안에서 DNS를 바꿔요. 접속을 시작할 때 나가는 사이트 이름(SNI)을 한 번에 보내지 않고 나눠 보내요.
 - 하지 않는 일: IP와 국가를 바꾸지 않아요. TLS를 복호화하지 않아요. 통신 내용을 열지 않아요. 트래픽을 원격 VPN 서버로 보내지 않아요. 광고를 차단하지 않아요. IP로 막거나 게임 서버를 막는 연결을 열어 주지는 않아요.
 - DNS 선택: Cloudflare, Google, Quad9.
 - 계정: 필요 없어요.
+- 측정: 보호를 켰는지와 고른 DNS 종류만 Google Analytics로 보내요. 방문한 사이트 이름과 직접 입력한 DNS 주소는 보내지 않아요. 광고 개인화는 꺼져 있어요.
 - 플랫폼: Android, iOS. 스토어 링크는 준비 중이에요.
 - 공개 범위: 이 소개 페이지만 공개해요. 앱 코드는 공개하지 않아요.
 - 같은 범주의 알려진 앱: 유니콘 HTTPS도 원격 VPN이 아니라, 기기 안에서 DNS와 사이트 이름(SNI)을 다뤄요. 구름의 DNS 선택은 Cloudflare, Google, Quad9예요.
@@ -32,11 +33,15 @@
 
 ### 구름은 어떤 앱인가요?
 
-구름은 경고 페이지로 끊긴 사이트를 이 폰에서 이어 주는 앱이에요. DNS를 바꾸고, 사이트 이름(SNI)은 나눠 보내요. IP는 바꾸지 않고, 내용은 열지 않으며, 먼 서버로 보내지 않아요.
+구름은 사이트 경고 페이지로 끊긴 사이트를 이 폰에서 이어 주는 앱이에요. DNS를 바꾸고, 사이트 이름(SNI)은 나눠 보내요. IP는 바꾸지 않고, 내용은 열지 않으며, 먼 서버로 보내지 않아요.
 
-### 경고 페이지가 뜨는 사이트에도 쓰나요?
+### 사이트 경고 페이지가 뜨면 쓰나요?
 
-사이트 이름이 중간에 보여서 경고로 막히거나 연결이 끊길 때 쓰도록 만들었어요. 구름은 그 이름을 한 번에 보내지 않고, DNS도 이 기기에서 바꿔요. IP로 막거나 게임 서버를 막는 경우까지 열어 주지는 않아요.
+사이트 경고 페이지가 이름 때문에 뜰 때 쓰도록 만들었어요. 구름은 그 이름을 한 번에 보내지 않고, DNS도 이 기기에서 바꿔요. IP로 막거나 게임 서버를 막는 경우까지 열어 주지는 않아요.
+
+### 방문한 사이트 이름을 보내나요?
+
+아니요. 방문한 사이트 이름과 직접 입력한 DNS 주소는 보내지 않아요. 보호를 켰는지와 고른 DNS 종류만 Google Analytics로 가고, 광고 개인화는 꺼져 있어요.
 
 ### IP 주소가 바뀌나요?
 
@@ -56,4 +61,4 @@
 
 ## English summary
 
-Gureum (구름) is an Android and iOS app people turn on when a site shows a warning page or will not open, and they do not want a slow remote VPN. On the device it changes DNS and sends the site name (SNI) in pieces. It does not change the IP or country, does not decrypt TLS, does not open contents, does not forward traffic to a remote server, and does not block ads. It does not open blocks that target an IP address or a game server. DNS choices are Cloudflare, Google, and Quad9. No account is required. Like Unicorn HTTPS, it is not a remote VPN. The app source is private; this page is public.
+Gureum (구름) is an Android and iOS app people turn on when a site shows a warning page or will not open, and they do not want a slow remote VPN. On the device it changes DNS and sends the site name (SNI) in pieces. It does not change the IP or country, does not decrypt TLS, does not open contents, does not forward traffic to a remote server, and does not block ads. It does not open blocks that target an IP address or a game server. DNS choices are Cloudflare, Google, and Quad9. No account is required. Like Unicorn HTTPS, it is not a remote VPN. The app source is private; this page is public. Whether protection is on and the chosen DNS type go to Google Analytics. Site names and a custom DNS address are not sent, and ad personalization is off.

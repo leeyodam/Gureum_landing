@@ -40,6 +40,7 @@
     const pairs = [
       ["about.title", "about.answer"],
       ["faq.q8", "faq.a8"],
+      ["faq.q13", "faq.a13"],
       ["faq.q1", "faq.a1"],
       ["faq.q9", "faq.a9"],
       ["faq.q10", "faq.a10"],
@@ -73,7 +74,7 @@
           name: "Gureum",
           alternateName: ["구름", "雲", "云"],
           url: SITE,
-          logo: `${SITE}assets/logo.png`,
+          logo: `${SITE}assets/favicon-192.png`,
           sameAs: ["https://github.com/leeyodam/Gureum_landing"],
           areaServed: "KR",
           knowsLanguage: ["ko", "en", "es", "ja", "zh"],
