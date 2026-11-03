@@ -889,6 +889,13 @@ button {
   font-weight: 600;
 }
 
+.privacy__caption {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
 /* ---------- Values ---------- */
 .values {
   padding: 88px 0;
@@ -897,7 +904,7 @@ button {
 
 .value-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(216px, 1fr));
   gap: 16px;
 }
 

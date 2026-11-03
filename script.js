@@ -105,7 +105,7 @@
           isPartOf: { "@id": `${SITE}#website` },
           about: { "@id": `${SITE}#app` },
           primaryImageOfPage: `${SITE}assets/og.png`,
-          dateModified: "2026-11-03",
+          dateModified: "2026-11-04",
           speakable: {
             "@type": "SpeakableSpecification",
             cssSelector: [".about__answer", ".hero__sub"],
