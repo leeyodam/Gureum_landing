@@ -42,18 +42,20 @@
       ["faq.q14", "faq.a14"],
       ["faq.q15", "faq.a15"],
       ["faq.q8", "faq.a8"],
-      ["faq.q13", "faq.a13"],
       ["faq.q1", "faq.a1"],
       ["faq.q9", "faq.a9"],
       ["faq.q10", "faq.a10"],
       ["faq.q2", "faq.a2"],
       ["faq.q4", "faq.a4"],
       ["faq.q12", "faq.a12"],
+      ["faq.q16", "faq.a16"],
+      ["faq.q17", "faq.a17"],
       ["faq.q5", "faq.a5"],
       ["faq.q11", "faq.a11"],
       ["faq.q6", "faq.a6"],
       ["faq.q7", "faq.a7"],
       ["faq.q3", "faq.a3"],
+      ["faq.q13", "faq.a13"],
     ]
       .map(([question, answer]) => ({ q: dict[question], a: dict[answer] }))
       .filter((item) => item.q && item.a);

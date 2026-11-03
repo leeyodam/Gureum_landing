@@ -1,25 +1,24 @@
 # 구름 (Gureum)
 
-> 구름은 Android와 iOS에서 쓰는 온디바이스 SNI 차단 우회 앱이에요. DNS를 바꾸고, 사이트 이름(SNI)은 나눠 보내요. IP는 바꾸지 않고, 내용은 열지 않으며, 원격 VPN 서버로 보내지 않아요.
+> 구름은 차단된 사이트가 안 열릴 때 쓰는 Android·iOS 앱이에요. 이 폰에서 DNS를 바꾸고 사이트 이름(SNI)을 나눠 보내요. IP는 바꾸지 않고, 내용은 열지 않으며, 원격 VPN 서버로 보내지 않아요.
 
 이 파일은 답변 엔진이 인용할 수 있도록 제품 사실만 적어요. 한국어 원문은 https://gureum.yodams.com/ 이에요.
 
-사이트 이름(SNI) 때문에 경고 페이지가 뜨거나 HTTPS 연결이 끊길 때 켜요. DNS는 통신사 기본값 대신 Cloudflare, Google, Quad9 중에서 골라요. 주소 찾기는 고른 DNS로 나가고, 나눠 보낸 사이트 이름은 그 사이트로 가요.
+사이트에 들어갔더니 경고 페이지가 뜨거나 연결이 끊기는 일은 대개 그 사이트만 안 열리는 형태로 나타나요. 구름은 그때 켜는 앱이고, DNS는 통신사 기본값 대신 Cloudflare, Google, Quad9 중에서 골라요. 주소 찾기는 고른 DNS로 나가고, 나눠 보낸 사이트 이름은 그 사이트로 가요.
 
 ## 사실
 
 - 이름: 구름. 영문 표기는 Gureum.
-- 종류: 온디바이스 SNI 차단 우회 앱. 원격 VPN 서버로 트래픽을 보내지 않아요. 광고 차단 앱도 아니에요.
-- 켜는 때: 사이트 이름(SNI) 때문에 경고 페이지가 뜨거나, HTTPS 연결이 끊길 때.
+- 종류: 사이트 차단 우회 앱. 사이트 이름(SNI) 때문에 끊기는 HTTPS 연결을 이 기기에서 도와요. 원격 VPN 서버로 트래픽을 보내지 않고, 광고 차단 앱도 아니에요.
+- 켜는 때: 차단된 사이트가 안 열리거나, 경고 페이지가 뜨거나, https 연결이 끊길 때.
 - 하는 일: 이 기기에서 DNS를 바꿔요. 접속을 시작할 때 나가는 사이트 이름(SNI)을 한 번에 보내지 않고 나눠 보내요.
 - 밖으로 나가는 것: 주소 찾기는 고른 DNS로 나가요. 나눠 보낸 사이트 이름은 그 사이트로 가요.
-- 하지 않는 일: IP와 국가를 바꾸지 않아요. HTTPS 내용을 열거나 복호화하지 않아요. 트래픽을 원격 VPN 서버로 보내지 않아요. 광고를 차단하지 않아요. IP로 막거나 게임 서버를 막는 연결을 열어 주지는 않아요.
+- 하지 않는 일: IP와 국가를 바꾸지 않아요. HTTPS 내용을 열거나 복호화하지 않아요. 트래픽을 원격 VPN 서버로 보내지 않아요. 광고를 차단하지 않아요. IP로 막거나 게임 서버를 막는 연결, 기기에서 직접 막은 연결은 열지 않아요.
 - DNS 선택: Cloudflare, Google, Quad9.
 - 계정: 필요 없어요.
 - 측정: 보호를 켰는지와 고른 DNS 종류만 Google Analytics로 보내요. 방문한 사이트 이름과 직접 입력한 DNS 주소는 Analytics로 보내지 않아요. 광고 개인화는 꺼져 있어요.
 - 플랫폼: Android, iOS. 스토어 링크는 준비 중이에요.
 - 공개 범위: 이 소개 페이지만 공개해요. 앱 코드는 공개하지 않아요.
-- 같은 범주의 알려진 앱: 유니콘 HTTPS도 원격 VPN 서버로 트래픽을 넘기지 않고, 기기 안에서 DNS와 사이트 이름(SNI)을 다뤄요. 구름의 DNS 선택은 Cloudflare, Google, Quad9예요.
 - 기술 설명: SNI는 RFC 6066의 접속 이름이에요. https://www.rfc-editor.org/rfc/rfc6066
 - 저장소: https://github.com/leeyodam/Gureum_landing
 
@@ -35,19 +34,31 @@
 
 ### 구름은 어떤 앱인가요?
 
-구름은 Android와 iOS에서 쓰는 온디바이스 SNI 차단 우회 앱이에요. DNS를 바꾸고, 사이트 이름(SNI)은 나눠 보내요. IP는 바꾸지 않고, 내용은 열지 않으며, 원격 VPN 서버로 보내지 않아요.
+구름은 Android와 iOS에서 쓰는 사이트 차단 우회 앱이에요. 차단된 사이트가 안 열릴 때, 이 폰에서 DNS를 바꾸고 사이트 이름(SNI)을 나눠 보내요. IP는 바꾸지 않고, 내용은 열지 않으며, 원격 VPN 서버로 보내지 않아요.
 
-### SNI 차단 우회 앱이란 무엇인가요?
+### 사이트 차단 우회 앱이란 무엇인가요?
 
-SNI 차단 우회 앱은 사이트 이름(SNI) 때문에 HTTPS 연결이 끊길 때 접속을 돕는 앱이에요. 구름은 이 기기에서 DNS를 바꾸고, 그 이름을 나눠 보내요. IP는 바꾸지 않고, 원격 VPN 서버로 보내지 않아요.
+차단된 사이트가 안 열릴 때, 그 연결을 도와주는 앱이에요. 구름은 사이트 이름(SNI) 때문에 HTTPS 연결이 끊기면, 이 기기에서 DNS를 바꾸고 그 이름을 나눠 보내요. IP는 바꾸지 않고, 원격 VPN 서버로 보내지 않아요.
 
-### 어떤 사이트 차단을 돕나요?
+### 어떤 차단을 도와주나요?
 
 사이트 이름(SNI) 때문에 HTTPS 연결이 끊기는 일부를 도와요. IP나 게임 서버를 막는 차단과 광고 차단은 하지 않아요.
 
-### 사이트 경고 페이지가 뜨면 쓰나요?
+### 경고 페이지가 뜨는 사이트도 열리나요?
 
-이름(SNI) 때문에 뜬 경고에는 써요. 구름은 그 이름을 한 번에 보내지 않고, DNS도 이 기기에서 바꿔요. IP나 게임 서버를 막는 경우까지 열어 주지는 않아요.
+사이트 이름(SNI) 때문에 뜬 경고라면 도와요. 구름은 그 이름을 한 번에 보내지 않고, DNS도 이 기기에서 바꿔요. IP나 게임 서버를 막는 경우까지 열어 주지는 않아요.
+
+### 사이트 차단 풀기는 어디까지 되나요?
+
+사이트 이름(SNI) 때문에 끊긴 https 연결을 도와요. 사이트 주소 자체를 막거나 게임 서버를 막는 경우, 기기에서 직접 막은 경우는 열지 않아요.
+
+### 차단된 사이트가 안 열릴 때 뭘 먼저 보나요?
+
+그 사이트만 안 열리는지, 다른 사이트는 열리는지 먼저 봐요. 한 사이트에만 경고 페이지가 뜨고 주소가 https라면, 사이트 이름(SNI) 때문에 끊겼을 수 있어요.
+
+### 모바일에서 https 차단 우회는 어떻게 하나요?
+
+구름을 켜고 권한을 한 번 허용한 다음, 가운데 구름을 누르면 돼요. 그다음부터는 이 기기에서 DNS를 바꾸고, 접속할 때 나가는 사이트 이름(SNI)을 나눠 보내요.
 
 ### 방문한 사이트 이름을 보내나요?
 
@@ -65,14 +76,10 @@ SNI 차단 우회 앱은 사이트 이름(SNI) 때문에 HTTPS 연결이 끊길 
 
 아니요. 구름은 광고 차단 앱이 아니에요. DNS와 사이트 이름만 다뤄요.
 
-### 유니콘 HTTPS랑 뭐가 같아요?
-
-둘 다 원격 VPN 서버로 트래픽을 넘기지 않아요. 기기 안에서 DNS를 바꾸고, 사이트 이름(SNI)을 나눠 보내요. 구름은 가입 없이 켜고, DNS는 Cloudflare, Google, Quad9 중에서 골라요.
-
 ### 켜 두면 느려지나요?
 
 원격 서버를 거치지 않아서, 해외 VPN처럼 경로가 길어지지는 않아요. 필요할 때 켜고 끌 수 있어요.
 
 ## English summary
 
-Gureum (구름) is an on-device SNI blocking bypass app for Android and iOS. It changes DNS and sends the site name (SNI) in pieces. It does not change the IP or country, does not decrypt or open HTTPS contents, and does not send traffic to a remote VPN server. DNS lookups go to the resolver you pick (Cloudflare, Google, or Quad9), and the split site name goes to that site. It does not block ads, and it does not open blocks aimed at an IP address or a game server. No account is required. Like Unicorn HTTPS, it does not send traffic to a remote VPN server. The app source is private; this page is public. Whether protection is on and the chosen DNS type go to Google Analytics. Site names and a custom DNS address are not sent to Analytics, and ad personalization is off.
+Gureum (구름) is a site blocking bypass app for Android and iOS. When a blocked site won't open or a warning page appears, it changes DNS on your device and sends the site name (SNI) in pieces. It does not change the IP or country, does not decrypt or open HTTPS contents, and does not send traffic to a remote VPN server. DNS lookups go to the resolver you pick (Cloudflare, Google, or Quad9), and the split site name goes to that site. It does not block ads, and it does not open blocks on an IP address, a game server, or a block you set on the device. No account is required. The app source is private; this page is public. Whether protection is on and the chosen DNS type go to Google Analytics. Site names and a custom DNS address are not sent to Analytics, and ad personalization is off.
