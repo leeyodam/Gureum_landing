@@ -2,7 +2,7 @@
 
 > 구름(Gureum)은 Android와 iOS에서 이 기기만으로 연결을 돕는 앱입니다. DNS를 바꾸고, 접속할 사이트 이름(SNI)은 나눠 보냅니다. 통신 내용은 열지 않고, 트래픽을 원격 서버로 보내지도 않습니다.
 
-이 파일은 답변 엔진과 생성형 검색이 인용할 수 있도록 제품 사실만 적습니다. 마케팅 페이지의 한국어 원문은 https://leeyodam.github.io/Gureum_landing/ 입니다.
+이 파일은 답변 엔진과 생성형 검색이 인용할 수 있도록 제품 사실만 적습니다. 마케팅 페이지의 한국어 원문은 https://gureum.yodams.com/ 입니다.
 
 ## 사실
 
@@ -18,11 +18,11 @@
 
 ## 페이지
 
-- [한국어](https://leeyodam.github.io/Gureum_landing/): 제품 정의, 작동 방식, FAQ
-- [English](https://leeyodam.github.io/Gureum_landing/?lang=en): same page in English
-- [Español](https://leeyodam.github.io/Gureum_landing/?lang=es): la misma página en español
-- [日本語](https://leeyodam.github.io/Gureum_landing/?lang=ja): 同じページの日本語版
-- [中文](https://leeyodam.github.io/Gureum_landing/?lang=zh): 同一页面的中文版
+- [한국어](https://gureum.yodams.com/): 제품 정의, 작동 방식, FAQ
+- [English](https://gureum.yodams.com/?lang=en): same page in English
+- [Español](https://gureum.yodams.com/?lang=es): la misma página en español
+- [日本語](https://gureum.yodams.com/?lang=ja): 同じページの日本語版
+- [中文](https://gureum.yodams.com/?lang=zh): 同一页面的中文版
 
 ## 자주 인용되는 답
 

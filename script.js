@@ -16,7 +16,7 @@
   const langCurrent = document.getElementById("langCurrent");
 
   const dictionaries = window.GUREUM_I18N || {};
-  const SITE = "https://leeyodam.github.io/Gureum_landing/";
+  const SITE = "https://gureum.yodams.com/";
   const LOCALES = {
     ko: "ko_KR",
     en: "en_US",

@@ -16,7 +16,8 @@ python -m http.server 5173
 저장소: [leeyodam/Gureum_landing](https://github.com/leeyodam/Gureum_landing)
 
 - Source: `main` / `/ (root)`
-- URL: https://leeyodam.github.io/Gureum_landing/
+- URL: https://gureum.yodams.com/
+- DNS: `gureum.yodams.com` CNAME `leeyodam.github.io`
 
 ## 브랜드 에셋
 
@@ -32,7 +33,7 @@ python -m http.server 5173
 
 ## 검색·답변 엔진
 
-공개 URL은 https://leeyodam.github.io/Gureum_landing/ 이고, 이 주소의 본문은 한국어입니다.
+공개 URL은 https://gureum.yodams.com/ 이고, 이 주소의 본문은 한국어입니다.
 
 | 파일 | 역할 |
 |------|------|
