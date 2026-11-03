@@ -132,6 +132,7 @@ window.GUREUM_I18N = {
     "foot.repo": "저장소",
     "foot.github": "GitHub",
     "foot.newWindow": "새 창",
+    "foot.sitePrivacy": "이 페이지는 언어 선택을 이 브라우저에 저장해요. 방문, 스크롤, 클릭은 Google Analytics로 가고, 광고 개인화는 꺼져 있어요. 글꼴은 jsDelivr에서 받아요.",
     "skip": "본문으로",
   },
   en: {
@@ -267,6 +268,7 @@ window.GUREUM_I18N = {
     "foot.repo": "Repository",
     "foot.github": "GitHub",
     "foot.newWindow": "opens in a new tab",
+    "foot.sitePrivacy": "This page stores the language choice in this browser. Visits, scrolling, and clicks go to Google Analytics, with ad personalization off. Fonts come from jsDelivr.",
     "skip": "Skip to content",
   },
   es: {
@@ -402,6 +404,7 @@ window.GUREUM_I18N = {
     "foot.repo": "Repositorio",
     "foot.github": "GitHub",
     "foot.newWindow": "se abre en una pestaña nueva",
+    "foot.sitePrivacy": "Esta página guarda el idioma en este navegador. Las visitas, el desplazamiento y los clics van a Google Analytics, sin personalización de anuncios. Las fuentes llegan desde jsDelivr.",
     "skip": "Ir al contenido",
   },
   ja: {
@@ -537,6 +540,7 @@ window.GUREUM_I18N = {
     "foot.repo": "リポジトリ",
     "foot.github": "GitHub",
     "foot.newWindow": "新しいタブで開く",
+    "foot.sitePrivacy": "このページは言語の選択をこのブラウザに保存します。訪問、スクロール、クリックは Google Analytics に送られ、広告の個人最適化はオフです。フォントは jsDelivr から読み込みます。",
     "skip": "本文へ",
   },
   zh: {
@@ -672,6 +676,7 @@ window.GUREUM_I18N = {
     "foot.repo": "仓库",
     "foot.github": "GitHub",
     "foot.newWindow": "在新标签页打开",
+    "foot.sitePrivacy": "本页把语言选择存在这台浏览器里。访问、滚动和点击会发给 Google Analytics，广告个性化是关闭的。字体从 jsDelivr 加载。",
     "skip": "跳到正文",
   },
 };

@@ -16,6 +16,7 @@
   gtag("config", MEASUREMENT_ID, {
     allow_google_signals: false,
     allow_ad_personalization_signals: false,
+    cookie_flags: "SameSite=Lax;Secure",
     page_lang: lang(),
   });
 
