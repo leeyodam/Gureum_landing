@@ -65,6 +65,10 @@
     }
     if (url.host && url.host !== location.host) {
       gtag("event", "outbound_click", { link_host: url.host, page_lang: lang() });
+      return;
+    }
+    if (url.protocol === "mailto:") {
+      gtag("event", "notify_click", { section: "download", page_lang: lang() });
     }
   });
 
