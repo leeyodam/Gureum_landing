@@ -153,7 +153,7 @@
       "url": "https://gureum.yodams.com/en/",
       "image": "https://gureum.yodams.com/assets/og.png",
       "inLanguage": "en",
-      "description": "Gureum changes DNS on this device and sends the site name (SNI) in pieces, with no remote VPN server. It helps some HTTPS connections that drop because of that name. Your IP and country stay the same, and it does not open HTTPS contents.",
+      "description": "Gureum changes DNS and sends the site name (SNI) in pieces on your device, with no complicated remote VPN server. It bypasses HTTPS blocks caused by the site name, keeps your IP and country, and is faster too. It never opens your communications.",
       "featureList": [
         "When a connection drops because of the site name (SNI), it changes DNS on the device and sends that name in pieces.",
         "It does not change your IP, does not open HTTPS contents, and does not send traffic to a remote VPN server.",
@@ -222,27 +222,27 @@
     {
       "@type": "HowTo",
       "@id": "https://gureum.yodams.com/en/#how",
-      "name": "How to use Gureum when a blocked site won't open",
-      "description": "Allow the permission, then tap the cloud in the middle.",
+      "name": "Simple steps",
+      "description": "Tap the cloud in the middle and allow the permission. It starts right away.",
       "inLanguage": "en",
       "step": [
         {
           "@type": "HowToStep",
           "position": 1,
           "name": "Tap the cloud icon",
-          "text": "Tap the cloud in the middle and allow the permission. It starts then."
+          "text": "Tap the cloud in the middle of the screen and allow the permission. It starts right away."
         },
         {
           "@type": "HowToStep",
           "position": 2,
           "name": "Pick a DNS",
-          "text": "Pick the DNS you want. Lookups go to that DNS, and a connection that drops because of its name is helped by sending that name in pieces."
+          "text": "Pick the DNS you want. The DNS change and SNI splitting work together so you can bypass a blocked site."
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Open the site",
-          "text": "It helps some connections that drop because of the name. HTTPS content is not opened. Not every site will open."
+          "text": "You can open a site that would not open. Communications are never opened, so you can relax."
         }
       ]
     }
@@ -297,17 +297,17 @@
             <p class="brand-hero">구름</p>
             <h1>
               <span class="hero__line" data-i18n="hero.line1">When a blocked site won't open,</span>
-              <span class="hero__line" data-i18n="hero.line2">one app helps you connect</span>
+              <span class="hero__line" data-i18n="hero.line2">connect easily with one app.</span>
             </h1>
-            <p class="hero__sub" data-i18n="hero.sub">Gureum changes DNS on this device and sends the site name (SNI) in pieces, with no remote VPN server. It helps some HTTPS connections that drop because of that name. Your IP and country stay the same, and it does not open HTTPS contents.</p>
+            <p class="hero__sub" data-i18n="hero.sub">Gureum changes DNS and sends the site name (SNI) in pieces on your device, with no complicated remote VPN server. It bypasses HTTPS blocks caused by the site name, keeps your IP and country, and is faster too. It never opens your communications.</p>
             <div class="hero__cta">
               <a class="btn btn--primary" href="#download" data-i18n="hero.download">Download</a>
               <a class="btn btn--ghost" href="#how" data-i18n="hero.how">How it works</a>
             </div>
             <ul class="hero__points">
               <li data-i18n="point.local">DNS change</li>
-              <li data-i18n="point.ip">SNI split</li>
-              <li data-i18n="point.tls">IP stays the same</li>
+              <li data-i18n="point.ip">SNI censorship bypass</li>
+              <li data-i18n="point.tls">No slowdown</li>
             </ul>
           </div>
 
@@ -360,24 +360,24 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow" data-i18n="when.kicker">When to turn it on</p>
-            <h2 data-i18n="when.title">When Gureum helps</h2>
-            <p data-i18n-html="when.lead">A site can fail to open for several reasons.<br />Gureum helps some connections that drop because of the site name (SNI), on this device.</p>
+            <h2 data-i18n="when.title">When to use Gureum</h2>
+            <p data-i18n-html="when.lead">A site can fail to open for several reasons.<br />Gureum fixes connections dropped by SNI censorship.</p>
           </div>
           <div class="value-grid">
             <article class="value reveal">
               <h3 data-i18n="when.1.title">When a site won't open</h3>
-              <p data-i18n="when.1.body">If a site you could open suddenly stops, or a warning page appears, the site name (SNI) may be why. Gureum helps some of those cases on this device.</p>
+              <p data-i18n="when.1.body">If a site you used suddenly won't open, or a warning page appears, SNI censorship may be why. Gureum will help.</p>
             </article>
             <article class="value reveal" style="--delay: 60ms">
-              <h3 data-i18n="when.3.title">When you want to pick the DNS</h3>
-              <p data-i18n="when.3.body">Pick Google, Cloudflare, or Quad9 on this device. A DNS change alone does not open a connection that drops because of its name.</p>
+              <h3 data-i18n="when.3.title">When you want the DNS you prefer</h3>
+              <p data-i18n="when.3.body">Pick Google, Cloudflare, or Quad9 yourself. Changing DNS alone does not lift a site block.</p>
             </article>
             <article class="value reveal" style="--delay: 120ms">
               <h3 data-i18n="when.4.title">When a remote VPN server feels like too much</h3>
-              <p data-i18n="when.4.body">Traffic does not go through a server in another country. Your IP and country stay the same.</p>
+              <p data-i18n="when.4.body">It does not go through another country or an outside server, so it is fast and your IP and country stay the same.</p>
             </article>
           </div>
-          <p class="when__note reveal" data-i18n-html="when.note">Please note.<br />Gureum helps connections that drop because of the site name (SNI). It cannot help when the IP address itself is blocked.</p>
+          <p class="when__note reveal" data-i18n-html="when.note">💡 Please note.<br />Gureum helps you bypass SNI censorship. It cannot help when the IP address itself is blocked.</p>
         </div>
       </section>
 
@@ -385,15 +385,15 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow eyebrow--on-dark" data-i18n="features.kicker">Features</p>
-            <h2 data-i18n-html="features.title">The main features</h2>
-            <p data-i18n="features.lead">Tap the cloud, pick a DNS, and send the site name in pieces.</p>
+            <h2 data-i18n-html="features.title">The main features at a glance</h2>
+            <p data-i18n="features.lead">Turn it on with one tap, pick a DNS, and split the SNI.</p>
           </div>
 
           <div class="bento">
             <article class="bento__card bento__card--lg reveal">
               <div class="bento__text">
-                <h3 data-i18n="feat.tap.title">Start with one tap</h3>
-                <p data-i18n="feat.tap.body">Tap the cloud in the middle and it starts on this device.</p>
+                <h3 data-i18n="feat.tap.title">Start with one easy tap</h3>
+                <p data-i18n="feat.tap.body">Tap the cloud icon on the main screen and it starts right away.</p>
               </div>
               <div class="bento__visual">
                 <img src="/assets/logo-ui.webp" alt="" width="148" height="148" />
@@ -402,8 +402,8 @@
 
             <article class="bento__card reveal" style="--delay: 60ms">
               <div class="bento__text">
-                <h3 data-i18n="feat.dns.title">Pick a DNS</h3>
-                <p data-i18n="feat.dns.body">Choose Google, Cloudflare, or Quad9. A DNS change alone does not open a connection that drops because of its name.</p>
+                <h3 data-i18n="feat.dns.title">Pick the DNS you want</h3>
+                <p data-i18n="feat.dns.body">Choose freely among Google, Cloudflare, and Quad9.</p>
               </div>
               <div class="chip-row" aria-hidden="true">
                 <span>Cloudflare</span>
@@ -414,8 +414,8 @@
 
             <article class="bento__card reveal" style="--delay: 120ms">
               <div class="bento__text">
-                <h3 data-i18n="feat.sni.title">The site name goes out in pieces</h3>
-                <p data-i18n="feat.sni.body">It sends the site name (SNI) in pieces when a connection starts. That helps some connections that drop because of the name. A block on an IP address does not open this way.</p>
+                <h3 data-i18n="feat.sni.title">Safe SNI splitting</h3>
+                <p data-i18n="feat.sni.body">It splits the SNI and clears the blocked connection.</p>
               </div>
               <div class="split-viz" aria-hidden="true">
                 <span class="bar"></span>
@@ -427,12 +427,12 @@
             <article class="bento__card bento__card--wide reveal" style="--delay: 80ms">
               <div class="bento__text">
                 <h3 data-i18n="feat.local.title">No remote VPN server</h3>
-                <p data-i18n="feat.local.body">Traffic is not sent to a remote VPN server. Your IP stays the same, and HTTPS content is not decrypted.</p>
+                <p data-i18n="feat.local.body">Data is not sent to an outside server, so your IP stays the same and your privacy stays protected.</p>
               </div>
               <ul class="checklist">
-                <li data-i18n="check.local">The split and the DNS choice stay on this device</li>
-                <li data-i18n="check.tls">HTTPS content is not opened</li>
-                <li data-i18n="check.proxy">No remote VPN server</li>
+                <li data-i18n="check.local">Every connection and split is handled on the device</li>
+                <li data-i18n="check.tls">Communications are never opened</li>
+                <li data-i18n="check.proxy">No remote VPN server, so it stays safe</li>
               </ul>
             </article>
           </div>
@@ -443,8 +443,8 @@
         <div class="section-shell how__grid">
           <div class="how__copy reveal">
             <p class="eyebrow" data-i18n="how.kicker">How it works</p>
-            <h2 data-i18n-html="how.title">How to use it</h2>
-            <p class="lead" data-i18n="how.lead">Allow the permission, then tap the cloud in the middle.</p>
+            <h2 data-i18n-html="how.title">Simple steps</h2>
+            <p class="lead" data-i18n="how.lead">Tap the cloud in the middle and allow the permission. It starts right away.</p>
           </div>
 
           <ol class="steps reveal" style="--delay: 80ms">
@@ -452,21 +452,21 @@
               <span class="steps__num">1</span>
               <div>
                 <strong data-i18n="step1.title">Tap the cloud icon</strong>
-                <p data-i18n="step1.body">Tap the cloud in the middle and allow the permission. It starts then.</p>
+                <p data-i18n="step1.body">Tap the cloud in the middle of the screen and allow the permission. It starts right away.</p>
               </div>
             </li>
             <li>
               <span class="steps__num">2</span>
               <div>
                 <strong data-i18n="step2.title">Pick a DNS</strong>
-                <p data-i18n="step2.body">Pick the DNS you want. Lookups go to that DNS, and a connection that drops because of its name is helped by sending that name in pieces.</p>
+                <p data-i18n="step2.body">Pick the DNS you want. The DNS change and SNI splitting work together so you can bypass a blocked site.</p>
               </div>
             </li>
             <li>
               <span class="steps__num">3</span>
               <div>
                 <strong data-i18n="step3.title">Open the site</strong>
-                <p data-i18n="step3.body">It helps some connections that drop because of the name. HTTPS content is not opened. Not every site will open.</p>
+                <p data-i18n="step3.body">You can open a site that would not open. Communications are never opened, so you can relax.</p>
               </div>
             </li>
           </ol>
@@ -511,8 +511,12 @@
       <section class="cta" id="download">
         <div class="section-shell cta__inner reveal">
           <img src="/assets/logo-ui.webp" alt="" width="72" height="72" class="cta__icon" />
-          <h2 data-i18n="cta.title">Coming soon</h2>
-          <p data-i18n="cta.body">The store release is in progress.</p>
+          <h2 data-i18n="cta.title">We'll be with you soon!</h2>
+          <p data-i18n="cta.body">We're working hard on the release.</p>
+          <div class="hero__cta">
+            <button type="button" class="btn btn--primary" data-i18n="cta.android">Android download</button>
+            <button type="button" class="btn btn--ghost btn--on-dark" data-i18n="cta.ios">iOS download</button>
+          </div>
         </div>
       </section>
     </main>

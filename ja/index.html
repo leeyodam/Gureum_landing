@@ -153,7 +153,7 @@
       "url": "https://gureum.yodams.com/ja/",
       "image": "https://gureum.yodams.com/assets/og.png",
       "inLanguage": "ja",
-      "description": "雲は遠隔VPNサーバーを使わず、この端末でDNSを変え、サイト名（SNI）を分けて送ります。名前で切れる一部のHTTPS接続を助け、IPと接続している国はそのままです。通信の中身は開きません。",
+      "description": "雲は複雑な外部VPNサーバーを使わず、自分の端末の中でDNSを変え、サイト名（SNI）を分割して送ります。サイト名のために遮断されたHTTPS接続を回避し、IPと接続している国はそのままなので速度も速くなります。もちろん通信の中身は絶対に開きません。",
       "featureList": [
         "サイト名のために切れた接続で、端末の中のDNSを変え、サイト名を分けて送ります。",
         "IPは変えず、HTTPSの中身は開かず、遠隔VPNサーバーへ送りません。",
@@ -222,27 +222,27 @@
     {
       "@type": "HowTo",
       "@id": "https://gureum.yodams.com/ja/#how",
-      "name": "ブロックされたサイトが開かないときの使い方",
-      "description": "許可したあと、中央の雲を押します。",
+      "name": "かんたんな使い方",
+      "description": "画面中央の雲を押して許可すると、すぐに始まります。",
       "inLanguage": "ja",
       "step": [
         {
           "@type": "HowToStep",
           "position": 1,
           "name": "雲のアイコンを押す",
-          "text": "中央の雲を押して許可すると、始まります。"
+          "text": "画面中央の雲を押して許可すると、すぐに始まります。"
         },
         {
           "@type": "HowToStep",
           "position": 2,
           "name": "DNSを選ぶ",
-          "text": "使いたいDNSを選びます。アドレス検索は選んだDNSへ行き、名前で切れた接続はその名前を分けて送って助けます。"
+          "text": "使いたいDNSを選びます。DNSの変更とSNI分割が一緒に働き、遮断されたサイトを回避できます。"
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "サイトへ接続する",
-          "text": "名前で切れる一部の接続を助けます。通信の中身は開きません。すべてのサイトが開くわけではありません。"
+          "name": "サイトに接続する",
+          "text": "開かなかったサイトに接続できます。通信の中身は絶対に開かないので、安心してください。"
         }
       ]
     }
@@ -297,17 +297,17 @@
             <p class="brand-hero">구름</p>
             <h1>
               <span class="hero__line" data-i18n="hero.line1">ブロックされたサイトが開かないとき、</span>
-              <span class="hero__line" data-i18n="hero.line2">アプリひとつで接続を助けます</span>
+              <span class="hero__line" data-i18n="hero.line2">アプリひとつで楽に接続してください。</span>
             </h1>
-            <p class="hero__sub" data-i18n="hero.sub">雲は遠隔VPNサーバーを使わず、この端末でDNSを変え、サイト名（SNI）を分けて送ります。名前で切れる一部のHTTPS接続を助け、IPと接続している国はそのままです。通信の中身は開きません。</p>
+            <p class="hero__sub" data-i18n="hero.sub">雲は複雑な外部VPNサーバーを使わず、自分の端末の中でDNSを変え、サイト名（SNI）を分割して送ります。サイト名のために遮断されたHTTPS接続を回避し、IPと接続している国はそのままなので速度も速くなります。もちろん通信の中身は絶対に開きません。</p>
             <div class="hero__cta">
               <a class="btn btn--primary" href="#download" data-i18n="hero.download">ダウンロード</a>
               <a class="btn btn--ghost" href="#how" data-i18n="hero.how">仕組み</a>
             </div>
             <ul class="hero__points">
               <li data-i18n="point.local">DNS変更</li>
-              <li data-i18n="point.ip">SNI分割</li>
-              <li data-i18n="point.tls">IPはそのまま</li>
+              <li data-i18n="point.ip">SNI検閲の回避</li>
+              <li data-i18n="point.tls">速度低下なし</li>
             </ul>
           </div>
 
@@ -361,23 +361,23 @@
           <div class="section-head reveal">
             <p class="eyebrow" data-i18n="when.kicker">こんなとき</p>
             <h2 data-i18n="when.title">雲はこんなときに使います</h2>
-            <p data-i18n-html="when.lead">サイトが開かない理由はいくつかあります。<br />雲はサイト名（SNI）で切れる一部の接続を、この端末で助けます。</p>
+            <p data-i18n-html="when.lead">サイトが開かない理由はいくつかあります。<br />雲はサイト名（SNI）の検閲で切れた接続を解決します。</p>
           </div>
           <div class="value-grid">
             <article class="value reveal">
               <h3 data-i18n="when.1.title">サイトが開かないとき</h3>
-              <p data-i18n="when.1.body">開いていたサイトが急に開かない、または警告ページが出るなら、サイト名（SNI）が原因のことがあります。雲はその一部をこの端末で助けます。</p>
+              <p data-i18n="when.1.body">開いていたサイトが急に開かない、または警告ページが出るなら、サイト名（SNI）の検閲かもしれません。雲が助けます。</p>
             </article>
             <article class="value reveal" style="--delay: 60ms">
-              <h3 data-i18n="when.3.title">使いたいDNSを選びたいとき</h3>
-              <p data-i18n="when.3.body">Google、Cloudflare、Quad9 をこの端末で選びます。DNSだけ変えても、名前で切れた接続は開きません。</p>
+              <h3 data-i18n="when.3.title">使いたいDNSを使いたいとき</h3>
+              <p data-i18n="when.3.body">Google、Cloudflare、Quad9 から好きなものを自分で選べます。DNSだけ変えても、サイトの遮断は解けません。</p>
             </article>
             <article class="value reveal" style="--delay: 120ms">
               <h3 data-i18n="when.4.title">外部のVPNサーバーが負担なとき</h3>
-              <p data-i18n="when.4.body">他国のサーバーは通りません。IPと接続している国はそのままです。</p>
+              <p data-i18n="when.4.body">他国や外部のサーバーを通らないので速く、IPや接続している国は変わりません。</p>
             </article>
           </div>
-          <p class="when__note reveal" data-i18n-html="when.note">参考にしてください。<br />雲はサイト名（SNI）のために切れた接続を助けます。IPそのものが止まっている場合は助けられません。</p>
+          <p class="when__note reveal" data-i18n-html="when.note">💡 参考にしてください。<br />雲はSNI検閲の回避を助けるサービスです。IPそのものが遮断されているときは助けられません。</p>
         </div>
       </section>
 
@@ -385,15 +385,15 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow eyebrow--on-dark" data-i18n="features.kicker">機能</p>
-            <h2 data-i18n-html="features.title">主な機能</h2>
-            <p data-i18n="features.lead">雲を押して、DNSを選んで、サイト名を分けて送ります。</p>
+            <h2 data-i18n-html="features.title">主な機能をひと目で</h2>
+            <p data-i18n="features.lead">タップひとつでオンにして、DNSを選んで、SNIを分けて送ります。</p>
           </div>
 
           <div class="bento">
             <article class="bento__card bento__card--lg reveal">
               <div class="bento__text">
-                <h3 data-i18n="feat.tap.title">タップひとつで始まります</h3>
-                <p data-i18n="feat.tap.body">中央の雲を押すと、この端末で始まります。</p>
+                <h3 data-i18n="feat.tap.title">タップひとつでかんたん開始</h3>
+                <p data-i18n="feat.tap.body">メイン画面の雲アイコンを押すだけで、すぐに動きます。</p>
               </div>
               <div class="bento__visual">
                 <img src="/assets/logo-ui.webp" alt="" width="148" height="148" />
@@ -402,8 +402,8 @@
 
             <article class="bento__card reveal" style="--delay: 60ms">
               <div class="bento__text">
-                <h3 data-i18n="feat.dns.title">使いたいDNSを選びます</h3>
-                <p data-i18n="feat.dns.body">Google、Cloudflare、Quad9 から選びます。DNSだけ変えても、名前で切れた接続は開きません。</p>
+                <h3 data-i18n="feat.dns.title">使いたいDNSを選択</h3>
+                <p data-i18n="feat.dns.body">Google、Cloudflare、Quad9 から自由に選んで使ってください。</p>
               </div>
               <div class="chip-row" aria-hidden="true">
                 <span>Cloudflare</span>
@@ -414,8 +414,8 @@
 
             <article class="bento__card reveal" style="--delay: 120ms">
               <div class="bento__text">
-                <h3 data-i18n="feat.sni.title">サイト名は分けて送ります</h3>
-                <p data-i18n="feat.sni.body">接続を始めるときにサイト名（SNI）を分けて送ります。名前で切れる一部の接続を助けます。IPで止めている場合は開きません。</p>
+                <h3 data-i18n="feat.sni.title">安全なSNI分割</h3>
+                <p data-i18n="feat.sni.body">SNIを分割して通信し、遮断された接続を解きます。</p>
               </div>
               <div class="split-viz" aria-hidden="true">
                 <span class="bar"></span>
@@ -426,13 +426,13 @@
 
             <article class="bento__card bento__card--wide reveal" style="--delay: 80ms">
               <div class="bento__text">
-                <h3 data-i18n="feat.local.title">外部のVPNサーバーはありません</h3>
-                <p data-i18n="feat.local.body">通信を外部のVPNサーバーへ送りません。IPはそのままで、通信の中身は開きません。</p>
+                <h3 data-i18n="feat.local.title">外部VPNサーバーなし</h3>
+                <p data-i18n="feat.local.body">データを外部サーバーへ送らないので、IPもそのまま、個人情報も守られます。</p>
               </div>
               <ul class="checklist">
-                <li data-i18n="check.local">分割とDNSの選択はこの端末で</li>
-                <li data-i18n="check.tls">通信の中身は開かない</li>
-                <li data-i18n="check.proxy">外部のVPNサーバーなし</li>
+                <li data-i18n="check.local">すべての接続と分割はこの端末の中で処理</li>
+                <li data-i18n="check.tls">通信の中身は絶対に開かない</li>
+                <li data-i18n="check.proxy">外部VPNサーバーを通らないので安全</li>
               </ul>
             </article>
           </div>
@@ -443,8 +443,8 @@
         <div class="section-shell how__grid">
           <div class="how__copy reveal">
             <p class="eyebrow" data-i18n="how.kicker">仕組み</p>
-            <h2 data-i18n-html="how.title">簡単な使い方</h2>
-            <p class="lead" data-i18n="how.lead">許可したあと、中央の雲を押します。</p>
+            <h2 data-i18n-html="how.title">かんたんな使い方</h2>
+            <p class="lead" data-i18n="how.lead">画面中央の雲を押して許可すると、すぐに始まります。</p>
           </div>
 
           <ol class="steps reveal" style="--delay: 80ms">
@@ -452,21 +452,21 @@
               <span class="steps__num">1</span>
               <div>
                 <strong data-i18n="step1.title">雲のアイコンを押す</strong>
-                <p data-i18n="step1.body">中央の雲を押して許可すると、始まります。</p>
+                <p data-i18n="step1.body">画面中央の雲を押して許可すると、すぐに始まります。</p>
               </div>
             </li>
             <li>
               <span class="steps__num">2</span>
               <div>
                 <strong data-i18n="step2.title">DNSを選ぶ</strong>
-                <p data-i18n="step2.body">使いたいDNSを選びます。アドレス検索は選んだDNSへ行き、名前で切れた接続はその名前を分けて送って助けます。</p>
+                <p data-i18n="step2.body">使いたいDNSを選びます。DNSの変更とSNI分割が一緒に働き、遮断されたサイトを回避できます。</p>
               </div>
             </li>
             <li>
               <span class="steps__num">3</span>
               <div>
-                <strong data-i18n="step3.title">サイトへ接続する</strong>
-                <p data-i18n="step3.body">名前で切れる一部の接続を助けます。通信の中身は開きません。すべてのサイトが開くわけではありません。</p>
+                <strong data-i18n="step3.title">サイトに接続する</strong>
+                <p data-i18n="step3.body">開かなかったサイトに接続できます。通信の中身は絶対に開かないので、安心してください。</p>
               </div>
             </li>
           </ol>
@@ -511,8 +511,12 @@
       <section class="cta" id="download">
         <div class="section-shell cta__inner reveal">
           <img src="/assets/logo-ui.webp" alt="" width="72" height="72" class="cta__icon" />
-          <h2 data-i18n="cta.title">もうすぐ届きます</h2>
-          <p data-i18n="cta.body">ストア公開を準備しています。</p>
+          <h2 data-i18n="cta.title">もうすぐ皆さんのところへ行きます！</h2>
+          <p data-i18n="cta.body">今、公開に向けて準備を進めています。</p>
+          <div class="hero__cta">
+            <button type="button" class="btn btn--primary" data-i18n="cta.android">Android ダウンロード</button>
+            <button type="button" class="btn btn--ghost btn--on-dark" data-i18n="cta.ios">iOS ダウンロード</button>
+          </div>
         </div>
       </section>
     </main>

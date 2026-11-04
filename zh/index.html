@@ -153,7 +153,7 @@
       "url": "https://gureum.yodams.com/zh/",
       "image": "https://gureum.yodams.com/assets/og.png",
       "inLanguage": "zh-Hans",
-      "description": "云不使用远程 VPN 服务器，在这台设备上更换 DNS，并把网站名（SNI）拆开再发。它帮一部分因为这个名字而断开的 HTTPS 连接，IP 和所在国家不变，也不打开通信内容。",
+      "description": "云不使用复杂的远程 VPN 服务器，在你的设备里更换 DNS，并把网站名（SNI）拆开再发。它绕过因为网站名而被拦截的 HTTPS 连接，IP 和所在国家保持不变，速度也更快。当然，通信内容绝对不会被打开。",
       "featureList": [
         "连接因为网站名断开时，在设备上更换 DNS，并把网站名拆开再发送。",
         "不改变 IP，不打开 HTTPS 内容，也不把流量送到远程 VPN 服务器。",
@@ -222,27 +222,27 @@
     {
       "@type": "HowTo",
       "@id": "https://gureum.yodams.com/zh/#how",
-      "name": "网站被拦截打不开时的用法",
-      "description": "允许权限之后，点中间的云。",
+      "name": "简单用法",
+      "description": "点屏幕中间的云并允许权限，就会马上开始。",
       "inLanguage": "zh-Hans",
       "step": [
         {
           "@type": "HowToStep",
           "position": 1,
           "name": "点云图标",
-          "text": "点中间的云并允许权限，就会开始。"
+          "text": "点屏幕中间的云并允许权限，就会马上开始。"
         },
         {
           "@type": "HowToStep",
           "position": 2,
           "name": "选择 DNS",
-          "text": "选你想用的 DNS。地址查询会发到那个 DNS，因为名字而断开的连接会把名字拆开再发来帮忙。"
+          "text": "选择想用的 DNS。更换 DNS 和 SNI 分割一起工作，可以绕过被拦截的网站。"
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "打开网站",
-          "text": "它帮一部分因为名字而断开的连接，也不打开通信内容。不是每个网站都能打开。"
+          "text": "可以打开以前打不开的网站。通信内容绝对不会被打开，可以放心。"
         }
       ]
     }
@@ -297,17 +297,17 @@
             <p class="brand-hero">구름</p>
             <h1>
               <span class="hero__line" data-i18n="hero.line1">网站被拦截打不开时，</span>
-              <span class="hero__line" data-i18n="hero.line2">一个应用帮助连接</span>
+              <span class="hero__line" data-i18n="hero.line2">用一个应用轻松连接。</span>
             </h1>
-            <p class="hero__sub" data-i18n="hero.sub">云不使用远程 VPN 服务器，在这台设备上更换 DNS，并把网站名（SNI）拆开再发。它帮一部分因为这个名字而断开的 HTTPS 连接，IP 和所在国家不变，也不打开通信内容。</p>
+            <p class="hero__sub" data-i18n="hero.sub">云不使用复杂的远程 VPN 服务器，在你的设备里更换 DNS，并把网站名（SNI）拆开再发。它绕过因为网站名而被拦截的 HTTPS 连接，IP 和所在国家保持不变，速度也更快。当然，通信内容绝对不会被打开。</p>
             <div class="hero__cta">
               <a class="btn btn--primary" href="#download" data-i18n="hero.download">下载</a>
               <a class="btn btn--ghost" href="#how" data-i18n="hero.how">工作方式</a>
             </div>
             <ul class="hero__points">
               <li data-i18n="point.local">更换 DNS</li>
-              <li data-i18n="point.ip">SNI 分割</li>
-              <li data-i18n="point.tls">IP 不变</li>
+              <li data-i18n="point.ip">绕过 SNI 审查</li>
+              <li data-i18n="point.tls">速度不下降</li>
             </ul>
           </div>
 
@@ -360,24 +360,24 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow" data-i18n="when.kicker">什么时候打开</p>
-            <h2 data-i18n="when.title">云在这些时候用</h2>
-            <p data-i18n-html="when.lead">网站打不开的原因有好几种。<br />云在这台设备上帮的是一部分因为网站名（SNI）而断开的连接。</p>
+            <h2 data-i18n="when.title">云在这些时候使用</h2>
+            <p data-i18n-html="when.lead">网站打不开的原因有好几种。<br />云解决因为网站名（SNI）审查而断开的连接。</p>
           </div>
           <div class="value-grid">
             <article class="value reveal">
               <h3 data-i18n="when.1.title">网站打不开时</h3>
-              <p data-i18n="when.1.body">以前能打开的网站突然打不开，或出现警告页，可能是网站名（SNI）导致断开。云在这台设备上帮其中一部分。</p>
+              <p data-i18n="when.1.body">以前能打开的网站突然打不开，或出现警告页，可能是网站名（SNI）审查。云会帮忙。</p>
             </article>
             <article class="value reveal" style="--delay: 60ms">
-              <h3 data-i18n="when.3.title">想自己选 DNS 时</h3>
-              <p data-i18n="when.3.body">在这台设备上选 Google、Cloudflare 或 Quad9。只换 DNS，打不开因为名字而断开的连接。</p>
+              <h3 data-i18n="when.3.title">想用自己选的 DNS 时</h3>
+              <p data-i18n="when.3.body">可以自己在 Google、Cloudflare、Quad9 里挑一个喜欢的。只改 DNS，解不开网站拦截。</p>
             </article>
             <article class="value reveal" style="--delay: 120ms">
               <h3 data-i18n="when.4.title">觉得远程 VPN 服务器负担重时</h3>
-              <p data-i18n="when.4.body">流量不经过别的国家的服务器。IP 和所在国家保持不变。</p>
+              <p data-i18n="when.4.body">不经过别的国家或外部服务器，所以速度快，IP 和所在国家也不会变。</p>
             </article>
           </div>
-          <p class="when__note reveal" data-i18n-html="when.note">请注意。<br />云帮助因为网站名（SNI）而断开的连接。IP 本身被拦截时，它帮不上。</p>
+          <p class="when__note reveal" data-i18n-html="when.note">💡 请注意。<br />云帮助绕过 SNI 审查。IP 本身被拦截时，它帮不上。</p>
         </div>
       </section>
 
@@ -385,15 +385,15 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow eyebrow--on-dark" data-i18n="features.kicker">功能</p>
-            <h2 data-i18n-html="features.title">主要功能</h2>
-            <p data-i18n="features.lead">点一下云，选一个 DNS，再把网站名拆开再发。</p>
+            <h2 data-i18n-html="features.title">主要功能一眼看清</h2>
+            <p data-i18n="features.lead">点一下打开，选一个 DNS，再把 SNI 拆开再发。</p>
           </div>
 
           <div class="bento">
             <article class="bento__card bento__card--lg reveal">
               <div class="bento__text">
-                <h3 data-i18n="feat.tap.title">点一下就开始</h3>
-                <p data-i18n="feat.tap.body">点中间的云，就会在这台设备上开始。</p>
+                <h3 data-i18n="feat.tap.title">点一下轻松开始</h3>
+                <p data-i18n="feat.tap.body">点主画面的云图标，就会马上开始。</p>
               </div>
               <div class="bento__visual">
                 <img src="/assets/logo-ui.webp" alt="" width="148" height="148" />
@@ -402,8 +402,8 @@
 
             <article class="bento__card reveal" style="--delay: 60ms">
               <div class="bento__text">
-                <h3 data-i18n="feat.dns.title">选想用的 DNS</h3>
-                <p data-i18n="feat.dns.body">在 Google、Cloudflare、Quad9 里选。只换 DNS，打不开因为名字而断开的连接。</p>
+                <h3 data-i18n="feat.dns.title">选择想用的 DNS</h3>
+                <p data-i18n="feat.dns.body">在 Google、Cloudflare、Quad9 里自由选择使用。</p>
               </div>
               <div class="chip-row" aria-hidden="true">
                 <span>Cloudflare</span>
@@ -414,8 +414,8 @@
 
             <article class="bento__card reveal" style="--delay: 120ms">
               <div class="bento__text">
-                <h3 data-i18n="feat.sni.title">网站名会拆开再发</h3>
-                <p data-i18n="feat.sni.body">连接开始时把网站名（SNI）拆开再发，帮一部分因为这个名字而断开的连接。针对 IP 的拦截，这种方式打不开。</p>
+                <h3 data-i18n="feat.sni.title">安全的 SNI 分割</h3>
+                <p data-i18n="feat.sni.body">把 SNI 拆开传输，解开被拦截的连接。</p>
               </div>
               <div class="split-viz" aria-hidden="true">
                 <span class="bar"></span>
@@ -427,12 +427,12 @@
             <article class="bento__card bento__card--wide reveal" style="--delay: 80ms">
               <div class="bento__text">
                 <h3 data-i18n="feat.local.title">没有远程 VPN 服务器</h3>
-                <p data-i18n="feat.local.body">流量不会送到远程 VPN 服务器。IP 不变，也不打开通信内容。</p>
+                <p data-i18n="feat.local.body">数据不会送到外部服务器，所以 IP 保持不变，个人信息也受到保护。</p>
               </div>
               <ul class="checklist">
-                <li data-i18n="check.local">拆分和 DNS 选择在这台设备上</li>
-                <li data-i18n="check.tls">不打开通信内容</li>
-                <li data-i18n="check.proxy">没有远程 VPN 服务器</li>
+                <li data-i18n="check.local">所有连接和拆分都在设备里处理</li>
+                <li data-i18n="check.tls">通信内容绝对不会被打开</li>
+                <li data-i18n="check.proxy">不经过远程 VPN 服务器，所以安全</li>
               </ul>
             </article>
           </div>
@@ -444,7 +444,7 @@
           <div class="how__copy reveal">
             <p class="eyebrow" data-i18n="how.kicker">工作方式</p>
             <h2 data-i18n-html="how.title">简单用法</h2>
-            <p class="lead" data-i18n="how.lead">允许权限之后，点中间的云。</p>
+            <p class="lead" data-i18n="how.lead">点屏幕中间的云并允许权限，就会马上开始。</p>
           </div>
 
           <ol class="steps reveal" style="--delay: 80ms">
@@ -452,21 +452,21 @@
               <span class="steps__num">1</span>
               <div>
                 <strong data-i18n="step1.title">点云图标</strong>
-                <p data-i18n="step1.body">点中间的云并允许权限，就会开始。</p>
+                <p data-i18n="step1.body">点屏幕中间的云并允许权限，就会马上开始。</p>
               </div>
             </li>
             <li>
               <span class="steps__num">2</span>
               <div>
                 <strong data-i18n="step2.title">选择 DNS</strong>
-                <p data-i18n="step2.body">选你想用的 DNS。地址查询会发到那个 DNS，因为名字而断开的连接会把名字拆开再发来帮忙。</p>
+                <p data-i18n="step2.body">选择想用的 DNS。更换 DNS 和 SNI 分割一起工作，可以绕过被拦截的网站。</p>
               </div>
             </li>
             <li>
               <span class="steps__num">3</span>
               <div>
                 <strong data-i18n="step3.title">打开网站</strong>
-                <p data-i18n="step3.body">它帮一部分因为名字而断开的连接，也不打开通信内容。不是每个网站都能打开。</p>
+                <p data-i18n="step3.body">可以打开以前打不开的网站。通信内容绝对不会被打开，可以放心。</p>
               </div>
             </li>
           </ol>
@@ -511,8 +511,12 @@
       <section class="cta" id="download">
         <div class="section-shell cta__inner reveal">
           <img src="/assets/logo-ui.webp" alt="" width="72" height="72" class="cta__icon" />
-          <h2 data-i18n="cta.title">很快就来</h2>
-          <p data-i18n="cta.body">商店上架还在准备。</p>
+          <h2 data-i18n="cta.title">很快就来找你！</h2>
+          <p data-i18n="cta.body">正在认真准备上架。</p>
+          <div class="hero__cta">
+            <button type="button" class="btn btn--primary" data-i18n="cta.android">Android 下载</button>
+            <button type="button" class="btn btn--ghost btn--on-dark" data-i18n="cta.ios">iOS 下载</button>
+          </div>
         </div>
       </section>
     </main>
