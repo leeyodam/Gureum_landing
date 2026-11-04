@@ -76,7 +76,7 @@
     />
     <link rel="preload" href="/assets/logo-ui.webp" as="image" type="image/webp" />
     <script>document.documentElement.classList.add("js")</script>
-    <link rel="stylesheet" href="/styles.css?v=14" />
+    <link rel="stylesheet" href="/styles.css?v=16" />
     <script type="application/ld+json" id="structured-data">
 {
   "@context": "https://schema.org",
@@ -153,7 +153,7 @@
       "url": "https://gureum.yodams.com/ja/",
       "image": "https://gureum.yodams.com/assets/og.png",
       "inLanguage": "ja",
-      "description": "雲は複雑な外部VPNサーバーを使わず、自分の端末の中でDNSを変え、サイト名（SNI）を分割して送ります。サイト名のために遮断されたHTTPS接続を回避し、IPと接続している国はそのままなので速度も速くなります。もちろん通信の中身は絶対に開きません。",
+      "description": "雲は複雑な外部VPNサーバーを使わず、自分の端末の中でDNSを変え、サイト名（SNI）を分割して送ります。\u003cbr />サイト名のために遮断されたHTTPS接続を回避し、IPと接続している国はそのままなので速度も速くなります。もちろん通信の中身は絶対に開きません。",
       "featureList": [
         "サイト名のために切れた接続で、端末の中のDNSを変え、サイト名を分けて送ります。",
         "IPは変えず、HTTPSの中身は開かず、遠隔VPNサーバーへ送りません。",
@@ -297,18 +297,17 @@
             <p class="brand-hero">구름</p>
             <h1>
               <span class="hero__line" data-i18n="hero.line1">ブロックされたサイトが開かないとき、</span>
-              <span class="hero__line" data-i18n="hero.line2">アプリひとつで楽に接続してください。</span>
+              <span class="hero__line" data-i18n="hero.line2">アプリひとつで楽に接続できます。</span>
             </h1>
-            <p class="hero__sub" data-i18n="hero.sub">雲は複雑な外部VPNサーバーを使わず、自分の端末の中でDNSを変え、サイト名（SNI）を分割して送ります。サイト名のために遮断されたHTTPS接続を回避し、IPと接続している国はそのままなので速度も速くなります。もちろん通信の中身は絶対に開きません。</p>
+            <p class="hero__sub" data-i18n-html="hero.sub">雲は複雑な外部VPNサーバーを使わず、自分の端末の中でDNSを変え、サイト名（SNI）を分割して送ります。<br />サイト名のために遮断されたHTTPS接続を回避し、IPと接続している国はそのままなので速度も速くなります。もちろん通信の中身は絶対に開きません。</p>
             <div class="hero__cta">
               <a class="btn btn--primary" href="#download" data-i18n="hero.download">ダウンロード</a>
-              <a class="btn btn--ghost" href="#how" data-i18n="hero.how">仕組み</a>
+              <ul class="hero__points">
+                <li data-i18n="point.local">DNS変更</li>
+                <li data-i18n="point.ip">SNI検閲の回避</li>
+                <li data-i18n="point.tls">速度低下なし</li>
+              </ul>
             </div>
-            <ul class="hero__points">
-              <li data-i18n="point.local">DNS変更</li>
-              <li data-i18n="point.ip">SNI検閲の回避</li>
-              <li data-i18n="point.tls">速度低下なし</li>
-            </ul>
           </div>
 
           <div class="hero__visual reveal" style="--delay: 100ms">
@@ -359,7 +358,7 @@
       <section class="when" id="when">
         <div class="section-shell">
           <div class="section-head reveal">
-            <p class="eyebrow" data-i18n="when.kicker">こんなとき</p>
+            <p class="eyebrow" data-i18n="when.kicker">紹介</p>
             <h2 data-i18n="when.title">雲はこんなときに使います</h2>
             <p data-i18n-html="when.lead">サイトが開かない理由はいくつかあります。<br />雲はサイト名（SNI）の検閲で切れた接続を解決します。</p>
           </div>
@@ -442,7 +441,7 @@
       <section class="how" id="how">
         <div class="section-shell how__grid">
           <div class="how__copy reveal">
-            <p class="eyebrow" data-i18n="how.kicker">仕組み</p>
+            <p class="eyebrow" data-i18n="how.kicker">使い方</p>
             <h2 data-i18n-html="how.title">かんたんな使い方</h2>
             <p class="lead" data-i18n="how.lead">画面中央の雲を押して許可すると、すぐに始まります。</p>
           </div>
@@ -534,12 +533,12 @@
           <div>
             <p class="footer__label" data-i18n="foot.product">製品</p>
             <a href="#features" data-i18n="foot.features">機能</a>
-            <a href="#how" data-i18n="foot.how">仕組み</a>
+            <a href="#how" data-i18n="foot.how">使い方</a>
             <a href="#download" data-i18n="foot.download">ダウンロード</a>
           </div>
           <div>
             <p class="footer__label" data-i18n="foot.trust">案内</p>
-            <a href="#when" data-i18n="foot.when">こんなとき</a>
+            <a href="#when" data-i18n="foot.when">紹介</a>
             <a href="#faq" data-i18n="foot.faq">FAQ</a>
           </div>
           <div>

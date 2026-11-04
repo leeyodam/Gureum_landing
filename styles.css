@@ -388,15 +388,19 @@ button {
 .hero__cta {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 12px;
 }
 
-.hero__points {
+.hero .hero__points {
+  flex: 1 1 180px;
+  min-width: 180px;
   list-style: none;
-  margin: 28px 0 0;
+  margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 8px;
 }
 
@@ -1254,10 +1258,6 @@ details p {
     min-height: auto;
     padding: 28px 0 56px;
     gap: 36px;
-  }
-
-  .hero__visual {
-    order: -1;
   }
 
   .phone {

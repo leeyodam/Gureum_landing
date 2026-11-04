@@ -76,7 +76,7 @@
     />
     <link rel="preload" href="/assets/logo-ui.webp" as="image" type="image/webp" />
     <script>document.documentElement.classList.add("js")</script>
-    <link rel="stylesheet" href="/styles.css?v=14" />
+    <link rel="stylesheet" href="/styles.css?v=16" />
     <script type="application/ld+json" id="structured-data">
 {
   "@context": "https://schema.org",
@@ -153,7 +153,7 @@
       "url": "https://gureum.yodams.com/",
       "image": "https://gureum.yodams.com/assets/og.png",
       "inLanguage": "ko",
-      "description": "구름은 복잡한 외부 VPN 서버 없이, 내 기기 안에서 DNS를 변경하고 사이트 이름(SNI)을 분할해서 전송해요. 사이트 이름 때문에 차단된 HTTPS 접속을 우회하며, 내 IP나 접속 국가는 그대로 유지돼 속도도 빨라요. 당연히 통신 내용도 절대 열어보지 않습니다.",
+      "description": "구름은 복잡한 외부 VPN 서버 없이, 내 기기 안에서 DNS를 변경하고 사이트 이름(SNI)을 분할해서 전송해요.\u003cbr />사이트 이름 때문에 차단된 HTTPS 접속을 우회하며, 내 IP나 접속 국가는 그대로 유지돼 속도도 빨라요. 당연히 통신 내용도 절대 열어보지 않습니다.",
       "featureList": [
         "사이트 이름(SNI) 때문에 끊긴 연결에서, 이 기기의 DNS를 바꾸고 그 이름을 나눠 보내요.",
         "IP를 바꾸지 않고, HTTPS 내용은 열지 않으며, 원격 VPN 서버로 보내지 않아요.",
@@ -297,18 +297,17 @@
             <p class="brand-hero">구름</p>
             <h1>
               <span class="hero__line" data-i18n="hero.line1">차단된 사이트가 안 열릴 때,</span>
-              <span class="hero__line" data-i18n="hero.line2">앱 하나로 편하게 접속하세요.</span>
+              <span class="hero__line" data-i18n="hero.line2">앱 하나로 편하게 접속해요.</span>
             </h1>
-            <p class="hero__sub" data-i18n="hero.sub">구름은 복잡한 외부 VPN 서버 없이, 내 기기 안에서 DNS를 변경하고 사이트 이름(SNI)을 분할해서 전송해요. 사이트 이름 때문에 차단된 HTTPS 접속을 우회하며, 내 IP나 접속 국가는 그대로 유지돼 속도도 빨라요. 당연히 통신 내용도 절대 열어보지 않습니다.</p>
+            <p class="hero__sub" data-i18n-html="hero.sub">구름은 복잡한 외부 VPN 서버 없이, 내 기기 안에서 DNS를 변경하고 사이트 이름(SNI)을 분할해서 전송해요.<br />사이트 이름 때문에 차단된 HTTPS 접속을 우회하며, 내 IP나 접속 국가는 그대로 유지돼 속도도 빨라요. 당연히 통신 내용도 절대 열어보지 않습니다.</p>
             <div class="hero__cta">
               <a class="btn btn--primary" href="#download" data-i18n="hero.download">다운로드</a>
-              <a class="btn btn--ghost" href="#how" data-i18n="hero.how">작동 방식</a>
+              <ul class="hero__points">
+                <li data-i18n="point.local">DNS 변경</li>
+                <li data-i18n="point.ip">SNI 검열 우회</li>
+                <li data-i18n="point.tls">속도 저하 없음</li>
+              </ul>
             </div>
-            <ul class="hero__points">
-              <li data-i18n="point.local">DNS 변경</li>
-              <li data-i18n="point.ip">SNI 검열 우회</li>
-              <li data-i18n="point.tls">속도 저하 없음</li>
-            </ul>
           </div>
 
           <div class="hero__visual reveal" style="--delay: 100ms">
@@ -359,7 +358,7 @@
       <section class="when" id="when">
         <div class="section-shell">
           <div class="section-head reveal">
-            <p class="eyebrow" data-i18n="when.kicker">이럴 때</p>
+            <p class="eyebrow" data-i18n="when.kicker">소개</p>
             <h2 data-i18n="when.title">구름은 이럴 때 사용해요</h2>
             <p data-i18n-html="when.lead">사이트가 열리지 않는 이유는 여러 가지예요.<br />구름은 사이트 이름(SNI) 검열 때문에 끊긴 연결을 해결해요.</p>
           </div>
@@ -442,7 +441,7 @@
       <section class="how" id="how">
         <div class="section-shell how__grid">
           <div class="how__copy reveal">
-            <p class="eyebrow" data-i18n="how.kicker">작동 방식</p>
+            <p class="eyebrow" data-i18n="how.kicker">사용 방법</p>
             <h2 data-i18n-html="how.title">간단한 사용 방법</h2>
             <p class="lead" data-i18n="how.lead">화면 가운데 구름을 누르고 권한을 허용하면 바로 시작돼요.</p>
           </div>
@@ -534,12 +533,12 @@
           <div>
             <p class="footer__label" data-i18n="foot.product">제품</p>
             <a href="#features" data-i18n="foot.features">기능</a>
-            <a href="#how" data-i18n="foot.how">작동 방식</a>
+            <a href="#how" data-i18n="foot.how">사용 방법</a>
             <a href="#download" data-i18n="foot.download">다운로드</a>
           </div>
           <div>
             <p class="footer__label" data-i18n="foot.trust">안내</p>
-            <a href="#when" data-i18n="foot.when">이럴 때</a>
+            <a href="#when" data-i18n="foot.when">소개</a>
             <a href="#faq" data-i18n="foot.faq">FAQ</a>
           </div>
           <div>
