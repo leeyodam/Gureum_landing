@@ -196,6 +196,14 @@ function localizeText(html, dict) {
       return pre + escapeAttr(value) + post;
     }
   );
+  out = out.replace(
+    /(data-i18n-alt="([^"]+)"\s+alt=")([^"]*)(")/g,
+    (whole, pre, key, old, post) => {
+      const value = dict[key];
+      if (value == null) throw new Error("missing i18n key " + key);
+      return pre + escapeAttr(value) + post;
+    }
+  );
   return out;
 }
 
