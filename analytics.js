@@ -31,19 +31,10 @@
     var node = event.target;
     if (!node || !node.closest) return;
 
-    var langButton = node.closest("[data-lang]");
-    if (langButton) {
-      var next = langButton.getAttribute("data-lang") || lang();
+    var langLink = node.closest("[data-lang]");
+    if (langLink) {
+      var next = langLink.getAttribute("data-lang") || lang();
       gtag("event", "language_change", { page_lang: next });
-      gtag("config", MEASUREMENT_ID, {
-        page_lang: next,
-        send_page_view: false,
-      });
-      gtag("event", "page_view", {
-        page_lang: next,
-        page_location: location.href,
-        page_title: document.title,
-      });
       return;
     }
 

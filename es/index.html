@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self' 'unsafe-inline'; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; base-uri 'none'; object-src 'none'; form-action 'none'"
+    />
+    <title>¿No abre un sitio bloqueado? App para desbloquear sitios, Gureum</title>
+    <meta
+      name="description"
+      content="¿No abre un sitio bloqueado? Gureum cambia el DNS y parte el nombre del sitio (SNI) para ayudar con algunas conexiones HTTPS, sin servidor VPN remoto ni cambio de IP."
+    />
+    <meta name="author" content="Gureum" />
+    <meta name="application-name" content="Gureum" />
+    <meta name="apple-mobile-web-app-title" content="Gureum" />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <link rel="canonical" href="https://gureum.yodams.com/es/" />
+    <link rel="alternate" hreflang="es" href="https://gureum.yodams.com/es/" />
+    <link rel="alternate" hreflang="ko" href="https://gureum.yodams.com/" />
+    <link rel="alternate" hreflang="en" href="https://gureum.yodams.com/en/" />
+    <link rel="alternate" hreflang="ja" href="https://gureum.yodams.com/ja/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://gureum.yodams.com/zh/" />
+    <link rel="alternate" hreflang="x-default" href="https://gureum.yodams.com/" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="구름(Gureum) 요약" />
+    <meta property="og:title" content="¿No abre un sitio bloqueado? App para desbloquear sitios, Gureum" />
+    <meta
+      property="og:description"
+      content="¿No abre un sitio bloqueado? Gureum cambia el DNS y parte el nombre del sitio (SNI) para ayudar con algunas conexiones HTTPS, sin servidor VPN remoto ni cambio de IP."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gureum.yodams.com/es/" />
+    <meta property="og:site_name" content="구름 (Gureum)" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:locale:alternate" content="ja_JP" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+    <meta property="og:image" content="https://gureum.yodams.com/assets/og.png" />
+    <meta property="og:image:secure_url" content="https://gureum.yodams.com/assets/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="App Gureum para desbloquear sitios, con cambio de DNS y división SNI" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="¿No abre un sitio bloqueado? App para desbloquear sitios, Gureum" />
+    <meta
+      name="twitter:description"
+      content="¿No abre un sitio bloqueado? Gureum cambia el DNS y parte el nombre del sitio (SNI) para ayudar con algunas conexiones HTTPS, sin servidor VPN remoto ni cambio de IP."
+    />
+    <meta name="twitter:image" content="https://gureum.yodams.com/assets/og.png" />
+    <meta name="twitter:image:alt" content="App Gureum para desbloquear sitios, con cambio de DNS y división SNI" />
+    <meta name="theme-color" content="#B0D6F2" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2-subset/Pretendard-Regular.subset.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2-subset/Pretendard-Bold.subset.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="preload" href="/assets/logo-ui.webp" as="image" type="image/webp" />
+    <script>document.documentElement.classList.add("js")</script>
+    <link rel="stylesheet" href="/styles.css?v=14" />
+    <script type="application/ld+json" id="structured-data">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://gureum.yodams.com/#organization",
+      "name": "Gureum",
+      "alternateName": [
+        "구름",
+        "雲",
+        "云"
+      ],
+      "url": "https://gureum.yodams.com/",
+      "logo": "https://gureum.yodams.com/assets/favicon-192.png",
+      "sameAs": [
+        "https://github.com/leeyodam/Gureum_landing"
+      ],
+      "areaServed": "KR",
+      "knowsLanguage": [
+        "ko",
+        "en",
+        "es",
+        "ja",
+        "zh"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://gureum.yodams.com/#website",
+      "url": "https://gureum.yodams.com/",
+      "name": "구름",
+      "alternateName": "Gureum",
+      "inLanguage": [
+        "ko",
+        "en",
+        "es",
+        "ja",
+        "zh-Hans"
+      ],
+      "publisher": {
+        "@id": "https://gureum.yodams.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://gureum.yodams.com/es/#webpage",
+      "url": "https://gureum.yodams.com/es/",
+      "name": "¿No abre un sitio bloqueado? App para desbloquear sitios, Gureum",
+      "description": "¿No abre un sitio bloqueado? Gureum cambia el DNS y parte el nombre del sitio (SNI) para ayudar con algunas conexiones HTTPS, sin servidor VPN remoto ni cambio de IP.",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://gureum.yodams.com/#website"
+      },
+      "about": {
+        "@id": "https://gureum.yodams.com/#app"
+      },
+      "primaryImageOfPage": "https://gureum.yodams.com/assets/og.png",
+      "dateModified": "2026-11-04",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".about__answer",
+          ".hero__sub"
+        ]
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://gureum.yodams.com/#app",
+      "name": "구름",
+      "alternateName": "Gureum",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Android, iOS",
+      "url": "https://gureum.yodams.com/es/",
+      "image": "https://gureum.yodams.com/assets/og.png",
+      "inLanguage": "es",
+      "description": "Gureum es una app para desbloquear sitios en Android e iOS. Cuando un sitio bloqueado no abre, cambia el DNS en este dispositivo y envía el nombre del sitio (SNI) por partes para ayudar con algunas conexiones HTTPS. No cambia la IP ni el país, no abre el contenido HTTPS y no envía el tráfico a un servidor VPN remoto. No abre todos los sitios bloqueados.",
+      "featureList": [
+        "Si la conexión se corta por el nombre del sitio, cambia el DNS en el dispositivo y envía ese nombre por partes.",
+        "No cambia la IP, no abre el contenido HTTPS y no envía el tráfico a un servidor VPN remoto.",
+        "Cloudflare, Google, Quad9"
+      ],
+      "publisher": {
+        "@id": "https://gureum.yodams.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://gureum.yodams.com/es/#faq",
+      "url": "https://gureum.yodams.com/es/#faq",
+      "inLanguage": "es",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es Gureum?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gureum es una app para desbloquear sitios en Android e iOS. Cuando un sitio bloqueado no abre, cambia el DNS en este dispositivo y envía el nombre del sitio (SNI) por partes para ayudar con algunas conexiones HTTPS. No cambia la IP ni el país, no abre el contenido HTTPS y no envía el tráfico a un servidor VPN remoto. No abre todos los sitios bloqueados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es una app para saltar bloqueos de sitios?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es una app que ayuda a abrir un sitio bloqueado. Cuando una conexión HTTPS se corta por el nombre del sitio (SNI), Gureum cambia el DNS en el dispositivo y envía ese nombre por partes. No cambia la IP ni envía el tráfico a un servidor VPN remoto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué bloqueos ayuda a pasar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ayuda en algunos bloqueos HTTPS que usan el nombre del sitio (SNI). No abre bloqueos dirigidos a una IP o a un servidor de juego, y no bloquea anuncios."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué no abre un sitio bloqueado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de dónde esté el bloqueo. Puede estar bloqueada la búsqueda (DNS), la IP, un servidor de juego, el propio dispositivo, o la conexión HTTPS puede cortarse por el nombre del sitio (SNI). Gureum ayuda en algunos cortes causados por el nombre del sitio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Abre sitios que muestran una página de aviso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, cuando el aviso aparece por el nombre del sitio (SNI). Cambia el DNS y envía ese nombre por partes. No abre bloqueos dirigidos a una IP o a un servidor de juego."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué se diferencia de una VPN normal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Una VPN remota puede enviar el tráfico a un servidor VPN y cambiar la IP o la ruta. Gureum no envía el tráfico a ese servidor. En este dispositivo cambia el DNS y trata solo el nombre del sitio (SNI). No cambia la IP ni el país."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se puede saltar un bloqueo sin VPN?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gureum no usa servidor VPN remoto. Cambia el DNS en este dispositivo y envía el nombre del sitio (SNI) por partes, y eso ayuda en algunas conexiones HTTPS que se cortan por ese nombre. No abre bloqueos dirigidos a una IP o a un servidor de juego."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cambia mi dirección IP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Gureum no cambia tu IP ni tu país. Tampoco envía el tráfico a un servidor VPN en el extranjero."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Bloquea los anuncios?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Gureum no es un bloqueador de anuncios. Cambia el DNS y parte el nombre del sitio (SNI)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Lee el HTTPS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Gureum no inspecciona ni descifra el contenido HTTPS. Lo que trata es el DNS y el nombre del sitio (SNI) que sale al empezar la conexión."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué significa enviar el nombre del sitio por partes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Al empezar la conexión HTTPS, Gureum no envía el nombre del sitio (SNI) de una vez. Lo envía por partes, y eso ayuda en algunos cortes causados por ese nombre. El contenido HTTPS no se inspecciona ni se descifra."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Y si el sitio bloqueado sigue sin abrir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si sigue sin abrir con Gureum encendido, puede que el bloqueo no sea por el nombre del sitio (SNI). Gureum no abre un bloqueo sobre la dirección del sitio, un servidor de juego, ni uno que pusiste en el dispositivo. Para probar solo el DNS, elige Cloudflare, Google o Quad9."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Un sitio bloqueado no abre. ¿Qué hago?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mira si los demás sitios siguen abriendo. Si la página de aviso sale en un solo sitio y la dirección es HTTPS, el nombre del sitio (SNI) puede ser la causa del corte. Activa Gureum y prueba ese sitio otra vez."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo salto el bloqueo HTTPS en el móvil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Activa Gureum y acepta el permiso una vez, luego toca la nube del centro. Desde ahí cambia el DNS en este dispositivo y envía el nombre del sitio (SNI) por partes al empezar la conexión."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué DNS puedo elegir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cloudflare, Google o Quad9. La búsqueda sale al DNS que eliges."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cloudflare, Google o Quad9: ¿cuál elijo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los tres resuelven direcciones. Cuál elegir depende de la política de cada proveedor, y Gureum envía la búsqueda solo al DNS que eliges. Los nombres de los sitios no van a Analytics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se vuelve lenta la conexión?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No pasa por un servidor VPN remoto, así que el camino no se alarga como con una VPN remota. La velocidad real depende de tu red y del DNS que elijas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hace falta una cuenta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Puedes activar Gureum sin registrarte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Funciona en Android y en iPhone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En Android e iOS. Los enlaces de las tiendas aparecerán en esta página cuando estén listos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El código de la app es público?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esta página es pública. El código de la app no."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se envían los sitios que visito?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Los nombres de los sitios y una dirección DNS escrita a mano no van a Google Analytics. Sí van el estado de la protección y el tipo de DNS, sin personalización de anuncios. Las búsquedas DNS van al resolver que eliges."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://gureum.yodams.com/es/#how",
+      "name": "Cómo Gureum retoma una conexión bloqueada",
+      "description": "Acepta el permiso y toca la nube. El DNS y el nombre partido se resuelven en este dispositivo.",
+      "inLanguage": "es",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Toca la nube",
+          "text": "Cuando das permiso, empieza la protección."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Elige un DNS",
+          "text": "La búsqueda sale al DNS que eliges. Cambiar solo el DNS no abre una conexión que se corta por el nombre, así que ese nombre también sale por partes."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Envía el nombre por partes",
+          "text": "Cuando hace falta, el nombre del sitio se parte para que la conexión se mantenga estable."
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#top" data-i18n="skip">Ir al contenido</a>
+    <header class="nav-shell" id="nav">
+      <div class="nav">
+        <a class="nav__brand" href="#top">
+          <img src="/assets/logo-ui.webp" alt="" width="36" height="36" />
+          <span>구름</span>
+        </a>
+
+        <div class="nav__actions">
+          <a class="btn btn--primary btn--sm" href="#download" data-i18n="nav.download">Descargar</a>
+          <div class="lang" id="lang">
+            <button
+              class="lang__btn"
+              id="langBtn"
+              type="button"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              aria-controls="langMenu"
+              data-i18n-aria="lang.label"
+              aria-label="Idioma"
+            >
+              <span id="langCurrent">Español</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                <path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <ul class="lang__menu" id="langMenu" role="listbox" hidden>
+              <li><a role="option" data-lang="en" href="/en/" hreflang="en" lang="en">English</a></li>
+              <li><a role="option" data-lang="es" href="/es/" hreflang="es" lang="es" aria-selected="true">Español</a></li>
+              <li><a role="option" data-lang="ja" href="/ja/" hreflang="ja" lang="ja">日本語</a></li>
+              <li><a role="option" data-lang="zh" href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></li>
+              <li><a role="option" data-lang="ko" href="/" hreflang="ko" lang="ko">한국어</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero__inner">
+          <div class="hero__copy reveal">
+            <p class="eyebrow" data-i18n="hero.kicker">App para desbloquear sitios</p>
+            <p class="brand-hero">구름</p>
+            <h1>
+              <span class="hero__line" data-i18n="hero.line1">Si un sitio bloqueado no abre</span>
+              <span class="hero__line" data-i18n="hero.line2">cambiar el DNS ayuda a abrirlo</span>
+            </h1>
+            <p class="hero__sub" data-i18n="hero.sub">Gureum es una app para desbloquear sitios cuando uno no abre. En este dispositivo cambia el DNS y envía el nombre del sitio (SNI) por partes para ayudar con algunas conexiones HTTPS. No usa servidor VPN remoto, no cambia la IP ni el país y no abre el contenido HTTPS.</p>
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#download" data-i18n="hero.download">Descargar</a>
+              <a class="btn btn--ghost" href="#how" data-i18n="hero.how">Cómo funciona</a>
+            </div>
+            <ul class="hero__points">
+              <li data-i18n="point.local">En este dispositivo</li>
+              <li data-i18n="point.dns">Elige un DNS</li>
+              <li data-i18n="point.sni">Nombre por partes</li>
+              <li data-i18n="point.tls">No inspecciona el HTTPS</li>
+            </ul>
+          </div>
+
+          <div class="hero__visual reveal" style="--delay: 100ms">
+            <div class="phone" role="img" data-i18n-aria="phone.aria" aria-label="Vista previa de la app Gureum">
+              <span class="phone__side phone__side--silent" aria-hidden="true"></span>
+              <span class="phone__side phone__side--up" aria-hidden="true"></span>
+              <span class="phone__side phone__side--down" aria-hidden="true"></span>
+              <span class="phone__side phone__side--power" aria-hidden="true"></span>
+              <div class="phone__frame">
+                <div class="phone__screen">
+                  <div class="phone__island" aria-hidden="true"></div>
+                  <div class="phone__bar" aria-hidden="true">
+                    <span>9:41</span>
+                    <span class="phone__sys">
+                      <svg width="15" height="11" viewBox="0 0 15 11" fill="currentColor"><rect x="0" y="7" width="2.2" height="4" rx="0.4"/><rect x="3.4" y="5" width="2.2" height="6" rx="0.4"/><rect x="6.8" y="2.6" width="2.2" height="8.4" rx="0.4"/><rect x="10.2" y="0" width="2.2" height="11" rx="0.4"/></svg>
+                      <svg width="14" height="11" viewBox="0 0 14 11" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 4.2c3.2-3 8.8-3 12 0"/><path d="M3.2 6.5c2-1.9 5.6-1.9 7.6 0"/><path d="M5.5 8.7c.9-.8 2.1-.8 3 0"/><circle cx="7" cy="10.2" r="0.7" fill="currentColor" stroke="none"/></svg>
+                      <svg width="22" height="11" viewBox="0 0 22 11"><rect x="0.6" y="0.6" width="18" height="9.8" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.2"/><rect x="2" y="2" width="12" height="7" rx="1" fill="currentColor"/><path d="M19.4 3.4h1.2c.5 0 .9.4.9.9v2.4c0 .5-.4.9-.9.9h-1.2V3.4z" fill="currentColor"/></svg>
+                    </span>
+                  </div>
+                  <div class="phone__top">
+                    <img src="/assets/logo-ui.webp" alt="" width="28" height="28" />
+                    <span>구름</span>
+                  </div>
+                  <p class="phone__pill" data-i18n="phone.pill">Protegido</p>
+                  <p class="phone__status" data-i18n="phone.status">La protección está activa</p>
+                  <p class="phone__support" data-i18n="phone.support">Básica · Cloudflare</p>
+                  <div class="phone__cloud">
+                    <img src="/assets/logo-ui.webp" alt="" width="120" height="120" />
+                  </div>
+                  <div class="phone__metrics">
+                    <div>
+                      <span data-i18n="phone.time">Tiempo protegido</span>
+                      <strong data-i18n="phone.timeValue">12 min</strong>
+                    </div>
+                    <div>
+                      <span data-i18n="phone.data">Datos protegidos</span>
+                      <strong>48.2 MB</strong>
+                    </div>
+                  </div>
+                  <div class="phone__home" aria-hidden="true"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="when" id="when">
+        <div class="section-shell">
+          <div class="section-head reveal">
+            <p class="eyebrow" data-i18n="when.kicker">Cuándo encenderla</p>
+            <h2 data-i18n="when.title">Enciéndela cuando un sitio bloqueado no abre</h2>
+            <p data-i18n="when.lead">Un sitio puede fallar por varias razones: la búsqueda (DNS) bloqueada, la IP bloqueada o una conexión HTTPS que se corta por el nombre del sitio (SNI). Gureum ayuda en algunos cortes causados por el nombre, en este dispositivo.</p>
+          </div>
+          <div class="value-grid">
+            <article class="value reveal">
+              <h3 data-i18n="when.1.title">Un sitio bloqueado no abre</h3>
+              <p data-i18n="when.1.body">Si un sitio que abrías deja de abrir, o aparece una página de aviso, toca la nube.</p>
+            </article>
+            <article class="value reveal" style="--delay: 60ms">
+              <h3 data-i18n="when.2.title">Solo sale una página de aviso</h3>
+              <p data-i18n="when.2.body">Si ves un aviso en lugar del sitio, primero mira si solo ese sitio está bloqueado por su nombre.</p>
+            </article>
+            <article class="value reveal" style="--delay: 120ms">
+              <h3 data-i18n="when.3.title">Buscas una app para cambiar el DNS</h3>
+              <p data-i18n="when.3.body">Elige Cloudflare, Google o Quad9 en este dispositivo, en lugar del DNS del operador.</p>
+            </article>
+            <article class="value reveal" style="--delay: 180ms">
+              <h3 data-i18n="when.4.title">Quieres probar sin VPN</h3>
+              <p data-i18n="when.4.body">Sin servidor VPN remoto. Solo trata el DNS y el nombre del sitio (SNI) en este dispositivo, y la IP y el país no cambian.</p>
+            </article>
+          </div>
+          <p class="when__note reveal" data-i18n="when.note">Ayuda cuando la conexión se corta por el nombre del sitio (SNI). No abre bloqueos que apuntan a una IP o a un servidor de juego. Tampoco bloquea anuncios.</p>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <div class="section-shell">
+          <div class="section-head reveal">
+            <p class="eyebrow eyebrow--on-dark" data-i18n="features.kicker">Funciones</p>
+            <h2 data-i18n-html="features.title">Solo lo que necesita<br />un desbloqueo de sitios</h2>
+            <p data-i18n="features.lead">Enciéndela cuando haga falta, elige un DNS y mira el estado.</p>
+          </div>
+
+          <div class="bento">
+            <article class="bento__card bento__card--lg reveal">
+              <div class="bento__text">
+                <h3 data-i18n="feat.tap.title">Toca la nube para encenderla</h3>
+                <p data-i18n="feat.tap.body">Toca la nube del centro y la protección empieza en este dispositivo.</p>
+              </div>
+              <div class="bento__visual">
+                <img src="/assets/logo-ui.webp" alt="" width="148" height="148" />
+              </div>
+            </article>
+
+            <article class="bento__card reveal" style="--delay: 60ms">
+              <div class="bento__text">
+                <h3 data-i18n="feat.dns.title">Elige un DNS de confianza</h3>
+                <p data-i18n="feat.dns.body">Cloudflare, Google o Quad9. Esto decide adónde va la búsqueda; cambiar el DNS no abre por sí solo una conexión bloqueada por su nombre.</p>
+              </div>
+              <div class="chip-row" aria-hidden="true">
+                <span>Cloudflare</span>
+                <span>Google</span>
+                <span>Quad9</span>
+              </div>
+            </article>
+
+            <article class="bento__card reveal" style="--delay: 120ms">
+              <div class="bento__text">
+                <h3 data-i18n="feat.sni.title">El nombre del sitio sale por partes</h3>
+                <p data-i18n="feat.sni.body">Envía el nombre del sitio (SNI) por partes al empezar la conexión, y eso ayuda en algunos cortes causados por ese nombre. No abre un bloqueo sobre una IP.</p>
+              </div>
+              <div class="split-viz" aria-hidden="true">
+                <span class="bar"></span>
+                <span class="bar bar--accent"></span>
+                <span class="bar"></span>
+              </div>
+            </article>
+
+            <article class="bento__card bento__card--wide reveal" style="--delay: 80ms">
+              <div class="bento__text">
+                <h3 data-i18n="feat.local.title">Sin VPN remota</h3>
+                <p data-i18n="feat.local.body">El tráfico no va a un servidor VPN remoto. La IP no cambia y el contenido HTTPS no se inspecciona ni se descifra.</p>
+              </div>
+              <ul class="checklist">
+                <li data-i18n="check.local">Solo en este dispositivo</li>
+                <li data-i18n="check.tls">No inspecciona ni descifra el HTTPS</li>
+                <li data-i18n="check.proxy">Sin servidor VPN remoto</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="how" id="how">
+        <div class="section-shell how__grid">
+          <div class="how__copy reveal">
+            <p class="eyebrow" data-i18n="how.kicker">Cómo funciona</p>
+            <h2 data-i18n-html="how.title">Así vuelve a abrir<br />un sitio bloqueado</h2>
+            <p class="lead" data-i18n="how.lead">Acepta el permiso y toca la nube. El DNS y el nombre partido se resuelven en este dispositivo.</p>
+          </div>
+
+          <ol class="steps reveal" style="--delay: 80ms">
+            <li>
+              <span class="steps__num">1</span>
+              <div>
+                <strong data-i18n="step1.title">Toca la nube</strong>
+                <p data-i18n="step1.body">Cuando das permiso, empieza la protección.</p>
+              </div>
+            </li>
+            <li>
+              <span class="steps__num">2</span>
+              <div>
+                <strong data-i18n="step2.title">Elige un DNS</strong>
+                <p data-i18n="step2.body">La búsqueda sale al DNS que eliges. Cambiar solo el DNS no abre una conexión que se corta por el nombre, así que ese nombre también sale por partes.</p>
+              </div>
+            </li>
+            <li>
+              <span class="steps__num">3</span>
+              <div>
+                <strong data-i18n="step3.title">Envía el nombre por partes</strong>
+                <p data-i18n="step3.body">Cuando hace falta, el nombre del sitio se parte para que la conexión se mantenga estable.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="privacy" id="privacy">
+        <div class="section-shell privacy__grid">
+          <div class="privacy__copy reveal">
+            <p class="eyebrow" data-i18n="privacy.kicker">Privacidad</p>
+            <h2 data-i18n-html="privacy.title">La app envía<br />dos cosas</h2>
+            <p class="lead" data-i18n="privacy.lead">La app Gureum envía a Google Analytics dos cosas: si la protección está activa y el tipo de DNS. Los nombres de los sitios y una dirección DNS escrita a mano no se envían, y la personalización de anuncios está apagada. Para la conexión, la búsqueda sale al DNS que eliges y el nombre partido va a ese sitio. Las visitas a esta página se cuentan aparte de la app.</p>
+            <ul class="plain-list">
+              <li data-i18n="privacy.b1">Solo el estado y el tipo de DNS</li>
+              <li data-i18n="privacy.b2">Los nombres de sitios no van a Analytics</li>
+              <li data-i18n="privacy.b3">Una dirección DNS escrita no se envía</li>
+              <li data-i18n="privacy.b4">La personalización de anuncios está apagada</li>
+              <li data-i18n="privacy.b5">La búsqueda sale al DNS que eliges</li>
+            </ul>
+          </div>
+
+          <div class="privacy__panel reveal" style="--delay: 100ms">
+            <div class="privacy__card">
+              <img src="/assets/logo-ui.webp" alt="" width="88" height="88" />
+              <h3 data-i18n="card.title">Dos cosas de la app</h3>
+              <p data-i18n="card.body">Solo van a Analytics el estado de la protección y el tipo de DNS.</p>
+            </div>
+            <div class="privacy__stats" aria-hidden="true">
+              <div>
+                <strong>2</strong>
+                <span data-i18n="stat.server">datos</span>
+              </div>
+              <div>
+                <strong>0</strong>
+                <span data-i18n="stat.tls">nombres de sitios</span>
+              </div>
+              <div>
+                <strong>0</strong>
+                <span data-i18n="stat.tap">DNS escrito a mano</span>
+              </div>
+            </div>
+            <p class="privacy__caption" data-i18n="card.caption">Estos números cuentan lo que la app envía a Google Analytics. Van aparte de lo que sale del dispositivo para resolver un nombre o llegar a un sitio.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="section-shell section-shell--narrow">
+          <div class="section-head reveal">
+            <p class="eyebrow" data-i18n="about.kicker">Qué es</p>
+            <h2 data-i18n="about.title">¿Qué es Gureum?</h2>
+          </div>
+            <p class="about__answer reveal" data-i18n="about.answer">Gureum es una app para desbloquear sitios en Android e iOS. Cuando un sitio bloqueado no abre, cambia el DNS en este dispositivo y envía el nombre del sitio (SNI) por partes para ayudar con algunas conexiones HTTPS. No cambia la IP ni el país, no abre el contenido HTTPS y no envía el tráfico a un servidor VPN remoto. No abre todos los sitios bloqueados.</p>
+          <dl class="about__facts reveal" style="--delay: 60ms">
+            <div>
+              <dt data-i18n="about.f1.dt">Qué hace</dt>
+              <dd data-i18n="about.f1.dd">Si la conexión se corta por el nombre del sitio, cambia el DNS en el dispositivo y envía ese nombre por partes.</dd>
+            </div>
+            <div>
+              <dt data-i18n="about.f2.dt">Qué no hace</dt>
+              <dd data-i18n="about.f2.dd">No cambia la IP, no abre el contenido HTTPS y no envía el tráfico a un servidor VPN remoto.</dd>
+            </div>
+            <div>
+              <dt data-i18n="about.f3.dt">Dispositivos</dt>
+              <dd data-i18n="about.f3.dd">Android, iOS</dd>
+            </div>
+            <div>
+              <dt data-i18n="about.f4.dt">DNS</dt>
+              <dd data-i18n="about.f4.dd">Cloudflare, Google, Quad9</dd>
+            </div>
+            <div>
+              <dt data-i18n="about.f5.dt">Cuenta</dt>
+              <dd data-i18n="about.f5.dd">No hace falta.</dd>
+            </div>
+          </dl>
+          <p class="about__sources reveal" data-i18n-html="about.sources">SNI es el nombre de conexión de <a href="https://www.rfc-editor.org/rfc/rfc6066">RFC 6066</a>. Las notas de DNS están en <a href="https://developers.cloudflare.com/1.1.1.1/">Cloudflare</a>, <a href="https://developers.google.com/speed/public-dns">Google</a> y <a href="https://www.quad9.net/">Quad9</a>.</p>
+        </div>
+      </section>
+
+      <section class="faq" id="faq">
+        <div class="section-shell section-shell--narrow">
+          <div class="section-head reveal">
+            <p class="eyebrow" data-i18n="faq.kicker">FAQ</p>
+            <h2 data-i18n="faq.title">Preguntas sobre saltar bloqueos de sitios</h2>
+          </div>
+          <div class="faq__list">
+            <details class="reveal" id="faq-what">
+              <summary data-i18n="faq.q14">¿Qué es una app para saltar bloqueos de sitios?</summary>
+              <p data-i18n="faq.a14">Es una app que ayuda a abrir un sitio bloqueado. Cuando una conexión HTTPS se corta por el nombre del sitio (SNI), Gureum cambia el DNS en el dispositivo y envía ese nombre por partes. No cambia la IP ni envía el tráfico a un servidor VPN remoto.</p>
+            </details>
+            <details class="reveal" id="faq-which">
+              <summary data-i18n="faq.q15">¿Qué bloqueos ayuda a pasar?</summary>
+              <p data-i18n="faq.a15">Ayuda en algunos bloqueos HTTPS que usan el nombre del sitio (SNI). No abre bloqueos dirigidos a una IP o a un servidor de juego, y no bloquea anuncios.</p>
+            </details>
+            <details class="reveal" id="faq-why">
+              <summary data-i18n="faq.q20">¿Por qué no abre un sitio bloqueado?</summary>
+              <p data-i18n="faq.a20">Depende de dónde esté el bloqueo. Puede estar bloqueada la búsqueda (DNS), la IP, un servidor de juego, el propio dispositivo, o la conexión HTTPS puede cortarse por el nombre del sitio (SNI). Gureum ayuda en algunos cortes causados por el nombre del sitio.</p>
+            </details>
+            <details class="reveal" id="faq-warning">
+              <summary data-i18n="faq.q8">¿Abre sitios que muestran una página de aviso?</summary>
+              <p data-i18n="faq.a8">Sí, cuando el aviso aparece por el nombre del sitio (SNI). Cambia el DNS y envía ese nombre por partes. No abre bloqueos dirigidos a una IP o a un servidor de juego.</p>
+            </details>
+            <details class="reveal" id="faq-vpn">
+              <summary data-i18n="faq.q1">¿En qué se diferencia de una VPN normal?</summary>
+              <p data-i18n="faq.a1">Una VPN remota puede enviar el tráfico a un servidor VPN y cambiar la IP o la ruta. Gureum no envía el tráfico a ese servidor. En este dispositivo cambia el DNS y trata solo el nombre del sitio (SNI). No cambia la IP ni el país.</p>
+            </details>
+            <details class="reveal" id="faq-no-vpn">
+              <summary data-i18n="faq.q18">¿Se puede saltar un bloqueo sin VPN?</summary>
+              <p data-i18n="faq.a18">Gureum no usa servidor VPN remoto. Cambia el DNS en este dispositivo y envía el nombre del sitio (SNI) por partes, y eso ayuda en algunas conexiones HTTPS que se cortan por ese nombre. No abre bloqueos dirigidos a una IP o a un servidor de juego.</p>
+            </details>
+            <details class="reveal" id="faq-ip">
+              <summary data-i18n="faq.q9">¿Cambia mi dirección IP?</summary>
+              <p data-i18n="faq.a9">No. Gureum no cambia tu IP ni tu país. Tampoco envía el tráfico a un servidor VPN en el extranjero.</p>
+            </details>
+            <details class="reveal" id="faq-ads">
+              <summary data-i18n="faq.q10">¿Bloquea los anuncios?</summary>
+              <p data-i18n="faq.a10">No. Gureum no es un bloqueador de anuncios. Cambia el DNS y parte el nombre del sitio (SNI).</p>
+            </details>
+            <details class="reveal" id="faq-https" style="--delay: 40ms">
+              <summary data-i18n="faq.q2">¿Lee el HTTPS?</summary>
+              <p data-i18n="faq.a2">No. Gureum no inspecciona ni descifra el contenido HTTPS. Lo que trata es el DNS y el nombre del sitio (SNI) que sale al empezar la conexión.</p>
+            </details>
+            <details class="reveal" id="faq-sni" style="--delay: 80ms">
+              <summary data-i18n="faq.q4">¿Qué significa enviar el nombre del sitio por partes?</summary>
+              <p data-i18n="faq.a4">Al empezar la conexión HTTPS, Gureum no envía el nombre del sitio (SNI) de una vez. Lo envía por partes, y eso ayuda en algunos cortes causados por ese nombre. El contenido HTTPS no se inspecciona ni se descifra.</p>
+            </details>
+            <details class="reveal" id="faq-like">
+              <summary data-i18n="faq.q12">¿Y si el sitio bloqueado sigue sin abrir?</summary>
+              <p data-i18n="faq.a12">Si sigue sin abrir con Gureum encendido, puede que el bloqueo no sea por el nombre del sitio (SNI). Gureum no abre un bloqueo sobre la dirección del sitio, un servidor de juego, ni uno que pusiste en el dispositivo. Para probar solo el DNS, elige Cloudflare, Google o Quad9.</p>
+            </details>
+            <details class="reveal" id="faq-check" style="--delay: 20ms">
+              <summary data-i18n="faq.q16">Un sitio bloqueado no abre. ¿Qué hago?</summary>
+              <p data-i18n="faq.a16">Mira si los demás sitios siguen abriendo. Si la página de aviso sale en un solo sitio y la dirección es HTTPS, el nombre del sitio (SNI) puede ser la causa del corte. Activa Gureum y prueba ese sitio otra vez.</p>
+            </details>
+            <details class="reveal" id="faq-mobile" style="--delay: 40ms">
+              <summary data-i18n="faq.q17">¿Cómo salto el bloqueo HTTPS en el móvil?</summary>
+              <p data-i18n="faq.a17">Activa Gureum y acepta el permiso una vez, luego toca la nube del centro. Desde ahí cambia el DNS en este dispositivo y envía el nombre del sitio (SNI) por partes al empezar la conexión.</p>
+            </details>
+            <details class="reveal" id="faq-dns">
+              <summary data-i18n="faq.q5">¿Qué DNS puedo elegir?</summary>
+              <p data-i18n="faq.a5">Cloudflare, Google o Quad9. La búsqueda sale al DNS que eliges.</p>
+            </details>
+            <details class="reveal" id="faq-dns-which">
+              <summary data-i18n="faq.q19">Cloudflare, Google o Quad9: ¿cuál elijo?</summary>
+              <p data-i18n="faq.a19">Los tres resuelven direcciones. Cuál elegir depende de la política de cada proveedor, y Gureum envía la búsqueda solo al DNS que eliges. Los nombres de los sitios no van a Analytics.</p>
+            </details>
+            <details class="reveal" id="faq-speed">
+              <summary data-i18n="faq.q11">¿Se vuelve lenta la conexión?</summary>
+              <p data-i18n="faq.a11">No pasa por un servidor VPN remoto, así que el camino no se alarga como con una VPN remota. La velocidad real depende de tu red y del DNS que elijas.</p>
+            </details>
+            <details class="reveal" id="faq-account">
+              <summary data-i18n="faq.q6">¿Hace falta una cuenta?</summary>
+              <p data-i18n="faq.a6">No. Puedes activar Gureum sin registrarte.</p>
+            </details>
+            <details class="reveal" id="faq-devices">
+              <summary data-i18n="faq.q7">¿Funciona en Android y en iPhone?</summary>
+              <p data-i18n="faq.a7">En Android e iOS. Los enlaces de las tiendas aparecerán en esta página cuando estén listos.</p>
+            </details>
+            <details class="reveal" id="faq-code">
+              <summary data-i18n="faq.q3">¿El código de la app es público?</summary>
+              <p data-i18n="faq.a3">Esta página es pública. El código de la app no.</p>
+            </details>
+            <details class="reveal" id="faq-measure">
+              <summary data-i18n="faq.q13">¿Se envían los sitios que visito?</summary>
+              <p data-i18n="faq.a13">No. Los nombres de los sitios y una dirección DNS escrita a mano no van a Google Analytics. Sí van el estado de la protección y el tipo de DNS, sin personalización de anuncios. Las búsquedas DNS van al resolver que eliges.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" id="download">
+        <div class="section-shell cta__inner reveal">
+          <img src="/assets/logo-ui.webp" alt="" width="72" height="72" class="cta__icon" />
+          <h2 data-i18n="cta.title">Pruébala</h2>
+          <p data-i18n="cta.body">Los enlaces de las tiendas todavía no están listos. Si quieres saber del lanzamiento primero, escríbenos.</p>
+          <div class="hero__cta">
+            <button type="button" class="btn btn--primary" disabled data-i18n="cta.android">Android pronto</button>
+            <button type="button" class="btn btn--ghost btn--on-dark" disabled data-i18n="cta.ios">iOS pronto</button>
+          </div>
+          <p class="cta__note">
+            <a class="cta__mail" href="mailto:gureum@yodams.com?subject=Gureum%20launch" data-i18n="cta.notify">Enviar un correo</a>
+            <span data-i18n="cta.platforms">Android e iOS, pronto</span>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-shell">
+      <div class="footer">
+        <div class="footer__brand">
+          <img src="/assets/logo-ui.webp" alt="" width="40" height="40" />
+          <div>
+            <strong>구름</strong>
+            <span>GUREUM</span>
+          </div>
+        </div>
+        <div class="footer__cols">
+          <div>
+            <p class="footer__label" data-i18n="foot.product">Producto</p>
+            <a href="#features" data-i18n="foot.features">Funciones</a>
+            <a href="#how" data-i18n="foot.how">Cómo funciona</a>
+            <a href="#download" data-i18n="foot.download">Descargar</a>
+          </div>
+          <div>
+            <p class="footer__label" data-i18n="foot.trust">Información</p>
+            <a href="#when" data-i18n="foot.when">Cuándo</a>
+            <a href="#about" data-i18n="foot.about">Qué es</a>
+            <a href="#privacy" data-i18n="foot.privacy">Privacidad</a>
+            <a href="#faq" data-i18n="foot.faq">FAQ</a>
+          </div>
+          <div>
+            <p class="footer__label" data-i18n="foot.repo">Repositorio</p>
+            <a
+              href="https://github.com/leeyodam/Gureum_landing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span data-i18n="foot.github">GitHub</span>
+              <span class="sr-only"> (<span data-i18n="foot.newWindow">se abre en una pestaña nueva</span>)</span>
+            </a>
+          </div>
+        </div>
+        <p class="footer__note" data-i18n="foot.sitePrivacy">El idioma que eliges va en la dirección de la página. Las visitas, el desplazamiento y los clics van a Google Analytics, sin personalización de anuncios. Las fuentes llegan desde jsDelivr.</p>
+        <p class="footer__copy">© <span id="year"></span> GUREUM</p>
+      </div>
+    </footer>
+    <script src="/script.js?v=16" defer></script>
+    <script src="/analytics.js?v=5" defer></script>
+  </body>
+</html>

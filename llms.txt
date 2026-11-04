@@ -135,6 +135,14 @@ Android와 iOS에서 쓸 수 있어요. 스토어 링크는 준비되는 대로 
 
 소개 페이지만 공개해요. 앱 코드는 공개하지 않아요.
 
+## 언어별 페이지
+
+- 한국어: https://gureum.yodams.com/
+- English: https://gureum.yodams.com/en/
+- Español: https://gureum.yodams.com/es/
+- 日本語: https://gureum.yodams.com/ja/
+- 中文: https://gureum.yodams.com/zh/
+
 ## English summary
 
 Gureum (구름) is a site blocking bypass app for Android and iOS. When a blocked site won't open, it changes DNS on the device and sends the site name (SNI) in pieces to help with some HTTPS connections. It is not a conventional VPN service, a proxy, or an ad blocker. DNS lookups go to the resolver the user picks (Cloudflare, Google, or Quad9); changing DNS alone does not open a connection that drops over its site name. Splitting the name does not open an IP-based block.
