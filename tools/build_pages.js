@@ -70,7 +70,7 @@ function buildGraph(lang, dict) {
         "@type": "WebSite",
         "@id": `${SITE}/#website`,
         url: `${SITE}/`,
-        name: "구름",
+        name: dict["brand.name"],
         alternateName: "Gureum",
         inLanguage: ["ko", "en", "es", "ja", "zh-Hans"],
         publisher: { "@id": `${SITE}/#organization` },
@@ -94,7 +94,7 @@ function buildGraph(lang, dict) {
       {
         "@type": "SoftwareApplication",
         "@id": `${SITE}/#app`,
-        name: "구름",
+        name: dict["brand.name"],
         alternateName: "Gureum",
         applicationCategory: "SecurityApplication",
         operatingSystem: "Android, iOS",
@@ -248,6 +248,11 @@ for (const lang of LANGS) {
   html = setMetaContentOnce(html, "property", "og:description", dict["meta.description"]);
   html = setMetaContentOnce(html, "property", "og:url", pageUrl(lang));
   html = setMetaContentOnce(html, "property", "og:locale", lang.locale);
+  html = setMetaContentOnce(html, "property", "og:site_name", dict["brand.site"]);
+  html = html.replace(
+    /(rel="alternate" type="text\/plain" href="\/llms\.txt" title=")[^"]*(")/,
+    `$1${escapeAttr(dict["brand.summary"])}$2`
+  );
   html = setMetaContentOnce(html, "property", "og:image:alt", dict["meta.imageAlt"]);
   html = setMetaContentOnce(html, "name", "twitter:title", dict["meta.title"]);
   html = setMetaContentOnce(html, "name", "twitter:description", dict["meta.description"]);

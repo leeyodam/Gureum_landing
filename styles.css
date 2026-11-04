@@ -1158,6 +1158,10 @@ details p {
   font-size: 0.85rem;
 }
 
+.footer__brand span:empty {
+  display: none;
+}
+
 .footer__cols {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

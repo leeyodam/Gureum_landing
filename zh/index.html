@@ -27,7 +27,7 @@
     <link rel="alternate" hreflang="es" href="https://gureum.yodams.com/es/" />
     <link rel="alternate" hreflang="ja" href="https://gureum.yodams.com/ja/" />
     <link rel="alternate" hreflang="x-default" href="https://gureum.yodams.com/" />
-    <link rel="alternate" type="text/plain" href="/llms.txt" title="구름(Gureum) 요약" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="GUREUM 摘要" />
     <meta property="og:title" content="云(GUREUM) - 绕过网站拦截的应用" />
     <meta
       property="og:description"
@@ -35,7 +35,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://gureum.yodams.com/zh/" />
-    <meta property="og:site_name" content="구름 (Gureum)" />
+    <meta property="og:site_name" content="GUREUM" />
     <meta property="og:locale" content="zh_CN" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:locale:alternate" content="es_ES" />
@@ -76,7 +76,7 @@
     />
     <link rel="preload" href="/assets/logo-ui.webp" as="image" type="image/webp" />
     <script>document.documentElement.classList.add("js")</script>
-    <link rel="stylesheet" href="/styles.css?v=16" />
+    <link rel="stylesheet" href="/styles.css?v=17" />
     <script type="application/ld+json" id="structured-data">
 {
   "@context": "https://schema.org",
@@ -108,7 +108,7 @@
       "@type": "WebSite",
       "@id": "https://gureum.yodams.com/#website",
       "url": "https://gureum.yodams.com/",
-      "name": "구름",
+      "name": "GUREUM",
       "alternateName": "Gureum",
       "inLanguage": [
         "ko",
@@ -146,7 +146,7 @@
     {
       "@type": "SoftwareApplication",
       "@id": "https://gureum.yodams.com/#app",
-      "name": "구름",
+      "name": "GUREUM",
       "alternateName": "Gureum",
       "applicationCategory": "SecurityApplication",
       "operatingSystem": "Android, iOS",
@@ -256,7 +256,7 @@
       <div class="nav">
         <a class="nav__brand" href="#top">
           <img src="/assets/logo-ui.webp" data-i18n-alt="img.nav" alt="云的标志" width="36" height="36" />
-          <span>구름</span>
+          <span data-i18n="brand.name">GUREUM</span>
         </a>
 
         <div class="nav__actions">
@@ -294,7 +294,7 @@
         <div class="hero__inner">
           <div class="hero__copy reveal">
             <p class="eyebrow" data-i18n="hero.kicker">绕过网站拦截的应用</p>
-            <p class="brand-hero">구름</p>
+            <p class="brand-hero" data-i18n="brand.name">GUREUM</p>
             <h1>
               <span class="hero__line" data-i18n="hero.line1">网站被拦截打不开时，</span>
               <span class="hero__line" data-i18n="hero.line2">一个应用就能轻松连接。</span>
@@ -329,7 +329,7 @@
                   </div>
                   <div class="phone__top">
                     <img src="/assets/logo-ui.webp" data-i18n-alt="img.phone" alt="应用画面中的云标志" width="28" height="28" />
-                    <span>구름</span>
+                    <span data-i18n="brand.name">GUREUM</span>
                   </div>
                   <p class="phone__pill" data-i18n="phone.pill">保护中</p>
                   <p class="phone__status" data-i18n="phone.status">保护已经打开</p>
@@ -525,8 +525,8 @@
         <div class="footer__brand">
           <img src="/assets/logo-ui.webp" data-i18n-alt="img.foot" alt="云的标志" width="40" height="40" loading="lazy" />
           <div>
-            <strong>구름</strong>
-            <span>GUREUM</span>
+            <strong data-i18n="brand.name">GUREUM</strong>
+            <span data-i18n="brand.latin"></span>
           </div>
         </div>
         <div class="footer__cols">
@@ -543,6 +543,18 @@
           </div>
           <div>
             <p class="footer__label" data-i18n="foot.repo">仓库</p>
+            <a href="https://developers.google.com/speed/public-dns" target="_blank" rel="noopener noreferrer">
+              Google DNS
+              <span class="sr-only"> (<span data-i18n="foot.newWindow">在新标签页打开</span>)</span>
+            </a>
+            <a href="https://developers.cloudflare.com/1.1.1.1/" target="_blank" rel="noopener noreferrer">
+              Cloudflare DNS
+              <span class="sr-only"> (<span data-i18n="foot.newWindow">在新标签页打开</span>)</span>
+            </a>
+            <a href="https://www.quad9.net/" target="_blank" rel="noopener noreferrer">
+              Quad9 DNS
+              <span class="sr-only"> (<span data-i18n="foot.newWindow">在新标签页打开</span>)</span>
+            </a>
             <a
               href="https://github.com/leeyodam/Gureum_landing"
               target="_blank"
@@ -556,7 +568,7 @@
         <p class="footer__copy">© <span id="year"></span> GUREUM</p>
       </div>
     </footer>
-    <script src="/script.js?v=16" defer></script>
+    <script src="/script.js?v=17" defer></script>
     <script src="/analytics.js?v=5" defer></script>
   </body>
 </html>

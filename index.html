@@ -76,7 +76,7 @@
     />
     <link rel="preload" href="/assets/logo-ui.webp" as="image" type="image/webp" />
     <script>document.documentElement.classList.add("js")</script>
-    <link rel="stylesheet" href="/styles.css?v=16" />
+    <link rel="stylesheet" href="/styles.css?v=17" />
     <script type="application/ld+json" id="structured-data">
 {
   "@context": "https://schema.org",
@@ -256,7 +256,7 @@
       <div class="nav">
         <a class="nav__brand" href="#top">
           <img src="/assets/logo-ui.webp" data-i18n-alt="img.nav" alt="구름 로고" width="36" height="36" />
-          <span>구름</span>
+          <span data-i18n="brand.name">구름</span>
         </a>
 
         <div class="nav__actions">
@@ -294,7 +294,7 @@
         <div class="hero__inner">
           <div class="hero__copy reveal">
             <p class="eyebrow" data-i18n="hero.kicker">사이트 차단 우회 앱</p>
-            <p class="brand-hero">구름</p>
+            <p class="brand-hero" data-i18n="brand.name">구름</p>
             <h1>
               <span class="hero__line" data-i18n="hero.line1">차단된 사이트가 안 열릴 때,</span>
               <span class="hero__line" data-i18n="hero.line2">앱 하나로 편하게 접속해요.</span>
@@ -329,7 +329,7 @@
                   </div>
                   <div class="phone__top">
                     <img src="/assets/logo-ui.webp" data-i18n-alt="img.phone" alt="앱 화면의 구름 로고" width="28" height="28" />
-                    <span>구름</span>
+                    <span data-i18n="brand.name">구름</span>
                   </div>
                   <p class="phone__pill" data-i18n="phone.pill">보호 중</p>
                   <p class="phone__status" data-i18n="phone.status">보호가 켜져 있어요</p>
@@ -525,8 +525,8 @@
         <div class="footer__brand">
           <img src="/assets/logo-ui.webp" data-i18n-alt="img.foot" alt="구름 로고" width="40" height="40" loading="lazy" />
           <div>
-            <strong>구름</strong>
-            <span>GUREUM</span>
+            <strong data-i18n="brand.name">구름</strong>
+            <span data-i18n="brand.latin">GUREUM</span>
           </div>
         </div>
         <div class="footer__cols">
@@ -543,6 +543,18 @@
           </div>
           <div>
             <p class="footer__label" data-i18n="foot.repo">저장소</p>
+            <a href="https://developers.google.com/speed/public-dns" target="_blank" rel="noopener noreferrer">
+              Google DNS
+              <span class="sr-only"> (<span data-i18n="foot.newWindow">새 창</span>)</span>
+            </a>
+            <a href="https://developers.cloudflare.com/1.1.1.1/" target="_blank" rel="noopener noreferrer">
+              Cloudflare DNS
+              <span class="sr-only"> (<span data-i18n="foot.newWindow">새 창</span>)</span>
+            </a>
+            <a href="https://www.quad9.net/" target="_blank" rel="noopener noreferrer">
+              Quad9 DNS
+              <span class="sr-only"> (<span data-i18n="foot.newWindow">새 창</span>)</span>
+            </a>
             <a
               href="https://github.com/leeyodam/Gureum_landing"
               target="_blank"
@@ -556,7 +568,7 @@
         <p class="footer__copy">© <span id="year"></span> GUREUM</p>
       </div>
     </footer>
-    <script src="/script.js?v=16" defer></script>
+    <script src="/script.js?v=17" defer></script>
     <script src="/analytics.js?v=5" defer></script>
   </body>
 </html>

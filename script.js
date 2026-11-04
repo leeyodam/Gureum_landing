@@ -92,6 +92,20 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
+  const steps = document.querySelector(".steps");
+  if (steps) {
+    const equalizeSteps = () => {
+      const items = [...steps.children].filter((node) => node.tagName === "LI");
+      if (items.length < 2) return;
+      for (const item of items) item.style.minHeight = "";
+      const max = Math.max(...items.map((item) => item.offsetHeight));
+      for (const item of items) item.style.minHeight = `${max}px`;
+    };
+    equalizeSteps();
+    document.fonts?.ready?.then(equalizeSteps);
+    window.addEventListener("resize", equalizeSteps);
+  }
+
   const reveals = [...document.querySelectorAll(".reveal")];
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const show = (el) => el.classList.add("is-visible");
