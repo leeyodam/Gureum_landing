@@ -139,7 +139,6 @@
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [
-          ".about__answer",
           ".hero__sub"
         ]
       }
@@ -154,7 +153,7 @@
       "url": "https://gureum.yodams.com/en/",
       "image": "https://gureum.yodams.com/assets/og.png",
       "inLanguage": "en",
-      "description": "Gureum is a site blocking bypass app for Android and iOS. When a blocked site won't open, it changes DNS on this device and sends the site name (SNI) in pieces to help with some HTTPS connections. It does not change your IP or country, does not open HTTPS contents, and does not send traffic to a remote VPN server. It does not open every blocked site.",
+      "description": "Gureum changes DNS on this device and sends the site name (SNI) in pieces, with no remote VPN server. It helps some HTTPS connections that drop because of that name. Your IP and country stay the same, and it does not open HTTPS contents.",
       "featureList": [
         "When a connection drops because of the site name (SNI), it changes DNS on the device and sends that name in pieces.",
         "It does not change your IP, does not open HTTPS contents, and does not send traffic to a remote VPN server.",
@@ -170,14 +169,6 @@
       "url": "https://gureum.yodams.com/en/#faq",
       "inLanguage": "en",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is Gureum?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Gureum is a site blocking bypass app for Android and iOS. When a blocked site won't open, it changes DNS on this device and sends the site name (SNI) in pieces to help with some HTTPS connections. It does not change your IP or country, does not open HTTPS contents, and does not send traffic to a remote VPN server. It does not open every blocked site."
-          }
-        },
         {
           "@type": "Question",
           "name": "What is a site blocking bypass app?",
@@ -212,34 +203,10 @@
         },
         {
           "@type": "Question",
-          "name": "How is this different from a regular VPN?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A remote VPN can send traffic to a VPN server and change your IP or path. Gureum does not send traffic to that server. On this device it changes DNS and handles only the site name (SNI). It does not change your IP or country."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "Can I bypass a site block without a VPN?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Gureum uses no remote VPN server. It changes DNS on this device and sends the site name (SNI) in pieces, which helps with some HTTPS connections that drop because of that name. It does not open blocks aimed at an IP address or a game server."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does it change my IP address?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Gureum does not change your IP or your country. It does not send traffic to a VPN server overseas."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does it block ads?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Gureum is not an ad blocker. It changes DNS and splits the site name (SNI)."
           }
         },
         {
@@ -249,121 +216,33 @@
             "@type": "Answer",
             "text": "No. Gureum does not open or decrypt HTTPS contents. It handles DNS and the site name (SNI) sent when a connection starts."
           }
-        },
-        {
-          "@type": "Question",
-          "name": "What does splitting the site name mean?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "When an HTTPS connection starts, Gureum does not send the site name (SNI) all at once. It sends it in pieces, which helps with some connections that drop because of that name. HTTPS content is not decrypted."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What if the blocked site still won't open?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If it still won't open with Gureum on, the block may not be about the site name (SNI). Gureum does not open a block on the site address, a game server, or a block you set on the device. To try only a DNS change, pick Cloudflare, Google, or Quad9."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "A blocked site won't open. What should I do?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Check whether other sites still open. If the warning page appears on one site and the address is HTTPS, the site name (SNI) may be why it drops. Tap Gureum and try that site again."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I bypass HTTPS blocking on a phone?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Turn Gureum on and allow the permission once, then tap the cloud in the middle. From then on it changes DNS on this device and sends the site name (SNI) in pieces when a connection starts."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which DNS can I choose?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cloudflare, Google, or Quad9. Lookups go to the DNS you pick."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Cloudflare, Google, or Quad9: which one should I pick?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "All three resolve addresses. Which one to pick depends on each provider's policy, and Gureum sends lookups only to the DNS you choose. Visited site names are not sent to Analytics."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Will it slow my connection?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It does not go through a remote VPN server, so the path does not get longer the way a remote VPN does. Actual speed depends on your network and the DNS you pick."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need an account?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. You can turn Gureum on without signing up."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does it work on Android and iPhone?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Android and iOS. Store links will appear on this page when they are ready."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is the app code public?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This page is public. The app code is not."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you send the sites I visit?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Site names and a custom DNS address are not sent to Google Analytics. Whether protection is on and the chosen DNS type are. Ad personalization is off. DNS lookups go to the resolver you pick."
-          }
         }
       ]
     },
     {
       "@type": "HowTo",
       "@id": "https://gureum.yodams.com/en/#how",
-      "name": "How Gureum picks up a blocked connection",
-      "description": "Allow the permission, then tap the cloud. DNS and the split name are handled on this device.",
+      "name": "How to use Gureum when a blocked site won't open",
+      "description": "Allow the permission, then tap the cloud in the middle.",
       "inLanguage": "en",
       "step": [
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Tap the cloud",
-          "text": "Once you allow it, protection starts."
+          "name": "Tap the cloud icon",
+          "text": "Tap the cloud in the middle and allow the permission. It starts then."
         },
         {
           "@type": "HowToStep",
           "position": 2,
           "name": "Pick a DNS",
-          "text": "Lookups go to the DNS you pick. A DNS change alone does not open a connection that drops over its name, so that name goes out in pieces too."
+          "text": "Pick the DNS you want. Lookups go to that DNS, and a connection that drops because of its name is helped by sending that name in pieces."
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Send the name in pieces",
-          "text": "The site name (SNI) goes out in pieces. That helps some connections that drop because of the name. HTTPS content is not decrypted."
+          "name": "Open the site",
+          "text": "It helps some connections that drop because of the name. HTTPS content is not opened. Not every site will open."
         }
       ]
     }
@@ -417,18 +296,18 @@
             <p class="eyebrow" data-i18n="hero.kicker">Site blocking bypass app</p>
             <p class="brand-hero">구름</p>
             <h1>
-              <span class="hero__line" data-i18n="hero.line1">When a blocked site won't open</span>
-              <span class="hero__line" data-i18n="hero.line2">this device helps</span>
+              <span class="hero__line" data-i18n="hero.line1">When a blocked site won't open,</span>
+              <span class="hero__line" data-i18n="hero.line2">one app helps you connect</span>
             </h1>
-            <p class="hero__sub" data-i18n="hero.sub">Gureum changes DNS on this device and sends the site name (SNI) in pieces, with no remote VPN server. It helps some HTTPS connections that drop because of that name. It does not change your IP or country, and it does not open HTTPS contents.</p>
+            <p class="hero__sub" data-i18n="hero.sub">Gureum changes DNS on this device and sends the site name (SNI) in pieces, with no remote VPN server. It helps some HTTPS connections that drop because of that name. Your IP and country stay the same, and it does not open HTTPS contents.</p>
             <div class="hero__cta">
               <a class="btn btn--primary" href="#download" data-i18n="hero.download">Download</a>
               <a class="btn btn--ghost" href="#how" data-i18n="hero.how">How it works</a>
             </div>
             <ul class="hero__points">
-              <li data-i18n="point.local">On this device</li>
-              <li data-i18n="point.ip">IP and country stay</li>
-              <li data-i18n="point.tls">HTTPS contents not opened</li>
+              <li data-i18n="point.local">DNS change</li>
+              <li data-i18n="point.ip">SNI split</li>
+              <li data-i18n="point.tls">IP stays the same</li>
             </ul>
           </div>
 
@@ -481,24 +360,24 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow" data-i18n="when.kicker">When to turn it on</p>
-            <h2 data-i18n="when.title">When to turn it on</h2>
-            <p data-i18n="when.lead">A site can fail to open for several reasons. Gureum helps some HTTPS connections that drop because of the site name (SNI), on this device.</p>
+            <h2 data-i18n="when.title">When Gureum helps</h2>
+            <p data-i18n-html="when.lead">A site can fail to open for several reasons.<br />Gureum helps some connections that drop because of the site name (SNI), on this device.</p>
           </div>
           <div class="value-grid">
             <article class="value reveal">
-              <h3 data-i18n="when.1.title">A site won't open, or a warning page shows</h3>
-              <p data-i18n="when.1.body">If a site you could open suddenly stops, or a warning page appears, the drop may be the site name (SNI). Gureum helps some of those cases on this device.</p>
+              <h3 data-i18n="when.1.title">When a site won't open</h3>
+              <p data-i18n="when.1.body">If a site you could open suddenly stops, or a warning page appears, the site name (SNI) may be why. Gureum helps some of those cases on this device.</p>
             </article>
             <article class="value reveal" style="--delay: 60ms">
-              <h3 data-i18n="when.3.title">You want a DNS other than the carrier's</h3>
-              <p data-i18n="when.3.body">Pick Cloudflare, Google, or Quad9 on this device. A DNS change alone does not open a connection that drops because of its name.</p>
+              <h3 data-i18n="when.3.title">When you want to pick the DNS</h3>
+              <p data-i18n="when.3.body">Pick Google, Cloudflare, or Quad9 on this device. A DNS change alone does not open a connection that drops because of its name.</p>
             </article>
             <article class="value reveal" style="--delay: 120ms">
-              <h3 data-i18n="when.4.title">A remote VPN server feels like too much</h3>
-              <p data-i18n="when.4.body">Traffic does not go through a remote VPN server. Your IP and country stay the same.</p>
+              <h3 data-i18n="when.4.title">When a remote VPN server feels like too much</h3>
+              <p data-i18n="when.4.body">Traffic does not go through a server in another country. Your IP and country stay the same.</p>
             </article>
           </div>
-          <p class="when__note reveal" data-i18n="when.note">It helps with drops caused by the site name (SNI). It does not open blocks aimed at an IP address or a game server, and it doesn't block ads.</p>
+          <p class="when__note reveal" data-i18n-html="when.note">Please note.<br />Gureum helps connections that drop because of the site name (SNI). It cannot help when the IP address itself is blocked.</p>
         </div>
       </section>
 
@@ -506,15 +385,15 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow eyebrow--on-dark" data-i18n="features.kicker">Features</p>
-            <h2 data-i18n-html="features.title">What a site blocking bypass<br />needs</h2>
-            <p data-i18n="features.lead">Turn it on, pick a DNS, and send the site name in pieces.</p>
+            <h2 data-i18n-html="features.title">The main features</h2>
+            <p data-i18n="features.lead">Tap the cloud, pick a DNS, and send the site name in pieces.</p>
           </div>
 
           <div class="bento">
             <article class="bento__card bento__card--lg reveal">
               <div class="bento__text">
-                <h3 data-i18n="feat.tap.title">Tap the cloud to turn it on</h3>
-                <p data-i18n="feat.tap.body">Tap the cloud in the middle and protection starts on this device.</p>
+                <h3 data-i18n="feat.tap.title">Start with one tap</h3>
+                <p data-i18n="feat.tap.body">Tap the cloud in the middle and it starts on this device.</p>
               </div>
               <div class="bento__visual">
                 <img src="/assets/logo-ui.webp" alt="" width="148" height="148" />
@@ -524,7 +403,7 @@
             <article class="bento__card reveal" style="--delay: 60ms">
               <div class="bento__text">
                 <h3 data-i18n="feat.dns.title">Pick a DNS</h3>
-                <p data-i18n="feat.dns.body">Cloudflare, Google, or Quad9. This sets where lookups go; a DNS change alone does not open a connection blocked by its name.</p>
+                <p data-i18n="feat.dns.body">Choose Google, Cloudflare, or Quad9. A DNS change alone does not open a connection that drops because of its name.</p>
               </div>
               <div class="chip-row" aria-hidden="true">
                 <span>Cloudflare</span>
@@ -536,7 +415,7 @@
             <article class="bento__card reveal" style="--delay: 120ms">
               <div class="bento__text">
                 <h3 data-i18n="feat.sni.title">The site name goes out in pieces</h3>
-                <p data-i18n="feat.sni.body">It sends the site name (SNI) in pieces when a connection starts, which helps with some drops caused by that name. It does not open a block on an IP address.</p>
+                <p data-i18n="feat.sni.body">It sends the site name (SNI) in pieces when a connection starts. That helps some connections that drop because of the name. A block on an IP address does not open this way.</p>
               </div>
               <div class="split-viz" aria-hidden="true">
                 <span class="bar"></span>
@@ -551,8 +430,8 @@
                 <p data-i18n="feat.local.body">Traffic is not sent to a remote VPN server. Your IP stays the same, and HTTPS content is not decrypted.</p>
               </div>
               <ul class="checklist">
-                <li data-i18n="check.local">The split and DNS choice stay on this device</li>
-                <li data-i18n="check.tls">HTTPS content is not decrypted</li>
+                <li data-i18n="check.local">The split and the DNS choice stay on this device</li>
+                <li data-i18n="check.tls">HTTPS content is not opened</li>
                 <li data-i18n="check.proxy">No remote VPN server</li>
               </ul>
             </article>
@@ -564,106 +443,33 @@
         <div class="section-shell how__grid">
           <div class="how__copy reveal">
             <p class="eyebrow" data-i18n="how.kicker">How it works</p>
-            <h2 data-i18n-html="how.title">Three steps,<br />on this device</h2>
-            <p class="lead" data-i18n="how.lead">Allow the permission, then tap the cloud. DNS and the split name are handled on this device.</p>
+            <h2 data-i18n-html="how.title">How to use it</h2>
+            <p class="lead" data-i18n="how.lead">Allow the permission, then tap the cloud in the middle.</p>
           </div>
 
           <ol class="steps reveal" style="--delay: 80ms">
             <li>
               <span class="steps__num">1</span>
               <div>
-                <strong data-i18n="step1.title">Tap the cloud</strong>
-                <p data-i18n="step1.body">Once you allow it, protection starts.</p>
+                <strong data-i18n="step1.title">Tap the cloud icon</strong>
+                <p data-i18n="step1.body">Tap the cloud in the middle and allow the permission. It starts then.</p>
               </div>
             </li>
             <li>
               <span class="steps__num">2</span>
               <div>
                 <strong data-i18n="step2.title">Pick a DNS</strong>
-                <p data-i18n="step2.body">Lookups go to the DNS you pick. A DNS change alone does not open a connection that drops over its name, so that name goes out in pieces too.</p>
+                <p data-i18n="step2.body">Pick the DNS you want. Lookups go to that DNS, and a connection that drops because of its name is helped by sending that name in pieces.</p>
               </div>
             </li>
             <li>
               <span class="steps__num">3</span>
               <div>
-                <strong data-i18n="step3.title">Send the name in pieces</strong>
-                <p data-i18n="step3.body">The site name (SNI) goes out in pieces. That helps some connections that drop because of the name. HTTPS content is not decrypted.</p>
+                <strong data-i18n="step3.title">Open the site</strong>
+                <p data-i18n="step3.body">It helps some connections that drop because of the name. HTTPS content is not opened. Not every site will open.</p>
               </div>
             </li>
           </ol>
-        </div>
-      </section>
-
-      <section class="privacy" id="privacy">
-        <div class="section-shell privacy__grid">
-          <div class="privacy__copy reveal">
-            <p class="eyebrow" data-i18n="privacy.kicker">Privacy</p>
-            <h2 data-i18n-html="privacy.title">Analytics receives<br />two things</h2>
-            <p class="lead" data-i18n="privacy.lead">The Gureum app sends Google Analytics two things: whether protection is on, and the DNS type. Visited site names and a custom DNS address are not sent, and ad personalization is off. For the connection itself, lookups go to the DNS you pick and the split site name goes to that site. Visits to this page are counted apart from the app.</p>
-            <ul class="plain-list">
-              <li data-i18n="privacy.b1">Only protection state and DNS type</li>
-              <li data-i18n="privacy.b2">Site names do not go to Analytics</li>
-              <li data-i18n="privacy.b3">A custom DNS address is not sent</li>
-              <li data-i18n="privacy.b4">Ad personalization is off</li>
-              <li data-i18n="privacy.b5">Lookups go to the DNS you pick</li>
-            </ul>
-          </div>
-
-          <div class="privacy__panel reveal" style="--delay: 100ms">
-            <div class="privacy__card">
-              <img src="/assets/logo-ui.webp" alt="" width="88" height="88" />
-              <h3 data-i18n="card.title">Two things go to Analytics</h3>
-              <p data-i18n="card.body">Whether protection is on, and which DNS type you picked.</p>
-            </div>
-            <div class="privacy__stats" aria-hidden="true">
-              <div>
-                <strong>2</strong>
-                <span data-i18n="stat.server">pieces of info</span>
-              </div>
-              <div>
-                <strong>0</strong>
-                <span data-i18n="stat.tls">site names</span>
-              </div>
-              <div>
-                <strong>0</strong>
-                <span data-i18n="stat.tap">custom DNS</span>
-              </div>
-            </div>
-            <p class="privacy__caption" data-i18n="card.caption">These numbers count what the app sends to Google Analytics. They are separate from what leaves the device to resolve a name or reach a site.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="about" id="about">
-        <div class="section-shell section-shell--narrow">
-          <div class="section-head reveal">
-            <p class="eyebrow" data-i18n="about.kicker">What it is</p>
-            <h2 data-i18n="about.title">What is Gureum?</h2>
-          </div>
-            <p class="about__answer reveal" data-i18n="about.answer">Gureum is a site blocking bypass app for Android and iOS. When a blocked site won't open, it changes DNS on this device and sends the site name (SNI) in pieces to help with some HTTPS connections. It does not change your IP or country, does not open HTTPS contents, and does not send traffic to a remote VPN server. It does not open every blocked site.</p>
-          <dl class="about__facts reveal" style="--delay: 60ms">
-            <div>
-              <dt data-i18n="about.f1.dt">What it does</dt>
-              <dd data-i18n="about.f1.dd">When a connection drops because of the site name (SNI), it changes DNS on the device and sends that name in pieces.</dd>
-            </div>
-            <div>
-              <dt data-i18n="about.f2.dt">What it does not do</dt>
-              <dd data-i18n="about.f2.dd">It does not change your IP, does not open HTTPS contents, and does not send traffic to a remote VPN server.</dd>
-            </div>
-            <div>
-              <dt data-i18n="about.f3.dt">Supported devices</dt>
-              <dd data-i18n="about.f3.dd">Android, iOS</dd>
-            </div>
-            <div>
-              <dt data-i18n="about.f4.dt">Supported DNS</dt>
-              <dd data-i18n="about.f4.dd">Cloudflare, Google, Quad9</dd>
-            </div>
-            <div>
-              <dt data-i18n="about.f5.dt">Account</dt>
-              <dd data-i18n="about.f5.dd">None needed.</dd>
-            </div>
-          </dl>
-          <p class="about__sources reveal" data-i18n-html="about.sources">SNI is the connection name in <a href="https://www.rfc-editor.org/rfc/rfc6066">RFC 6066</a>. DNS notes are at <a href="https://developers.cloudflare.com/1.1.1.1/">Cloudflare</a>, <a href="https://developers.google.com/speed/public-dns">Google</a>, and <a href="https://www.quad9.net/">Quad9</a>.</p>
         </div>
       </section>
 
@@ -690,69 +496,13 @@
               <summary data-i18n="faq.q8">Does it open sites that show a warning page?</summary>
               <p data-i18n="faq.a8">Yes, when the warning appears because of the site name (SNI). It changes DNS and sends that name in pieces. It does not open blocks aimed at an IP address or a game server.</p>
             </details>
-            <details class="reveal" id="faq-vpn">
-              <summary data-i18n="faq.q1">How is this different from a regular VPN?</summary>
-              <p data-i18n="faq.a1">A remote VPN can send traffic to a VPN server and change your IP or path. Gureum does not send traffic to that server. On this device it changes DNS and handles only the site name (SNI). It does not change your IP or country.</p>
-            </details>
             <details class="reveal" id="faq-no-vpn">
               <summary data-i18n="faq.q18">Can I bypass a site block without a VPN?</summary>
               <p data-i18n="faq.a18">Gureum uses no remote VPN server. It changes DNS on this device and sends the site name (SNI) in pieces, which helps with some HTTPS connections that drop because of that name. It does not open blocks aimed at an IP address or a game server.</p>
             </details>
-            <details class="reveal" id="faq-ip">
-              <summary data-i18n="faq.q9">Does it change my IP address?</summary>
-              <p data-i18n="faq.a9">No. Gureum does not change your IP or your country. It does not send traffic to a VPN server overseas.</p>
-            </details>
-            <details class="reveal" id="faq-ads">
-              <summary data-i18n="faq.q10">Does it block ads?</summary>
-              <p data-i18n="faq.a10">No. Gureum is not an ad blocker. It changes DNS and splits the site name (SNI).</p>
-            </details>
-            <details class="reveal" id="faq-https" style="--delay: 40ms">
+            <details class="reveal" id="faq-https">
               <summary data-i18n="faq.q2">Does it read HTTPS?</summary>
               <p data-i18n="faq.a2">No. Gureum does not open or decrypt HTTPS contents. It handles DNS and the site name (SNI) sent when a connection starts.</p>
-            </details>
-            <details class="reveal" id="faq-sni" style="--delay: 80ms">
-              <summary data-i18n="faq.q4">What does splitting the site name mean?</summary>
-              <p data-i18n="faq.a4">When an HTTPS connection starts, Gureum does not send the site name (SNI) all at once. It sends it in pieces, which helps with some connections that drop because of that name. HTTPS content is not decrypted.</p>
-            </details>
-            <details class="reveal" id="faq-like">
-              <summary data-i18n="faq.q12">What if the blocked site still won't open?</summary>
-              <p data-i18n="faq.a12">If it still won't open with Gureum on, the block may not be about the site name (SNI). Gureum does not open a block on the site address, a game server, or a block you set on the device. To try only a DNS change, pick Cloudflare, Google, or Quad9.</p>
-            </details>
-            <details class="reveal" id="faq-check" style="--delay: 20ms">
-              <summary data-i18n="faq.q16">A blocked site won't open. What should I do?</summary>
-              <p data-i18n="faq.a16">Check whether other sites still open. If the warning page appears on one site and the address is HTTPS, the site name (SNI) may be why it drops. Tap Gureum and try that site again.</p>
-            </details>
-            <details class="reveal" id="faq-mobile" style="--delay: 40ms">
-              <summary data-i18n="faq.q17">How do I bypass HTTPS blocking on a phone?</summary>
-              <p data-i18n="faq.a17">Turn Gureum on and allow the permission once, then tap the cloud in the middle. From then on it changes DNS on this device and sends the site name (SNI) in pieces when a connection starts.</p>
-            </details>
-            <details class="reveal" id="faq-dns">
-              <summary data-i18n="faq.q5">Which DNS can I choose?</summary>
-              <p data-i18n="faq.a5">Cloudflare, Google, or Quad9. Lookups go to the DNS you pick.</p>
-            </details>
-            <details class="reveal" id="faq-dns-which">
-              <summary data-i18n="faq.q19">Cloudflare, Google, or Quad9: which one should I pick?</summary>
-              <p data-i18n="faq.a19">All three resolve addresses. Which one to pick depends on each provider's policy, and Gureum sends lookups only to the DNS you choose. Visited site names are not sent to Analytics.</p>
-            </details>
-            <details class="reveal" id="faq-speed">
-              <summary data-i18n="faq.q11">Will it slow my connection?</summary>
-              <p data-i18n="faq.a11">It does not go through a remote VPN server, so the path does not get longer the way a remote VPN does. Actual speed depends on your network and the DNS you pick.</p>
-            </details>
-            <details class="reveal" id="faq-account">
-              <summary data-i18n="faq.q6">Do I need an account?</summary>
-              <p data-i18n="faq.a6">No. You can turn Gureum on without signing up.</p>
-            </details>
-            <details class="reveal" id="faq-devices">
-              <summary data-i18n="faq.q7">Does it work on Android and iPhone?</summary>
-              <p data-i18n="faq.a7">Android and iOS. Store links will appear on this page when they are ready.</p>
-            </details>
-            <details class="reveal" id="faq-code">
-              <summary data-i18n="faq.q3">Is the app code public?</summary>
-              <p data-i18n="faq.a3">This page is public. The app code is not.</p>
-            </details>
-            <details class="reveal" id="faq-measure">
-              <summary data-i18n="faq.q13">Do you send the sites I visit?</summary>
-              <p data-i18n="faq.a13">No. Site names and a custom DNS address are not sent to Google Analytics. Whether protection is on and the chosen DNS type are. Ad personalization is off. DNS lookups go to the resolver you pick.</p>
             </details>
           </div>
         </div>
@@ -761,16 +511,8 @@
       <section class="cta" id="download">
         <div class="section-shell cta__inner reveal">
           <img src="/assets/logo-ui.webp" alt="" width="72" height="72" class="cta__icon" />
-          <h2 data-i18n="cta.title">The store release is in progress</h2>
-          <p data-i18n="cta.body">Android and iOS store links are not up yet. If you want the launch news first, send a mail.</p>
-          <div class="hero__cta">
-            <button type="button" class="btn btn--primary" disabled data-i18n="cta.android">Android coming soon</button>
-            <button type="button" class="btn btn--ghost btn--on-dark" disabled data-i18n="cta.ios">iOS coming soon</button>
-          </div>
-          <p class="cta__note">
-            <a class="cta__mail" href="mailto:gureum@yodams.com?subject=Gureum%20launch" data-i18n="cta.notify">Send a mail</a>
-            <span data-i18n="cta.platforms">Android and iOS coming soon</span>
-          </p>
+          <h2 data-i18n="cta.title">Coming soon</h2>
+          <p data-i18n="cta.body">The store release is in progress.</p>
         </div>
       </section>
     </main>
@@ -794,8 +536,6 @@
           <div>
             <p class="footer__label" data-i18n="foot.trust">About</p>
             <a href="#when" data-i18n="foot.when">When</a>
-            <a href="#about" data-i18n="foot.about">What it is</a>
-            <a href="#privacy" data-i18n="foot.privacy">Privacy</a>
             <a href="#faq" data-i18n="foot.faq">FAQ</a>
           </div>
           <div>
@@ -810,7 +550,6 @@
             </a>
           </div>
         </div>
-        <p class="footer__note" data-i18n="foot.sitePrivacy">The language you pick is part of the page address. Visits, scrolling, and clicks go to Google Analytics, with ad personalization off. Fonts come from jsDelivr.</p>
         <p class="footer__copy">© <span id="year"></span> GUREUM</p>
       </div>
     </footer>

@@ -33,27 +33,12 @@ const escapeJson = (value) => JSON.stringify(value, null, 2).replace(/</g, "\\u0
 
 function buildFaq(dict) {
   const pairs = [
-    ["about.title", "about.answer"],
     ["faq.q14", "faq.a14"],
     ["faq.q15", "faq.a15"],
     ["faq.q20", "faq.a20"],
     ["faq.q8", "faq.a8"],
-    ["faq.q1", "faq.a1"],
     ["faq.q18", "faq.a18"],
-    ["faq.q9", "faq.a9"],
-    ["faq.q10", "faq.a10"],
     ["faq.q2", "faq.a2"],
-    ["faq.q4", "faq.a4"],
-    ["faq.q12", "faq.a12"],
-    ["faq.q16", "faq.a16"],
-    ["faq.q17", "faq.a17"],
-    ["faq.q5", "faq.a5"],
-    ["faq.q19", "faq.a19"],
-    ["faq.q11", "faq.a11"],
-    ["faq.q6", "faq.a6"],
-    ["faq.q7", "faq.a7"],
-    ["faq.q3", "faq.a3"],
-    ["faq.q13", "faq.a13"],
   ];
   return pairs
     .map(([q, a]) => ({ q: dict[q], a: dict[a] }))
@@ -103,7 +88,7 @@ function buildGraph(lang, dict) {
         dateModified: "2026-11-04",
         speakable: {
           "@type": "SpeakableSpecification",
-          cssSelector: [".about__answer", ".hero__sub"],
+          cssSelector: [".hero__sub"],
         },
       },
       {
@@ -116,7 +101,7 @@ function buildGraph(lang, dict) {
         url,
         image: abs("/assets/og.png"),
         inLanguage: lang.html,
-        description: dict["about.answer"],
+        description: dict["hero.sub"],
         featureList: [dict["about.f1.dd"], dict["about.f2.dd"], dict["about.f4.dd"]].filter(Boolean),
         publisher: { "@id": `${SITE}/#organization` },
       },

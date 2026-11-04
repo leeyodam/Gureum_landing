@@ -139,7 +139,6 @@
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [
-          ".about__answer",
           ".hero__sub"
         ]
       }
@@ -154,7 +153,7 @@
       "url": "https://gureum.yodams.com/ja/",
       "image": "https://gureum.yodams.com/assets/og.png",
       "inLanguage": "ja",
-      "description": "雲（Gureum）は、AndroidとiOSで使うサイト遮断の回避アプリです。ブロックされたサイトが開かないとき、この端末でDNSを変え、サイト名（SNI）を分けて送り、一部のHTTPS接続を助けます。IPも国も変えず、HTTPSの中身は開かず、遠隔VPNサーバーへ送りません。すべてのブロックされたサイトが開くわけではありません。",
+      "description": "雲は遠隔VPNサーバーを使わず、この端末でDNSを変え、サイト名（SNI）を分けて送ります。名前で切れる一部のHTTPS接続を助け、IPと接続している国はそのままです。通信の中身は開きません。",
       "featureList": [
         "サイト名のために切れた接続で、端末の中のDNSを変え、サイト名を分けて送ります。",
         "IPは変えず、HTTPSの中身は開かず、遠隔VPNサーバーへ送りません。",
@@ -170,14 +169,6 @@
       "url": "https://gureum.yodams.com/ja/#faq",
       "inLanguage": "ja",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "雲はどんなアプリですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "雲（Gureum）は、AndroidとiOSで使うサイト遮断の回避アプリです。ブロックされたサイトが開かないとき、この端末でDNSを変え、サイト名（SNI）を分けて送り、一部のHTTPS接続を助けます。IPも国も変えず、HTTPSの中身は開かず、遠隔VPNサーバーへ送りません。すべてのブロックされたサイトが開くわけではありません。"
-          }
-        },
         {
           "@type": "Question",
           "name": "サイト遮断の回避アプリとは何ですか？",
@@ -212,34 +203,10 @@
         },
         {
           "@type": "Question",
-          "name": "ふつうのVPNと何が違いますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "遠隔VPNは通信をVPNサーバーへ送り、IPや経路を変えられます。雲はそのサーバーへ送らず、この端末でDNSとサイト名（SNI）だけを扱います。IPや国は変えません。"
-          }
-        },
-        {
-          "@type": "Question",
           "name": "VPNなしでサイト遮断を回避できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "雲は遠隔VPNサーバーを使わず、この端末でDNSを変え、サイト名（SNI）を分けて送ります。サイト名のために切れる一部のHTTPS接続を助けます。IPやゲームサーバーで止めている接続は開きません。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "IPアドレスは変わりますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "いいえ。雲は国もIPも変えません。通信を海外のVPNサーバーへ送ることもありません。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "広告も止めますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "いいえ。雲は広告ブロックアプリではありません。するのはDNSの変更とサイト名（SNI）の分割です。"
           }
         },
         {
@@ -249,121 +216,33 @@
             "@type": "Answer",
             "text": "いいえ。雲はHTTPSの中身を開かず、復号もしません。扱うのはDNSと、接続を始めるときのサイト名（SNI）です。"
           }
-        },
-        {
-          "@type": "Question",
-          "name": "サイト名を分けるとは何ですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "HTTPS接続を始めるとき、サイト名（SNI）を一度に送らず分けて送ります。その名前で切れる一部の接続を助けます。HTTPS通信の中身は検査も復号もしません。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "ブロックされたサイトが開かないままのときは？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "雲をオンにしても開かないなら、サイト名（SNI）以外の遮断かもしれません。サイトのアドレスやゲームサーバーを止めている場合、端末側で自分で止めた場合、雲は開きません。DNSだけ変えてみるときは Cloudflare、Google、Quad9 から選びます。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "ブロックされたサイトが開かないときはどうすればいいですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ほかのサイトは開くかを先に見ます。ひとつのサイトだけ警告ページが出て、アドレスがHTTPSなら、サイト名（SNI）で切れている可能性があります。そのときは雲をオンにして、そのサイトをもう一度開きます。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "スマホでHTTPSの遮断はどう回避しますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "雲をオンにして許可を一度出し、中央の雲を押します。その後はこの端末でDNSを変え、接続を始めるときのサイト名（SNI）を分けて送ります。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "どのDNSを選べますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cloudflare、Google、Quad9から選べます。アドレス検索は選んだDNSへ行きます。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Cloudflare、Google、Quad9 のどれを選べばいいですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "どれもアドレスを引けます。どれを選ぶかは各提供元の方針で決めればよく、雲は選んだDNSにだけ検索を送ります。訪れたサイト名はAnalyticsへ送りません。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "オンにすると遅くなりますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "遠隔VPNサーバーを通らないので、海外VPNのように経路は長くなりません。実際の速さは回線と選んだDNSで変わります。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "アカウントは必要ですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "いいえ。雲は登録なしですぐオンにできます。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "AndroidとiPhoneでも使えますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "AndroidとiOSで使えます。ストアのリンクは用意でき次第、このページに載せます。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "アプリのコードは公開されていますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "紹介ページだけを公開しています。アプリのコードは公開していません。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "訪れたサイト名を送りますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "いいえ。訪れたサイト名と手入力のDNSアドレスは Google Analytics に送りません。送るのは保護のオンオフと選んだDNSの種類だけで、広告の個人最適化はオフです。アドレス検索は選んだDNSへ行きます。"
-          }
         }
       ]
     },
     {
       "@type": "HowTo",
       "@id": "https://gureum.yodams.com/ja/#how",
-      "name": "ブロックされた接続を雲がつなぐ方法",
-      "description": "許可したあと、雲を押すだけです。DNSと名前の分割はこの端末で処理します。",
+      "name": "ブロックされたサイトが開かないときの使い方",
+      "description": "許可したあと、中央の雲を押します。",
       "inLanguage": "ja",
       "step": [
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "雲を押す",
-          "text": "許可すると保護が始まります。"
+          "name": "雲のアイコンを押す",
+          "text": "中央の雲を押して許可すると、始まります。"
         },
         {
           "@type": "HowToStep",
           "position": 2,
           "name": "DNSを選ぶ",
-          "text": "アドレス検索は選んだDNSへ行きます。DNSだけ変えても、名前で切れる接続は開かないので、その名前も分けて送ります。"
+          "text": "使いたいDNSを選びます。アドレス検索は選んだDNSへ行き、名前で切れた接続はその名前を分けて送って助けます。"
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "名前を分けて送る",
-          "text": "接続するサイト名（SNI）を分けて送ります。名前で切れる一部の接続を助け、通信の中身は開きません。"
+          "name": "サイトへ接続する",
+          "text": "名前で切れる一部の接続を助けます。通信の中身は開きません。すべてのサイトが開くわけではありません。"
         }
       ]
     }
@@ -417,18 +296,18 @@
             <p class="eyebrow" data-i18n="hero.kicker">サイト遮断の回避アプリ</p>
             <p class="brand-hero">구름</p>
             <h1>
-              <span class="hero__line" data-i18n="hero.line1">ブロックされたサイトが開かないとき</span>
-              <span class="hero__line" data-i18n="hero.line2">この端末で接続を助けます</span>
+              <span class="hero__line" data-i18n="hero.line1">ブロックされたサイトが開かないとき、</span>
+              <span class="hero__line" data-i18n="hero.line2">アプリひとつで接続を助けます</span>
             </h1>
-            <p class="hero__sub" data-i18n="hero.sub">雲は遠隔VPNサーバーを使わず、この端末でDNSを変え、サイト名（SNI）を分けて送ります。名前で切れる一部のHTTPS接続を助け、IPと国は変えず、HTTPSの中身は開きません。</p>
+            <p class="hero__sub" data-i18n="hero.sub">雲は遠隔VPNサーバーを使わず、この端末でDNSを変え、サイト名（SNI）を分けて送ります。名前で切れる一部のHTTPS接続を助け、IPと接続している国はそのままです。通信の中身は開きません。</p>
             <div class="hero__cta">
               <a class="btn btn--primary" href="#download" data-i18n="hero.download">ダウンロード</a>
               <a class="btn btn--ghost" href="#how" data-i18n="hero.how">仕組み</a>
             </div>
             <ul class="hero__points">
-              <li data-i18n="point.local">この端末で動く</li>
-              <li data-i18n="point.ip">IPと国はそのまま</li>
-              <li data-i18n="point.tls">HTTPSの中身は開かない</li>
+              <li data-i18n="point.local">DNS変更</li>
+              <li data-i18n="point.ip">SNI分割</li>
+              <li data-i18n="point.tls">IPはそのまま</li>
             </ul>
           </div>
 
@@ -481,24 +360,24 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow" data-i18n="when.kicker">こんなとき</p>
-            <h2 data-i18n="when.title">こんなときにオンにします</h2>
-            <p data-i18n="when.lead">サイトが開かない理由はいくつかあります。雲はサイト名（SNI）で切れる一部のHTTPS接続を、この端末で助けます。</p>
+            <h2 data-i18n="when.title">雲はこんなときに使います</h2>
+            <p data-i18n-html="when.lead">サイトが開かない理由はいくつかあります。<br />雲はサイト名（SNI）で切れる一部の接続を、この端末で助けます。</p>
           </div>
           <div class="value-grid">
             <article class="value reveal">
-              <h3 data-i18n="when.1.title">サイトが開かない、または警告が出るとき</h3>
-              <p data-i18n="when.1.body">開いていたサイトが急に開かない、または警告ページが出るなら、サイト名（SNI）で切れていることがあります。雲はその一部をこの端末で助けます。</p>
+              <h3 data-i18n="when.1.title">サイトが開かないとき</h3>
+              <p data-i18n="when.1.body">開いていたサイトが急に開かない、または警告ページが出るなら、サイト名（SNI）が原因のことがあります。雲はその一部をこの端末で助けます。</p>
             </article>
             <article class="value reveal" style="--delay: 60ms">
-              <h3 data-i18n="when.3.title">通信会社のDNS以外を選びたいとき</h3>
-              <p data-i18n="when.3.body">Cloudflare、Google、Quad9 をこの端末で選びます。DNSだけ変えても、名前で切れた接続は開きません。</p>
+              <h3 data-i18n="when.3.title">使いたいDNSを選びたいとき</h3>
+              <p data-i18n="when.3.body">Google、Cloudflare、Quad9 をこの端末で選びます。DNSだけ変えても、名前で切れた接続は開きません。</p>
             </article>
             <article class="value reveal" style="--delay: 120ms">
-              <h3 data-i18n="when.4.title">遠隔VPNサーバーが負担なとき</h3>
-              <p data-i18n="when.4.body">遠隔VPNサーバーは通りません。IPと接続している国はそのままです。</p>
+              <h3 data-i18n="when.4.title">外部のVPNサーバーが負担なとき</h3>
+              <p data-i18n="when.4.body">他国のサーバーは通りません。IPと接続している国はそのままです。</p>
             </article>
           </div>
-          <p class="when__note reveal" data-i18n="when.note">サイト名（SNI）のために切れた場合を助けます。IPやゲームサーバーで止めている接続は開かず、広告も止めません。</p>
+          <p class="when__note reveal" data-i18n-html="when.note">参考にしてください。<br />雲はサイト名（SNI）のために切れた接続を助けます。IPそのものが止まっている場合は助けられません。</p>
         </div>
       </section>
 
@@ -506,15 +385,15 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow eyebrow--on-dark" data-i18n="features.kicker">機能</p>
-            <h2 data-i18n-html="features.title">サイト遮断の回避に<br />必要な機能です</h2>
-            <p data-i18n="features.lead">オンにして、DNSを選んで、サイト名を分けて送ります。</p>
+            <h2 data-i18n-html="features.title">主な機能</h2>
+            <p data-i18n="features.lead">雲を押して、DNSを選んで、サイト名を分けて送ります。</p>
           </div>
 
           <div class="bento">
             <article class="bento__card bento__card--lg reveal">
               <div class="bento__text">
-                <h3 data-i18n="feat.tap.title">雲を押せばオンになります</h3>
-                <p data-i18n="feat.tap.body">中央の雲を押すと、この端末で保護が始まります。</p>
+                <h3 data-i18n="feat.tap.title">タップひとつで始まります</h3>
+                <p data-i18n="feat.tap.body">中央の雲を押すと、この端末で始まります。</p>
               </div>
               <div class="bento__visual">
                 <img src="/assets/logo-ui.webp" alt="" width="148" height="148" />
@@ -523,8 +402,8 @@
 
             <article class="bento__card reveal" style="--delay: 60ms">
               <div class="bento__text">
-                <h3 data-i18n="feat.dns.title">DNSは選ぶだけ</h3>
-                <p data-i18n="feat.dns.body">Cloudflare、Google、Quad9から選べます。これは検索の行き先を決めるもので、DNSを変えるだけで名前で止まった接続が開くわけではありません。</p>
+                <h3 data-i18n="feat.dns.title">使いたいDNSを選びます</h3>
+                <p data-i18n="feat.dns.body">Google、Cloudflare、Quad9 から選びます。DNSだけ変えても、名前で切れた接続は開きません。</p>
               </div>
               <div class="chip-row" aria-hidden="true">
                 <span>Cloudflare</span>
@@ -536,7 +415,7 @@
             <article class="bento__card reveal" style="--delay: 120ms">
               <div class="bento__text">
                 <h3 data-i18n="feat.sni.title">サイト名は分けて送ります</h3>
-                <p data-i18n="feat.sni.body">接続を始めるときにサイト名（SNI）を分けて送ります。その名前で切れる一部の接続を助けます。IPで止めている場合は開きません。</p>
+                <p data-i18n="feat.sni.body">接続を始めるときにサイト名（SNI）を分けて送ります。名前で切れる一部の接続を助けます。IPで止めている場合は開きません。</p>
               </div>
               <div class="split-viz" aria-hidden="true">
                 <span class="bar"></span>
@@ -547,13 +426,13 @@
 
             <article class="bento__card bento__card--wide reveal" style="--delay: 80ms">
               <div class="bento__text">
-                <h3 data-i18n="feat.local.title">遠隔VPNサーバーはありません</h3>
-                <p data-i18n="feat.local.body">通信を遠隔VPNサーバーへ送りません。IPも変えず、HTTPSの中身は開きません。</p>
+                <h3 data-i18n="feat.local.title">外部のVPNサーバーはありません</h3>
+                <p data-i18n="feat.local.body">通信を外部のVPNサーバーへ送りません。IPはそのままで、通信の中身は開きません。</p>
               </div>
               <ul class="checklist">
                 <li data-i18n="check.local">分割とDNSの選択はこの端末で</li>
-                <li data-i18n="check.tls">HTTPSの中身は開かない</li>
-                <li data-i18n="check.proxy">遠隔VPNサーバーなし</li>
+                <li data-i18n="check.tls">通信の中身は開かない</li>
+                <li data-i18n="check.proxy">外部のVPNサーバーなし</li>
               </ul>
             </article>
           </div>
@@ -564,106 +443,33 @@
         <div class="section-shell how__grid">
           <div class="how__copy reveal">
             <p class="eyebrow" data-i18n="how.kicker">仕組み</p>
-            <h2 data-i18n-html="how.title">使い方は<br />三つの段階です</h2>
-            <p class="lead" data-i18n="how.lead">許可したあと、雲を押すだけです。DNSと名前の分割はこの端末で処理します。</p>
+            <h2 data-i18n-html="how.title">簡単な使い方</h2>
+            <p class="lead" data-i18n="how.lead">許可したあと、中央の雲を押します。</p>
           </div>
 
           <ol class="steps reveal" style="--delay: 80ms">
             <li>
               <span class="steps__num">1</span>
               <div>
-                <strong data-i18n="step1.title">雲を押す</strong>
-                <p data-i18n="step1.body">許可すると保護が始まります。</p>
+                <strong data-i18n="step1.title">雲のアイコンを押す</strong>
+                <p data-i18n="step1.body">中央の雲を押して許可すると、始まります。</p>
               </div>
             </li>
             <li>
               <span class="steps__num">2</span>
               <div>
                 <strong data-i18n="step2.title">DNSを選ぶ</strong>
-                <p data-i18n="step2.body">アドレス検索は選んだDNSへ行きます。DNSだけ変えても、名前で切れる接続は開かないので、その名前も分けて送ります。</p>
+                <p data-i18n="step2.body">使いたいDNSを選びます。アドレス検索は選んだDNSへ行き、名前で切れた接続はその名前を分けて送って助けます。</p>
               </div>
             </li>
             <li>
               <span class="steps__num">3</span>
               <div>
-                <strong data-i18n="step3.title">名前を分けて送る</strong>
-                <p data-i18n="step3.body">接続するサイト名（SNI）を分けて送ります。名前で切れる一部の接続を助け、通信の中身は開きません。</p>
+                <strong data-i18n="step3.title">サイトへ接続する</strong>
+                <p data-i18n="step3.body">名前で切れる一部の接続を助けます。通信の中身は開きません。すべてのサイトが開くわけではありません。</p>
               </div>
             </li>
           </ol>
-        </div>
-      </section>
-
-      <section class="privacy" id="privacy">
-        <div class="section-shell privacy__grid">
-          <div class="privacy__copy reveal">
-            <p class="eyebrow" data-i18n="privacy.kicker">プライバシー</p>
-            <h2 data-i18n-html="privacy.title">Analyticsへ送るのは<br />二つです</h2>
-            <p class="lead" data-i18n="privacy.lead">雲のアプリが Google Analytics へ送るのは、保護のオンオフとDNSの種類の二つです。訪れたサイト名と手入力のDNSアドレスは送らず、広告の個人最適化はオフです。接続のために、アドレス検索は選んだDNSへ、分けたサイト名はそのサイトへ行きます。この紹介ページの訪問数はアプリとは別に数えます。</p>
-            <ul class="plain-list">
-              <li data-i18n="privacy.b1">保護の状態とDNSの種類だけ</li>
-              <li data-i18n="privacy.b2">サイト名はAnalyticsへ行きません</li>
-              <li data-i18n="privacy.b3">手入力のDNSアドレスも送りません</li>
-              <li data-i18n="privacy.b4">広告の個人最適化はオフ</li>
-              <li data-i18n="privacy.b5">アドレス検索は選んだDNSへ行きます</li>
-            </ul>
-          </div>
-
-          <div class="privacy__panel reveal" style="--delay: 100ms">
-            <div class="privacy__card">
-              <img src="/assets/logo-ui.webp" alt="" width="88" height="88" />
-              <h3 data-i18n="card.title">Analyticsへ送るのは二つ</h3>
-              <p data-i18n="card.body">保護をオンにしたかと、選んだDNSの種類です。</p>
-            </div>
-            <div class="privacy__stats" aria-hidden="true">
-              <div>
-                <strong>2</strong>
-                <span data-i18n="stat.server">つ</span>
-              </div>
-              <div>
-                <strong>0</strong>
-                <span data-i18n="stat.tls">サイト名</span>
-              </div>
-              <div>
-                <strong>0</strong>
-                <span data-i18n="stat.tap">手入力のDNS</span>
-              </div>
-            </div>
-            <p class="privacy__caption" data-i18n="card.caption">この数字は、アプリが Google Analytics へ送る項目を数えたものです。名前を引くため、サイトへ届くために端末から出る情報とは別です。</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="about" id="about">
-        <div class="section-shell section-shell--narrow">
-          <div class="section-head reveal">
-            <p class="eyebrow" data-i18n="about.kicker">定義</p>
-            <h2 data-i18n="about.title">雲はどんなアプリですか？</h2>
-          </div>
-            <p class="about__answer reveal" data-i18n="about.answer">雲（Gureum）は、AndroidとiOSで使うサイト遮断の回避アプリです。ブロックされたサイトが開かないとき、この端末でDNSを変え、サイト名（SNI）を分けて送り、一部のHTTPS接続を助けます。IPも国も変えず、HTTPSの中身は開かず、遠隔VPNサーバーへ送りません。すべてのブロックされたサイトが開くわけではありません。</p>
-          <dl class="about__facts reveal" style="--delay: 60ms">
-            <div>
-              <dt data-i18n="about.f1.dt">すること</dt>
-              <dd data-i18n="about.f1.dd">サイト名のために切れた接続で、端末の中のDNSを変え、サイト名を分けて送ります。</dd>
-            </div>
-            <div>
-              <dt data-i18n="about.f2.dt">しないこと</dt>
-              <dd data-i18n="about.f2.dd">IPは変えず、HTTPSの中身は開かず、遠隔VPNサーバーへ送りません。</dd>
-            </div>
-            <div>
-              <dt data-i18n="about.f3.dt">対応端末</dt>
-              <dd data-i18n="about.f3.dd">Android、iOS</dd>
-            </div>
-            <div>
-              <dt data-i18n="about.f4.dt">対応DNS</dt>
-              <dd data-i18n="about.f4.dd">Cloudflare、Google、Quad9</dd>
-            </div>
-            <div>
-              <dt data-i18n="about.f5.dt">アカウント</dt>
-              <dd data-i18n="about.f5.dd">要りません。</dd>
-            </div>
-          </dl>
-          <p class="about__sources reveal" data-i18n-html="about.sources">SNIは <a href="https://www.rfc-editor.org/rfc/rfc6066">RFC 6066</a> の接続名です。DNSの説明は <a href="https://developers.cloudflare.com/1.1.1.1/">Cloudflare</a>、<a href="https://developers.google.com/speed/public-dns">Google</a>、<a href="https://www.quad9.net/">Quad9</a> にあります。</p>
         </div>
       </section>
 
@@ -690,69 +496,13 @@
               <summary data-i18n="faq.q8">警告ページが出るサイトも開きますか？</summary>
               <p data-i18n="faq.a8">サイト名（SNI）のために出た警告なら助けます。DNSを変え、その名前を分けて送ります。IPやゲームサーバーで止めている接続までは開きません。</p>
             </details>
-            <details class="reveal" id="faq-vpn">
-              <summary data-i18n="faq.q1">ふつうのVPNと何が違いますか？</summary>
-              <p data-i18n="faq.a1">遠隔VPNは通信をVPNサーバーへ送り、IPや経路を変えられます。雲はそのサーバーへ送らず、この端末でDNSとサイト名（SNI）だけを扱います。IPや国は変えません。</p>
-            </details>
             <details class="reveal" id="faq-no-vpn">
               <summary data-i18n="faq.q18">VPNなしでサイト遮断を回避できますか？</summary>
               <p data-i18n="faq.a18">雲は遠隔VPNサーバーを使わず、この端末でDNSを変え、サイト名（SNI）を分けて送ります。サイト名のために切れる一部のHTTPS接続を助けます。IPやゲームサーバーで止めている接続は開きません。</p>
             </details>
-            <details class="reveal" id="faq-ip">
-              <summary data-i18n="faq.q9">IPアドレスは変わりますか？</summary>
-              <p data-i18n="faq.a9">いいえ。雲は国もIPも変えません。通信を海外のVPNサーバーへ送ることもありません。</p>
-            </details>
-            <details class="reveal" id="faq-ads">
-              <summary data-i18n="faq.q10">広告も止めますか？</summary>
-              <p data-i18n="faq.a10">いいえ。雲は広告ブロックアプリではありません。するのはDNSの変更とサイト名（SNI）の分割です。</p>
-            </details>
-            <details class="reveal" id="faq-https" style="--delay: 40ms">
+            <details class="reveal" id="faq-https">
               <summary data-i18n="faq.q2">HTTPSの中身を見ますか？</summary>
               <p data-i18n="faq.a2">いいえ。雲はHTTPSの中身を開かず、復号もしません。扱うのはDNSと、接続を始めるときのサイト名（SNI）です。</p>
-            </details>
-            <details class="reveal" id="faq-sni" style="--delay: 80ms">
-              <summary data-i18n="faq.q4">サイト名を分けるとは何ですか？</summary>
-              <p data-i18n="faq.a4">HTTPS接続を始めるとき、サイト名（SNI）を一度に送らず分けて送ります。その名前で切れる一部の接続を助けます。HTTPS通信の中身は検査も復号もしません。</p>
-            </details>
-            <details class="reveal" id="faq-like">
-              <summary data-i18n="faq.q12">ブロックされたサイトが開かないままのときは？</summary>
-              <p data-i18n="faq.a12">雲をオンにしても開かないなら、サイト名（SNI）以外の遮断かもしれません。サイトのアドレスやゲームサーバーを止めている場合、端末側で自分で止めた場合、雲は開きません。DNSだけ変えてみるときは Cloudflare、Google、Quad9 から選びます。</p>
-            </details>
-            <details class="reveal" id="faq-check" style="--delay: 20ms">
-              <summary data-i18n="faq.q16">ブロックされたサイトが開かないときはどうすればいいですか？</summary>
-              <p data-i18n="faq.a16">ほかのサイトは開くかを先に見ます。ひとつのサイトだけ警告ページが出て、アドレスがHTTPSなら、サイト名（SNI）で切れている可能性があります。そのときは雲をオンにして、そのサイトをもう一度開きます。</p>
-            </details>
-            <details class="reveal" id="faq-mobile" style="--delay: 40ms">
-              <summary data-i18n="faq.q17">スマホでHTTPSの遮断はどう回避しますか？</summary>
-              <p data-i18n="faq.a17">雲をオンにして許可を一度出し、中央の雲を押します。その後はこの端末でDNSを変え、接続を始めるときのサイト名（SNI）を分けて送ります。</p>
-            </details>
-            <details class="reveal" id="faq-dns">
-              <summary data-i18n="faq.q5">どのDNSを選べますか？</summary>
-              <p data-i18n="faq.a5">Cloudflare、Google、Quad9から選べます。アドレス検索は選んだDNSへ行きます。</p>
-            </details>
-            <details class="reveal" id="faq-dns-which">
-              <summary data-i18n="faq.q19">Cloudflare、Google、Quad9 のどれを選べばいいですか？</summary>
-              <p data-i18n="faq.a19">どれもアドレスを引けます。どれを選ぶかは各提供元の方針で決めればよく、雲は選んだDNSにだけ検索を送ります。訪れたサイト名はAnalyticsへ送りません。</p>
-            </details>
-            <details class="reveal" id="faq-speed">
-              <summary data-i18n="faq.q11">オンにすると遅くなりますか？</summary>
-              <p data-i18n="faq.a11">遠隔VPNサーバーを通らないので、海外VPNのように経路は長くなりません。実際の速さは回線と選んだDNSで変わります。</p>
-            </details>
-            <details class="reveal" id="faq-account">
-              <summary data-i18n="faq.q6">アカウントは必要ですか？</summary>
-              <p data-i18n="faq.a6">いいえ。雲は登録なしですぐオンにできます。</p>
-            </details>
-            <details class="reveal" id="faq-devices">
-              <summary data-i18n="faq.q7">AndroidとiPhoneでも使えますか？</summary>
-              <p data-i18n="faq.a7">AndroidとiOSで使えます。ストアのリンクは用意でき次第、このページに載せます。</p>
-            </details>
-            <details class="reveal" id="faq-code">
-              <summary data-i18n="faq.q3">アプリのコードは公開されていますか？</summary>
-              <p data-i18n="faq.a3">紹介ページだけを公開しています。アプリのコードは公開していません。</p>
-            </details>
-            <details class="reveal" id="faq-measure">
-              <summary data-i18n="faq.q13">訪れたサイト名を送りますか？</summary>
-              <p data-i18n="faq.a13">いいえ。訪れたサイト名と手入力のDNSアドレスは Google Analytics に送りません。送るのは保護のオンオフと選んだDNSの種類だけで、広告の個人最適化はオフです。アドレス検索は選んだDNSへ行きます。</p>
             </details>
           </div>
         </div>
@@ -761,16 +511,8 @@
       <section class="cta" id="download">
         <div class="section-shell cta__inner reveal">
           <img src="/assets/logo-ui.webp" alt="" width="72" height="72" class="cta__icon" />
-          <h2 data-i18n="cta.title">ストア公開を準備しています</h2>
-          <p data-i18n="cta.body">Android と iOS のストアリンクはまだありません。公開のお知らせを先に受け取りたいときは、メールを送ってください。</p>
-          <div class="hero__cta">
-            <button type="button" class="btn btn--primary" disabled data-i18n="cta.android">Android 準備中</button>
-            <button type="button" class="btn btn--ghost btn--on-dark" disabled data-i18n="cta.ios">iOS 準備中</button>
-          </div>
-          <p class="cta__note">
-            <a class="cta__mail" href="mailto:gureum@yodams.com?subject=Gureum%20launch" data-i18n="cta.notify">メールを送る</a>
-            <span data-i18n="cta.platforms">Android、iOS 準備中</span>
-          </p>
+          <h2 data-i18n="cta.title">もうすぐ届きます</h2>
+          <p data-i18n="cta.body">ストア公開を準備しています。</p>
         </div>
       </section>
     </main>
@@ -794,8 +536,6 @@
           <div>
             <p class="footer__label" data-i18n="foot.trust">案内</p>
             <a href="#when" data-i18n="foot.when">こんなとき</a>
-            <a href="#about" data-i18n="foot.about">定義</a>
-            <a href="#privacy" data-i18n="foot.privacy">プライバシー</a>
             <a href="#faq" data-i18n="foot.faq">FAQ</a>
           </div>
           <div>
@@ -810,7 +550,6 @@
             </a>
           </div>
         </div>
-        <p class="footer__note" data-i18n="foot.sitePrivacy">選んだ言語はページのアドレスに入ります。訪問、スクロール、クリックは Google Analytics に送られ、広告の個人最適化はオフです。フォントは jsDelivr から読み込みます。</p>
         <p class="footer__copy">© <span id="year"></span> GUREUM</p>
       </div>
     </footer>
