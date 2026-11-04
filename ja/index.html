@@ -363,7 +363,7 @@
           "@type": "HowToStep",
           "position": 3,
           "name": "名前を分けて送る",
-          "text": "必要なときだけサイト名を分けて送り、接続を安定させます。"
+          "text": "接続するサイト名（SNI）を分けて送ります。名前で切れる一部の接続を助け、通信の中身は開きません。"
         }
       ]
     }
@@ -418,18 +418,17 @@
             <p class="brand-hero">구름</p>
             <h1>
               <span class="hero__line" data-i18n="hero.line1">ブロックされたサイトが開かないとき</span>
-              <span class="hero__line" data-i18n="hero.line2">DNSを変えて開けるよう助けます</span>
+              <span class="hero__line" data-i18n="hero.line2">この端末で接続を助けます</span>
             </h1>
-            <p class="hero__sub" data-i18n="hero.sub">Gureumは、ブロックされたサイトが開かないときに使うサイト遮断の回避アプリです。この端末でDNSを変え、サイト名（SNI）を分けて送り、一部のHTTPS接続を助けます。遠隔VPNサーバーは通らず、IPも国も変えず、HTTPSの中身は開きません。</p>
+            <p class="hero__sub" data-i18n="hero.sub">雲は遠隔VPNサーバーを使わず、この端末でDNSを変え、サイト名（SNI）を分けて送ります。名前で切れる一部のHTTPS接続を助け、IPと国は変えず、HTTPSの中身は開きません。</p>
             <div class="hero__cta">
               <a class="btn btn--primary" href="#download" data-i18n="hero.download">ダウンロード</a>
               <a class="btn btn--ghost" href="#how" data-i18n="hero.how">仕組み</a>
             </div>
             <ul class="hero__points">
               <li data-i18n="point.local">この端末で動く</li>
-              <li data-i18n="point.dns">DNSを選ぶ</li>
-              <li data-i18n="point.sni">名前を分けて送る</li>
-              <li data-i18n="point.tls">HTTPSを検査しない</li>
+              <li data-i18n="point.ip">IPと国はそのまま</li>
+              <li data-i18n="point.tls">HTTPSの中身は開かない</li>
             </ul>
           </div>
 
@@ -482,25 +481,21 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow" data-i18n="when.kicker">こんなとき</p>
-            <h2 data-i18n="when.title">ブロックされたサイトが開かないときに</h2>
-            <p data-i18n="when.lead">サイトが開かない理由はいくつかあります。アドレス検索（DNS）が止まる、IPが止まる、サイト名（SNI）でHTTPS接続が切れる、などです。雲はこのうちサイト名で切れる一部を、この端末で助けます。</p>
+            <h2 data-i18n="when.title">こんなときにオンにします</h2>
+            <p data-i18n="when.lead">サイトが開かない理由はいくつかあります。雲はサイト名（SNI）で切れる一部のHTTPS接続を、この端末で助けます。</p>
           </div>
           <div class="value-grid">
             <article class="value reveal">
-              <h3 data-i18n="when.1.title">ブロックされたサイトが開かないとき</h3>
-              <p data-i18n="when.1.body">今まで開いていたサイトが急に開かない、または警告ページが出るなら、雲を押します。</p>
+              <h3 data-i18n="when.1.title">サイトが開かない、または警告が出るとき</h3>
+              <p data-i18n="when.1.body">開いていたサイトが急に開かない、または警告ページが出るなら、サイト名（SNI）で切れていることがあります。雲はその一部をこの端末で助けます。</p>
             </article>
             <article class="value reveal" style="--delay: 60ms">
-              <h3 data-i18n="when.2.title">警告ページだけが出るとき</h3>
-              <p data-i18n="when.2.body">サイトの中身の代わりに警告が出るなら、そのサイトだけが名前のために止まっているか先に見ます。</p>
+              <h3 data-i18n="when.3.title">通信会社のDNS以外を選びたいとき</h3>
+              <p data-i18n="when.3.body">Cloudflare、Google、Quad9 をこの端末で選びます。DNSだけ変えても、名前で切れた接続は開きません。</p>
             </article>
             <article class="value reveal" style="--delay: 120ms">
-              <h3 data-i18n="when.3.title">DNSを変えるアプリを探しているとき</h3>
-              <p data-i18n="when.3.body">通信会社のDNSの代わりに、Cloudflare、Google、Quad9をこの端末で選びます。</p>
-            </article>
-            <article class="value reveal" style="--delay: 180ms">
-              <h3 data-i18n="when.4.title">VPNなしで試したいとき</h3>
-              <p data-i18n="when.4.body">遠隔VPNサーバーは通りません。この端末でDNSとサイト名（SNI）だけを扱い、IPと国はそのままです。</p>
+              <h3 data-i18n="when.4.title">遠隔VPNサーバーが負担なとき</h3>
+              <p data-i18n="when.4.body">遠隔VPNサーバーは通りません。IPと接続している国はそのままです。</p>
             </article>
           </div>
           <p class="when__note reveal" data-i18n="when.note">サイト名（SNI）のために切れた場合を助けます。IPやゲームサーバーで止めている接続は開かず、広告も止めません。</p>
@@ -511,8 +506,8 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow eyebrow--on-dark" data-i18n="features.kicker">機能</p>
-            <h2 data-i18n-html="features.title">サイト遮断の回避に<br />必要なものだけ</h2>
-            <p data-i18n="features.lead">必要なときオンにして、DNSを選んで、状態を見ます。</p>
+            <h2 data-i18n-html="features.title">サイト遮断の回避に<br />必要な機能です</h2>
+            <p data-i18n="features.lead">オンにして、DNSを選んで、サイト名を分けて送ります。</p>
           </div>
 
           <div class="bento">
@@ -552,12 +547,12 @@
 
             <article class="bento__card bento__card--wide reveal" style="--delay: 80ms">
               <div class="bento__text">
-                <h3 data-i18n="feat.local.title">遠隔VPNはありません</h3>
-                <p data-i18n="feat.local.body">通信を遠隔VPNサーバーへ送りません。IPも変えず、HTTPS通信の中身を検査も復号もしません。</p>
+                <h3 data-i18n="feat.local.title">遠隔VPNサーバーはありません</h3>
+                <p data-i18n="feat.local.body">通信を遠隔VPNサーバーへ送りません。IPも変えず、HTTPSの中身は開きません。</p>
               </div>
               <ul class="checklist">
-                <li data-i18n="check.local">この端末だけで動く</li>
-                <li data-i18n="check.tls">HTTPS通信の中身は検査も復号もしない</li>
+                <li data-i18n="check.local">分割とDNSの選択はこの端末で</li>
+                <li data-i18n="check.tls">HTTPSの中身は開かない</li>
                 <li data-i18n="check.proxy">遠隔VPNサーバーなし</li>
               </ul>
             </article>
@@ -569,7 +564,7 @@
         <div class="section-shell how__grid">
           <div class="how__copy reveal">
             <p class="eyebrow" data-i18n="how.kicker">仕組み</p>
-            <h2 data-i18n-html="how.title">ブロックされたサイトは<br />こうしてまた開きます</h2>
+            <h2 data-i18n-html="how.title">使い方は<br />三つの段階です</h2>
             <p class="lead" data-i18n="how.lead">許可したあと、雲を押すだけです。DNSと名前の分割はこの端末で処理します。</p>
           </div>
 
@@ -592,7 +587,7 @@
               <span class="steps__num">3</span>
               <div>
                 <strong data-i18n="step3.title">名前を分けて送る</strong>
-                <p data-i18n="step3.body">必要なときだけサイト名を分けて送り、接続を安定させます。</p>
+                <p data-i18n="step3.body">接続するサイト名（SNI）を分けて送ります。名前で切れる一部の接続を助け、通信の中身は開きません。</p>
               </div>
             </li>
           </ol>
@@ -603,7 +598,7 @@
         <div class="section-shell privacy__grid">
           <div class="privacy__copy reveal">
             <p class="eyebrow" data-i18n="privacy.kicker">プライバシー</p>
-            <h2 data-i18n-html="privacy.title">アプリが送るのは<br />二つです</h2>
+            <h2 data-i18n-html="privacy.title">Analyticsへ送るのは<br />二つです</h2>
             <p class="lead" data-i18n="privacy.lead">雲のアプリが Google Analytics へ送るのは、保護のオンオフとDNSの種類の二つです。訪れたサイト名と手入力のDNSアドレスは送らず、広告の個人最適化はオフです。接続のために、アドレス検索は選んだDNSへ、分けたサイト名はそのサイトへ行きます。この紹介ページの訪問数はアプリとは別に数えます。</p>
             <ul class="plain-list">
               <li data-i18n="privacy.b1">保護の状態とDNSの種類だけ</li>
@@ -617,8 +612,8 @@
           <div class="privacy__panel reveal" style="--delay: 100ms">
             <div class="privacy__card">
               <img src="/assets/logo-ui.webp" alt="" width="88" height="88" />
-              <h3 data-i18n="card.title">アプリから出るのは二つ</h3>
-              <p data-i18n="card.body">Analyticsへ行くのは保護のオンオフとDNSの種類だけです。</p>
+              <h3 data-i18n="card.title">Analyticsへ送るのは二つ</h3>
+              <p data-i18n="card.body">保護をオンにしたかと、選んだDNSの種類です。</p>
             </div>
             <div class="privacy__stats" aria-hidden="true">
               <div>
@@ -656,11 +651,11 @@
               <dd data-i18n="about.f2.dd">IPは変えず、HTTPSの中身は開かず、遠隔VPNサーバーへ送りません。</dd>
             </div>
             <div>
-              <dt data-i18n="about.f3.dt">端末</dt>
+              <dt data-i18n="about.f3.dt">対応端末</dt>
               <dd data-i18n="about.f3.dd">Android、iOS</dd>
             </div>
             <div>
-              <dt data-i18n="about.f4.dt">DNS</dt>
+              <dt data-i18n="about.f4.dt">対応DNS</dt>
               <dd data-i18n="about.f4.dd">Cloudflare、Google、Quad9</dd>
             </div>
             <div>
@@ -766,8 +761,8 @@
       <section class="cta" id="download">
         <div class="section-shell cta__inner reveal">
           <img src="/assets/logo-ui.webp" alt="" width="72" height="72" class="cta__icon" />
-          <h2 data-i18n="cta.title">使ってみる</h2>
-          <p data-i18n="cta.body">ストアのリンクはまだ準備中です。公開のお知らせを先に受け取りたいときは、メールを送ってください。</p>
+          <h2 data-i18n="cta.title">ストア公開を準備しています</h2>
+          <p data-i18n="cta.body">Android と iOS のストアリンクはまだありません。公開のお知らせを先に受け取りたいときは、メールを送ってください。</p>
           <div class="hero__cta">
             <button type="button" class="btn btn--primary" disabled data-i18n="cta.android">Android 準備中</button>
             <button type="button" class="btn btn--ghost btn--on-dark" disabled data-i18n="cta.ios">iOS 準備中</button>

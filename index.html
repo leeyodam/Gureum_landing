@@ -363,7 +363,7 @@
           "@type": "HowToStep",
           "position": 3,
           "name": "이름을 나눠 보내요",
-          "text": "접속할 사이트 이름을 나눠 보내요. 통신 내용은 열지 않아요."
+          "text": "접속할 사이트 이름(SNI)을 나눠 보내요. 이름 때문에 끊긴 일부 연결을 돕고, 통신 내용은 열지 않아요."
         }
       ]
     }
@@ -418,18 +418,17 @@
             <p class="brand-hero">구름</p>
             <h1>
               <span class="hero__line" data-i18n="hero.line1">차단된 사이트가 안 열릴 때</span>
-              <span class="hero__line" data-i18n="hero.line2">DNS를 바꿔 접속을 도와요</span>
+              <span class="hero__line" data-i18n="hero.line2">이 기기에서 접속을 도와요</span>
             </h1>
-            <p class="hero__sub" data-i18n="hero.sub">구름은 차단된 사이트가 안 열릴 때 쓰는 사이트 차단 우회 앱이에요. 이 기기에서 DNS를 바꾸고 사이트 이름(SNI)을 나눠 보내 일부 HTTPS 접속을 도와요. 원격 VPN 서버를 거치지 않고, IP 주소나 국가를 바꾸지 않으며, HTTPS 내용은 열지 않아요.</p>
+            <p class="hero__sub" data-i18n="hero.sub">구름은 원격 VPN 서버 없이, 이 기기에서 DNS를 바꾸고 사이트 이름(SNI)을 나눠 보내요. 이름 때문에 끊긴 일부 HTTPS 접속을 돕고, IP와 국가는 바꾸지 않으며, HTTPS 내용은 열지 않아요.</p>
             <div class="hero__cta">
               <a class="btn btn--primary" href="#download" data-i18n="hero.download">다운로드</a>
               <a class="btn btn--ghost" href="#how" data-i18n="hero.how">작동 방식</a>
             </div>
             <ul class="hero__points">
               <li data-i18n="point.local">이 기기에서 동작</li>
-              <li data-i18n="point.dns">DNS 바로 선택</li>
-              <li data-i18n="point.sni">이름 나눠 보내기</li>
-              <li data-i18n="point.tls">내용은 열지 않음</li>
+              <li data-i18n="point.ip">IP와 국가는 그대로</li>
+              <li data-i18n="point.tls">HTTPS 내용은 열지 않음</li>
             </ul>
           </div>
 
@@ -482,25 +481,21 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow" data-i18n="when.kicker">이럴 때</p>
-            <h2 data-i18n="when.title">차단된 사이트가 안 열릴 때 켜요</h2>
-            <p data-i18n="when.lead">사이트가 안 열리는 이유는 여러 가지예요. 주소 찾기(DNS)가 막히거나, IP가 막히거나, 사이트 이름(SNI) 때문에 HTTPS 연결이 끊길 수 있어요. 구름은 이 가운데 사이트 이름 때문에 끊긴 일부 연결을 이 기기에서 도와요.</p>
+            <h2 data-i18n="when.title">이럴 때 켜요</h2>
+            <p data-i18n="when.lead">사이트가 안 열리는 이유는 여러 가지예요. 구름은 사이트 이름(SNI) 때문에 끊긴 일부 HTTPS 연결을 이 기기에서 도와요.</p>
           </div>
           <div class="value-grid">
             <article class="value reveal">
-              <h3 data-i18n="when.1.title">차단된 사이트가 안 열릴 때</h3>
-              <p data-i18n="when.1.body">들어가던 사이트가 갑자기 안 열리거나 경고 페이지가 뜨면 구름을 눌러요.</p>
+              <h3 data-i18n="when.1.title">사이트가 안 열리거나 경고가 뜰 때</h3>
+              <p data-i18n="when.1.body">들어가던 사이트가 갑자기 안 열리거나 경고 페이지가 뜨면, 사이트 이름(SNI) 때문에 끊긴 연결일 수 있어요. 구름은 그 일부를 이 기기에서 도와요.</p>
             </article>
             <article class="value reveal" style="--delay: 60ms">
-              <h3 data-i18n="when.2.title">경고 페이지만 뜰 때</h3>
-              <p data-i18n="when.2.body">사이트 내용 대신 경고가 보이면, 그 사이트만 이름 때문에 막혔는지 먼저 확인해요.</p>
+              <h3 data-i18n="when.3.title">통신사 DNS 대신 고르고 싶을 때</h3>
+              <p data-i18n="when.3.body">Cloudflare, Google, Quad9 중에서 이 기기에서 골라요. DNS만 바꿔서는 이름 때문에 끊긴 연결이 열리지 않아요.</p>
             </article>
             <article class="value reveal" style="--delay: 120ms">
-              <h3 data-i18n="when.3.title">DNS 변경 앱을 찾을 때</h3>
-              <p data-i18n="when.3.body">통신사 DNS 대신 Cloudflare, Google, Quad9 중에서 이 기기에서 골라요.</p>
-            </article>
-            <article class="value reveal" style="--delay: 180ms">
-              <h3 data-i18n="when.4.title">VPN 없이 접속을 시도하고 싶을 때</h3>
-              <p data-i18n="when.4.body">원격 VPN 서버를 거치지 않고, 이 기기에서 DNS와 사이트 이름(SNI)만 다뤄요. IP와 국가는 그대로예요.</p>
+              <h3 data-i18n="when.4.title">원격 VPN 서버가 부담일 때</h3>
+              <p data-i18n="when.4.body">원격 VPN 서버를 거치지 않아요. IP와 접속 국가는 그대로예요.</p>
             </article>
           </div>
           <p class="when__note reveal" data-i18n="when.note">사이트 이름(SNI) 때문에 끊긴 경우를 도와요. IP로 막거나 게임 서버를 막는 연결은 열지 않아요. 광고 차단도 하지 않아요.</p>
@@ -511,8 +506,8 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow eyebrow--on-dark" data-i18n="features.kicker">기능</p>
-            <h2 data-i18n-html="features.title">사이트 차단 우회에<br />필요한 것만 담았어요</h2>
-            <p data-i18n="features.lead">필요할 때 켜고, DNS를 고르고, 상태만 확인하면 돼요.</p>
+            <h2 data-i18n-html="features.title">사이트 차단 우회에<br />필요한 기능이에요</h2>
+            <p data-i18n="features.lead">켜고, DNS를 고르고, 사이트 이름을 나눠 보내요.</p>
           </div>
 
           <div class="bento">
@@ -552,12 +547,12 @@
 
             <article class="bento__card bento__card--wide reveal" style="--delay: 80ms">
               <div class="bento__text">
-                <h3 data-i18n="feat.local.title">원격 VPN은 없어요</h3>
-                <p data-i18n="feat.local.body">트래픽을 원격 VPN 서버로 보내지 않아요. IP도 바꾸지 않고, 내용은 열지 않아요.</p>
+                <h3 data-i18n="feat.local.title">원격 VPN 서버는 없어요</h3>
+                <p data-i18n="feat.local.body">트래픽을 원격 VPN 서버로 보내지 않아요. IP도 바꾸지 않고, HTTPS 내용은 열지 않아요.</p>
               </div>
               <ul class="checklist">
-                <li data-i18n="check.local">이 기기에서만 동작</li>
-                <li data-i18n="check.tls">통신 내용은 열지 않음</li>
+                <li data-i18n="check.local">나누기와 DNS 선택은 이 기기에서</li>
+                <li data-i18n="check.tls">HTTPS 내용은 열지 않음</li>
                 <li data-i18n="check.proxy">원격 VPN 서버 없음</li>
               </ul>
             </article>
@@ -569,7 +564,7 @@
         <div class="section-shell how__grid">
           <div class="how__copy reveal">
             <p class="eyebrow" data-i18n="how.kicker">작동 방식</p>
-            <h2 data-i18n-html="how.title">차단된 사이트는<br />이렇게 다시 열려요</h2>
+            <h2 data-i18n-html="how.title">쓰는 법은<br />세 단계예요</h2>
             <p class="lead" data-i18n="how.lead">권한을 허용한 다음 구름만 누르면 돼요. DNS 변경과 이름 나누기는 이 기기에서 해요.</p>
           </div>
 
@@ -592,7 +587,7 @@
               <span class="steps__num">3</span>
               <div>
                 <strong data-i18n="step3.title">이름을 나눠 보내요</strong>
-                <p data-i18n="step3.body">접속할 사이트 이름을 나눠 보내요. 통신 내용은 열지 않아요.</p>
+                <p data-i18n="step3.body">접속할 사이트 이름(SNI)을 나눠 보내요. 이름 때문에 끊긴 일부 연결을 돕고, 통신 내용은 열지 않아요.</p>
               </div>
             </li>
           </ol>
@@ -603,7 +598,7 @@
         <div class="section-shell privacy__grid">
           <div class="privacy__copy reveal">
             <p class="eyebrow" data-i18n="privacy.kicker">프라이버시</p>
-            <h2 data-i18n-html="privacy.title">앱이 보내는 건<br />두 가지예요</h2>
+            <h2 data-i18n-html="privacy.title">Analytics로 보내는 건<br />두 가지예요</h2>
             <p class="lead" data-i18n="privacy.lead">구름 앱이 Google Analytics로 보내는 건 보호를 켰는지와 고른 DNS 종류 두 가지예요. 방문한 사이트 이름과 직접 입력한 DNS 주소는 보내지 않고, 광고 개인화는 꺼져 있어요. 연결을 위해 주소 찾기는 고른 DNS로 가고, 나눠 보낸 사이트 이름은 그 사이트로 가요. 이 소개 페이지의 방문 집계는 앱과 따로 쌓여요.</p>
             <ul class="plain-list">
               <li data-i18n="privacy.b1">보호 상태와 DNS 종류만 보내요</li>
@@ -617,8 +612,8 @@
           <div class="privacy__panel reveal" style="--delay: 100ms">
             <div class="privacy__card">
               <img src="/assets/logo-ui.webp" alt="" width="88" height="88" />
-              <h3 data-i18n="card.title">앱이 보내는 건 두 가지</h3>
-              <p data-i18n="card.body">Analytics로 가는 건 보호를 켰는지와 고른 DNS 종류뿐이에요.</p>
+              <h3 data-i18n="card.title">Analytics로 보내는 건 두 가지</h3>
+              <p data-i18n="card.body">보호를 켰는지와 고른 DNS 종류예요.</p>
             </div>
             <div class="privacy__stats" aria-hidden="true">
               <div>
@@ -656,11 +651,11 @@
               <dd data-i18n="about.f2.dd">IP를 바꾸지 않고, HTTPS 내용은 열지 않으며, 원격 VPN 서버로 보내지 않아요.</dd>
             </div>
             <div>
-              <dt data-i18n="about.f3.dt">기기</dt>
+              <dt data-i18n="about.f3.dt">지원 기기</dt>
               <dd data-i18n="about.f3.dd">Android, iOS</dd>
             </div>
             <div>
-              <dt data-i18n="about.f4.dt">DNS</dt>
+              <dt data-i18n="about.f4.dt">지원 DNS</dt>
               <dd data-i18n="about.f4.dd">Cloudflare, Google, Quad9</dd>
             </div>
             <div>
@@ -766,8 +761,8 @@
       <section class="cta" id="download">
         <div class="section-shell cta__inner reveal">
           <img src="/assets/logo-ui.webp" alt="" width="72" height="72" class="cta__icon" />
-          <h2 data-i18n="cta.title">지금 써 보세요</h2>
-          <p data-i18n="cta.body">스토어 링크는 아직 준비 중이에요. 출시 소식을 먼저 받고 싶다면 메일을 보내 주세요.</p>
+          <h2 data-i18n="cta.title">출시를 준비 중이에요</h2>
+          <p data-i18n="cta.body">Android와 iOS 스토어 링크는 아직 없어요. 출시 소식을 먼저 받고 싶다면 메일을 보내 주세요.</p>
           <div class="hero__cta">
             <button type="button" class="btn btn--primary" disabled data-i18n="cta.android">Android 준비 중</button>
             <button type="button" class="btn btn--ghost btn--on-dark" disabled data-i18n="cta.ios">iOS 준비 중</button>

@@ -363,7 +363,7 @@
           "@type": "HowToStep",
           "position": 3,
           "name": "把名字拆开再发",
-          "text": "需要的时候把网站名拆开，让连接更稳。"
+          "text": "连接时的网站名（SNI）会拆开再发。它帮一部分因为名字而断开的连接，也不打开通信内容。"
         }
       ]
     }
@@ -418,18 +418,17 @@
             <p class="brand-hero">구름</p>
             <h1>
               <span class="hero__line" data-i18n="hero.line1">网站被拦截打不开时</span>
-              <span class="hero__line" data-i18n="hero.line2">更换 DNS 帮它打开</span>
+              <span class="hero__line" data-i18n="hero.line2">在这台设备上帮助连接</span>
             </h1>
-            <p class="hero__sub" data-i18n="hero.sub">Gureum 是在网站被拦截打不开时使用的应用。它在这台设备上更换 DNS，并把网站名（SNI）拆开再发，帮助一部分 HTTPS 连接。它不经过远程 VPN 服务器，不改变 IP 或国家，也不打开 HTTPS 内容。</p>
+            <p class="hero__sub" data-i18n="hero.sub">云不使用远程 VPN 服务器，在这台设备上更换 DNS，并把网站名（SNI）拆开再发。它帮一部分因为这个名字而断开的 HTTPS 连接，不改变 IP 或国家，也不打开 HTTPS 内容。</p>
             <div class="hero__cta">
               <a class="btn btn--primary" href="#download" data-i18n="hero.download">下载</a>
               <a class="btn btn--ghost" href="#how" data-i18n="hero.how">工作方式</a>
             </div>
             <ul class="hero__points">
-              <li data-i18n="point.local">只在这台设备上</li>
-              <li data-i18n="point.dns">直接选 DNS</li>
-              <li data-i18n="point.sni">拆开网站名</li>
-              <li data-i18n="point.tls">不检查 HTTPS 内容</li>
+              <li data-i18n="point.local">在这台设备上运行</li>
+              <li data-i18n="point.ip">IP 和国家不变</li>
+              <li data-i18n="point.tls">不打开 HTTPS 内容</li>
             </ul>
           </div>
 
@@ -482,25 +481,21 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow" data-i18n="when.kicker">什么时候打开</p>
-            <h2 data-i18n="when.title">网站被拦截打不开时打开</h2>
-            <p data-i18n="when.lead">网站打不开的原因有好几种：地址查询（DNS）被拦、IP 被拦，或网站名（SNI）导致 HTTPS 连接断开。云在这台设备上帮的是一部分因为名字而断开的连接。</p>
+            <h2 data-i18n="when.title">这些时候打开</h2>
+            <p data-i18n="when.lead">网站打不开的原因有好几种。云在这台设备上帮的是一部分因为网站名（SNI）而断开的 HTTPS 连接。</p>
           </div>
           <div class="value-grid">
             <article class="value reveal">
-              <h3 data-i18n="when.1.title">网站被拦截打不开时</h3>
-              <p data-i18n="when.1.body">以前能打开的网站突然打不开，或出现警告页，就点一下云。</p>
+              <h3 data-i18n="when.1.title">网站打不开，或出现警告页时</h3>
+              <p data-i18n="when.1.body">以前能打开的网站突然打不开，或出现警告页，可能是网站名（SNI）导致断开。云在这台设备上帮其中一部分。</p>
             </article>
             <article class="value reveal" style="--delay: 60ms">
-              <h3 data-i18n="when.2.title">只出现警告页时</h3>
-              <p data-i18n="when.2.body">出现的不是网站内容而是警告页，先看看是不是只有这个网站因为名字被拦。</p>
+              <h3 data-i18n="when.3.title">想换掉运营商 DNS 时</h3>
+              <p data-i18n="when.3.body">在这台设备上选 Cloudflare、Google 或 Quad9。只换 DNS，打不开因为名字而断开的连接。</p>
             </article>
             <article class="value reveal" style="--delay: 120ms">
-              <h3 data-i18n="when.3.title">在找一个换 DNS 的应用时</h3>
-              <p data-i18n="when.3.body">不使用运营商 DNS，在这台设备上选 Cloudflare、Google 或 Quad9。</p>
-            </article>
-            <article class="value reveal" style="--delay: 180ms">
-              <h3 data-i18n="when.4.title">想不用 VPN 试一下时</h3>
-              <p data-i18n="when.4.body">不经过远程 VPN 服务器，只在这台设备上处理 DNS 和网站名（SNI），IP 和国家都不变。</p>
+              <h3 data-i18n="when.4.title">远程 VPN 服务器负担太重时</h3>
+              <p data-i18n="when.4.body">流量不经过远程 VPN 服务器。IP 和所在国家保持不变。</p>
             </article>
           </div>
           <p class="when__note reveal" data-i18n="when.note">网站名（SNI）导致断开时它能帮上忙。针对 IP 或游戏服务器的拦截，它打不开，也不拦截广告。</p>
@@ -511,8 +506,8 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow eyebrow--on-dark" data-i18n="features.kicker">功能</p>
-            <h2 data-i18n-html="features.title">绕过网站拦截，<br />只留需要的</h2>
-            <p data-i18n="features.lead">需要时打开，选一个 DNS，再看一下状态。</p>
+            <h2 data-i18n-html="features.title">绕过网站拦截<br />需要的功能</h2>
+            <p data-i18n="features.lead">打开，选一个 DNS，再把网站名拆开再发。</p>
           </div>
 
           <div class="bento">
@@ -552,12 +547,12 @@
 
             <article class="bento__card bento__card--wide reveal" style="--delay: 80ms">
               <div class="bento__text">
-                <h3 data-i18n="feat.local.title">没有远程 VPN</h3>
-                <p data-i18n="feat.local.body">流量不会送到远程 VPN 服务器。IP 不变，也不检查或解密 HTTPS 通信内容。</p>
+                <h3 data-i18n="feat.local.title">没有远程 VPN 服务器</h3>
+                <p data-i18n="feat.local.body">流量不会送到远程 VPN 服务器。IP 不变，也不打开 HTTPS 内容。</p>
               </div>
               <ul class="checklist">
-                <li data-i18n="check.local">只在这台设备上运行</li>
-                <li data-i18n="check.tls">不解密 HTTPS 通信内容</li>
+                <li data-i18n="check.local">拆分和 DNS 选择在这台设备上</li>
+                <li data-i18n="check.tls">不打开 HTTPS 内容</li>
                 <li data-i18n="check.proxy">没有远程 VPN 服务器</li>
               </ul>
             </article>
@@ -569,7 +564,7 @@
         <div class="section-shell how__grid">
           <div class="how__copy reveal">
             <p class="eyebrow" data-i18n="how.kicker">工作方式</p>
-            <h2 data-i18n-html="how.title">被拦截的网站<br />这样就能再打开</h2>
+            <h2 data-i18n-html="how.title">用法是<br />三步</h2>
             <p class="lead" data-i18n="how.lead">允许权限之后，点一下云就行。DNS 和拆分网站名都在这台设备上处理。</p>
           </div>
 
@@ -592,7 +587,7 @@
               <span class="steps__num">3</span>
               <div>
                 <strong data-i18n="step3.title">把名字拆开再发</strong>
-                <p data-i18n="step3.body">需要的时候把网站名拆开，让连接更稳。</p>
+                <p data-i18n="step3.body">连接时的网站名（SNI）会拆开再发。它帮一部分因为名字而断开的连接，也不打开通信内容。</p>
               </div>
             </li>
           </ol>
@@ -603,7 +598,7 @@
         <div class="section-shell privacy__grid">
           <div class="privacy__copy reveal">
             <p class="eyebrow" data-i18n="privacy.kicker">隐私</p>
-            <h2 data-i18n-html="privacy.title">应用发送的是<br />两样</h2>
+            <h2 data-i18n-html="privacy.title">发给 Analytics 的是<br />两样</h2>
             <p class="lead" data-i18n="privacy.lead">云的应用发给 Google Analytics 的是两样：保护是否开启，以及所选 DNS 类型。访问过的网站名和手动填写的 DNS 地址不会发送，广告个性化是关闭的。为了连接，地址查询会发到所选 DNS，拆开的网站名会发到那个网站。这个介绍页的访问量与应用分开统计。</p>
             <ul class="plain-list">
               <li data-i18n="privacy.b1">只发保护状态和 DNS 类型</li>
@@ -617,8 +612,8 @@
           <div class="privacy__panel reveal" style="--delay: 100ms">
             <div class="privacy__card">
               <img src="/assets/logo-ui.webp" alt="" width="88" height="88" />
-              <h3 data-i18n="card.title">应用只发两样</h3>
-              <p data-i18n="card.body">发给 Analytics 的只有保护是否开启和 DNS 类型。</p>
+              <h3 data-i18n="card.title">发给 Analytics 的是两样</h3>
+              <p data-i18n="card.body">保护是否开启，以及所选 DNS 的类型。</p>
             </div>
             <div class="privacy__stats" aria-hidden="true">
               <div>
@@ -656,11 +651,11 @@
               <dd data-i18n="about.f2.dd">不改变 IP，不打开 HTTPS 内容，也不把流量送到远程 VPN 服务器。</dd>
             </div>
             <div>
-              <dt data-i18n="about.f3.dt">设备</dt>
+              <dt data-i18n="about.f3.dt">支持的设备</dt>
               <dd data-i18n="about.f3.dd">Android、iOS</dd>
             </div>
             <div>
-              <dt data-i18n="about.f4.dt">DNS</dt>
+              <dt data-i18n="about.f4.dt">支持的 DNS</dt>
               <dd data-i18n="about.f4.dd">Cloudflare、Google、Quad9</dd>
             </div>
             <div>
@@ -766,8 +761,8 @@
       <section class="cta" id="download">
         <div class="section-shell cta__inner reveal">
           <img src="/assets/logo-ui.webp" alt="" width="72" height="72" class="cta__icon" />
-          <h2 data-i18n="cta.title">现在就试试</h2>
-          <p data-i18n="cta.body">商店链接还在准备中。想先收到发布消息，可以给我们发邮件。</p>
+          <h2 data-i18n="cta.title">商店上架还在准备</h2>
+          <p data-i18n="cta.body">Android 和 iOS 的商店链接还没有。想先收到发布消息，可以发邮件。</p>
           <div class="hero__cta">
             <button type="button" class="btn btn--primary" disabled data-i18n="cta.android">Android 准备中</button>
             <button type="button" class="btn btn--ghost btn--on-dark" disabled data-i18n="cta.ios">iOS 准备中</button>

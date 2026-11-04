@@ -363,7 +363,7 @@
           "@type": "HowToStep",
           "position": 3,
           "name": "Envía el nombre por partes",
-          "text": "Cuando hace falta, el nombre del sitio se parte para que la conexión se mantenga estable."
+          "text": "El nombre del sitio (SNI) sale por partes. Eso ayuda en algunas conexiones que se cortan por el nombre. El contenido HTTPS no se abre."
         }
       ]
     }
@@ -418,18 +418,17 @@
             <p class="brand-hero">구름</p>
             <h1>
               <span class="hero__line" data-i18n="hero.line1">Si un sitio bloqueado no abre</span>
-              <span class="hero__line" data-i18n="hero.line2">cambiar el DNS ayuda a abrirlo</span>
+              <span class="hero__line" data-i18n="hero.line2">este dispositivo ayuda</span>
             </h1>
-            <p class="hero__sub" data-i18n="hero.sub">Gureum es una app para desbloquear sitios cuando uno no abre. En este dispositivo cambia el DNS y envía el nombre del sitio (SNI) por partes para ayudar con algunas conexiones HTTPS. No usa servidor VPN remoto, no cambia la IP ni el país y no abre el contenido HTTPS.</p>
+            <p class="hero__sub" data-i18n="hero.sub">Gureum cambia el DNS en este dispositivo y envía el nombre del sitio (SNI) por partes, sin servidor VPN remoto. Ayuda con algunas conexiones HTTPS que se cortan por ese nombre. No cambia la IP ni el país, y no abre el contenido HTTPS.</p>
             <div class="hero__cta">
               <a class="btn btn--primary" href="#download" data-i18n="hero.download">Descargar</a>
               <a class="btn btn--ghost" href="#how" data-i18n="hero.how">Cómo funciona</a>
             </div>
             <ul class="hero__points">
               <li data-i18n="point.local">En este dispositivo</li>
-              <li data-i18n="point.dns">Elige un DNS</li>
-              <li data-i18n="point.sni">Nombre por partes</li>
-              <li data-i18n="point.tls">No inspecciona el HTTPS</li>
+              <li data-i18n="point.ip">La IP y el país no cambian</li>
+              <li data-i18n="point.tls">No abre el contenido HTTPS</li>
             </ul>
           </div>
 
@@ -482,25 +481,21 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow" data-i18n="when.kicker">Cuándo encenderla</p>
-            <h2 data-i18n="when.title">Enciéndela cuando un sitio bloqueado no abre</h2>
-            <p data-i18n="when.lead">Un sitio puede fallar por varias razones: la búsqueda (DNS) bloqueada, la IP bloqueada o una conexión HTTPS que se corta por el nombre del sitio (SNI). Gureum ayuda en algunos cortes causados por el nombre, en este dispositivo.</p>
+            <h2 data-i18n="when.title">Cuándo encenderla</h2>
+            <p data-i18n="when.lead">Un sitio puede no abrir por varias razones. Gureum ayuda en algunas conexiones HTTPS que se cortan por el nombre del sitio (SNI), en este dispositivo.</p>
           </div>
           <div class="value-grid">
             <article class="value reveal">
-              <h3 data-i18n="when.1.title">Un sitio bloqueado no abre</h3>
-              <p data-i18n="when.1.body">Si un sitio que abrías deja de abrir, o aparece una página de aviso, toca la nube.</p>
+              <h3 data-i18n="when.1.title">El sitio no abre o sale un aviso</h3>
+              <p data-i18n="when.1.body">Si un sitio que abrías deja de abrir de golpe, o aparece una página de aviso, el corte puede deberse al nombre del sitio (SNI). Gureum ayuda en algunos de esos casos, en este dispositivo.</p>
             </article>
             <article class="value reveal" style="--delay: 60ms">
-              <h3 data-i18n="when.2.title">Solo sale una página de aviso</h3>
-              <p data-i18n="when.2.body">Si ves un aviso en lugar del sitio, primero mira si solo ese sitio está bloqueado por su nombre.</p>
+              <h3 data-i18n="when.3.title">Quieres un DNS distinto del operador</h3>
+              <p data-i18n="when.3.body">Elige Cloudflare, Google o Quad9 en este dispositivo. Cambiar solo el DNS no abre una conexión que se corta por su nombre.</p>
             </article>
             <article class="value reveal" style="--delay: 120ms">
-              <h3 data-i18n="when.3.title">Buscas una app para cambiar el DNS</h3>
-              <p data-i18n="when.3.body">Elige Cloudflare, Google o Quad9 en este dispositivo, en lugar del DNS del operador.</p>
-            </article>
-            <article class="value reveal" style="--delay: 180ms">
-              <h3 data-i18n="when.4.title">Quieres probar sin VPN</h3>
-              <p data-i18n="when.4.body">Sin servidor VPN remoto. Solo trata el DNS y el nombre del sitio (SNI) en este dispositivo, y la IP y el país no cambian.</p>
+              <h3 data-i18n="when.4.title">Un servidor VPN remoto resulta pesado</h3>
+              <p data-i18n="when.4.body">El tráfico no pasa por un servidor VPN remoto. La IP y el país de acceso siguen igual.</p>
             </article>
           </div>
           <p class="when__note reveal" data-i18n="when.note">Ayuda cuando la conexión se corta por el nombre del sitio (SNI). No abre bloqueos que apuntan a una IP o a un servidor de juego. Tampoco bloquea anuncios.</p>
@@ -511,8 +506,8 @@
         <div class="section-shell">
           <div class="section-head reveal">
             <p class="eyebrow eyebrow--on-dark" data-i18n="features.kicker">Funciones</p>
-            <h2 data-i18n-html="features.title">Solo lo que necesita<br />un desbloqueo de sitios</h2>
-            <p data-i18n="features.lead">Enciéndela cuando haga falta, elige un DNS y mira el estado.</p>
+            <h2 data-i18n-html="features.title">Lo que hace falta para<br />desbloquear un sitio</h2>
+            <p data-i18n="features.lead">Enciéndela, elige un DNS y envía el nombre del sitio por partes.</p>
           </div>
 
           <div class="bento">
@@ -528,7 +523,7 @@
 
             <article class="bento__card reveal" style="--delay: 60ms">
               <div class="bento__text">
-                <h3 data-i18n="feat.dns.title">Elige un DNS de confianza</h3>
+                <h3 data-i18n="feat.dns.title">Elige un DNS</h3>
                 <p data-i18n="feat.dns.body">Cloudflare, Google o Quad9. Esto decide adónde va la búsqueda; cambiar el DNS no abre por sí solo una conexión bloqueada por su nombre.</p>
               </div>
               <div class="chip-row" aria-hidden="true">
@@ -552,12 +547,12 @@
 
             <article class="bento__card bento__card--wide reveal" style="--delay: 80ms">
               <div class="bento__text">
-                <h3 data-i18n="feat.local.title">Sin VPN remota</h3>
-                <p data-i18n="feat.local.body">El tráfico no va a un servidor VPN remoto. La IP no cambia y el contenido HTTPS no se inspecciona ni se descifra.</p>
+                <h3 data-i18n="feat.local.title">Sin servidor VPN remoto</h3>
+                <p data-i18n="feat.local.body">El tráfico no va a un servidor VPN remoto. La IP no cambia y el contenido HTTPS no se abre ni se descifra.</p>
               </div>
               <ul class="checklist">
-                <li data-i18n="check.local">Solo en este dispositivo</li>
-                <li data-i18n="check.tls">No inspecciona ni descifra el HTTPS</li>
+                <li data-i18n="check.local">El nombre partido y el DNS se eligen aquí</li>
+                <li data-i18n="check.tls">No abre el contenido HTTPS</li>
                 <li data-i18n="check.proxy">Sin servidor VPN remoto</li>
               </ul>
             </article>
@@ -569,7 +564,7 @@
         <div class="section-shell how__grid">
           <div class="how__copy reveal">
             <p class="eyebrow" data-i18n="how.kicker">Cómo funciona</p>
-            <h2 data-i18n-html="how.title">Así vuelve a abrir<br />un sitio bloqueado</h2>
+            <h2 data-i18n-html="how.title">Son tres pasos,<br />en este dispositivo</h2>
             <p class="lead" data-i18n="how.lead">Acepta el permiso y toca la nube. El DNS y el nombre partido se resuelven en este dispositivo.</p>
           </div>
 
@@ -592,7 +587,7 @@
               <span class="steps__num">3</span>
               <div>
                 <strong data-i18n="step3.title">Envía el nombre por partes</strong>
-                <p data-i18n="step3.body">Cuando hace falta, el nombre del sitio se parte para que la conexión se mantenga estable.</p>
+                <p data-i18n="step3.body">El nombre del sitio (SNI) sale por partes. Eso ayuda en algunas conexiones que se cortan por el nombre. El contenido HTTPS no se abre.</p>
               </div>
             </li>
           </ol>
@@ -603,7 +598,7 @@
         <div class="section-shell privacy__grid">
           <div class="privacy__copy reveal">
             <p class="eyebrow" data-i18n="privacy.kicker">Privacidad</p>
-            <h2 data-i18n-html="privacy.title">La app envía<br />dos cosas</h2>
+            <h2 data-i18n-html="privacy.title">Analytics recibe<br />dos cosas</h2>
             <p class="lead" data-i18n="privacy.lead">La app Gureum envía a Google Analytics dos cosas: si la protección está activa y el tipo de DNS. Los nombres de los sitios y una dirección DNS escrita a mano no se envían, y la personalización de anuncios está apagada. Para la conexión, la búsqueda sale al DNS que eliges y el nombre partido va a ese sitio. Las visitas a esta página se cuentan aparte de la app.</p>
             <ul class="plain-list">
               <li data-i18n="privacy.b1">Solo el estado y el tipo de DNS</li>
@@ -617,8 +612,8 @@
           <div class="privacy__panel reveal" style="--delay: 100ms">
             <div class="privacy__card">
               <img src="/assets/logo-ui.webp" alt="" width="88" height="88" />
-              <h3 data-i18n="card.title">Dos cosas de la app</h3>
-              <p data-i18n="card.body">Solo van a Analytics el estado de la protección y el tipo de DNS.</p>
+              <h3 data-i18n="card.title">Dos cosas van a Analytics</h3>
+              <p data-i18n="card.body">Si la protección está activa y el tipo de DNS que elegiste.</p>
             </div>
             <div class="privacy__stats" aria-hidden="true">
               <div>
@@ -660,7 +655,7 @@
               <dd data-i18n="about.f3.dd">Android, iOS</dd>
             </div>
             <div>
-              <dt data-i18n="about.f4.dt">DNS</dt>
+              <dt data-i18n="about.f4.dt">DNS disponibles</dt>
               <dd data-i18n="about.f4.dd">Cloudflare, Google, Quad9</dd>
             </div>
             <div>
@@ -766,8 +761,8 @@
       <section class="cta" id="download">
         <div class="section-shell cta__inner reveal">
           <img src="/assets/logo-ui.webp" alt="" width="72" height="72" class="cta__icon" />
-          <h2 data-i18n="cta.title">Pruébala</h2>
-          <p data-i18n="cta.body">Los enlaces de las tiendas todavía no están listos. Si quieres saber del lanzamiento primero, escríbenos.</p>
+          <h2 data-i18n="cta.title">La tienda está en preparación</h2>
+          <p data-i18n="cta.body">Los enlaces de Android e iOS todavía no están. Si quieres saber del lanzamiento primero, envía un correo.</p>
           <div class="hero__cta">
             <button type="button" class="btn btn--primary" disabled data-i18n="cta.android">Android pronto</button>
             <button type="button" class="btn btn--ghost btn--on-dark" disabled data-i18n="cta.ios">iOS pronto</button>
