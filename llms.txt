@@ -39,12 +39,9 @@ DNS 선택과 SNI 나누기는 사용자 기기에서 처리해요. 트래픽을
 
 ## 개인정보와 측정
 
-구름 앱이 Google Analytics로 보내는 것은 두 가지예요.
+처리방침: https://gureum.yodams.com/privacy/
 
-- 보호를 켰는지
-- 고른 DNS 종류
-
-방문한 사이트 이름과 직접 입력한 DNS 주소는 앱에서 Google Analytics로 보내지 않아요. 광고 개인화는 꺼져 있어요.
+앱의 Google Analytics는 기본으로 꺼져 있고, 이용자가 따로 허용한 뒤에만 보내요. 보내는 항목은 보호를 켰는지, 끈 이유, 고른 DNS 종류, 화면 이름이에요. 방문한 사이트 이름과 직접 입력한 DNS 주소는 보내지 않아요. 광고 개인화와 광고 ID는 꺼져 있어요. 설정에서 끌 수 있어요.
 
 연결을 위해서는 주소 찾기가 고른 DNS 제공자에게 가고, 나눠 보낸 사이트 이름은 그 사이트로 가요. 소개 페이지의 방문 집계는 앱 집계와 따로 쌓여요.
 
@@ -103,6 +100,6 @@ Gureum (구름) is a site blocking bypass app for Android and iOS. When a blocke
 
 It does not route traffic through a remote VPN server, does not change the IP address or country, and does not inspect or decrypt HTTPS content. It does not bypass IP-address blocking, game-server blocking, or a block set on the device, and it does not block ads. Gureum does not guarantee access to every blocked website.
 
-The app sends Google Analytics only whether protection is enabled and the selected DNS type. Visited site names and a manually entered DNS address are not sent to Google Analytics, and ad personalization is disabled. For the connection itself, lookups go to the chosen DNS provider and the split site name goes to that site. Website analytics are counted separately from app analytics.
+App analytics stay off until the person allows them. The allowed events are protection on or off, why protection failed, the DNS type, and the screen name. Visited site names and a manually entered DNS address are not sent, and ad personalization and the advertising ID stay off. The choice can be changed in settings. The privacy policy is https://gureum.yodams.com/privacy/ . For the connection itself, lookups go to the chosen DNS provider and the split site name goes to that site. Website analytics are counted separately from app analytics.
 
 No account or registration is required. The app source code is private; this introduction page is public. App store links are not available yet.
