@@ -30,3 +30,5 @@ User-agent: Bingbot
 Allow: /
 
 Sitemap: https://gureum.yodams.com/sitemap.xml
+
+#DaumWebMasterTool:94910665d37bb06baae765a9ccdf7d5246708110253f0b6311c2168de61b3aa4:8eDCqJCqTZrYCvf1G9zNRA==
